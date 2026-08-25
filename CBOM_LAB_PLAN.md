@@ -465,4 +465,5 @@ evidence/<tool>/<figure-number>-<short-description>.png
 
 - 영어 파일명 `RESULTS_OVERVIEW.md`로 도구 흐름, 핵심 수치, `results/` 디렉터리 역할, IBM Zurich Viewer 입력 파일과 주요 한계를 한 문서에 요약함.
 - README와 `plan.md`에서 결과 요약으로 바로 이동할 수 있도록 링크함.
-- 이번 사용자 요청 범위는 local commit까지이며 원격 push는 포함하지 않음.
+- `4ea726de3346a2d7292db2b1ef02c64d0fcc9b8d` (`docs: add CBOM results overview`)로 local commit한 뒤, 다음 사용자 승인에 따라 `origin/main`에 push함.
+- push 직후 local `HEAD`와 remote `main`이 모두 `4ea726de3346a2d7292db2b1ef02c64d0fcc9b8d`로 일치함을 확인함.
