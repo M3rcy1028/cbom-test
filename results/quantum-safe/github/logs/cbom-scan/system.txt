@@ -1,0 +1,8 @@
+2026-08-25T10:37:53.7130000Z Requested labels: ubuntu-latest
+2026-08-25T10:37:53.7130000Z Job defined at: M3rcy1028/cbom-test/.github/workflows/cbom.yml@refs/heads/main
+2026-08-25T10:37:53.7130000Z Waiting for a runner to pick up this job...
+2026-08-25T10:37:53.7090000Z Evaluating cbom-scan.if
+2026-08-25T10:37:53.7090000Z Evaluating: success()
+2026-08-25T10:37:53.7090000Z Result: true
+2026-08-25T10:37:53.8630000Z Job is waiting for a hosted runner to come online.
+2026-08-25T10:37:53.8630000Z Job is about to start running on the hosted runner: GitHub Actions 1000000878

@@ -88,6 +88,7 @@
 
 - Go `crypto/mlkem`으로 양쪽 32-byte shared key가 실제로 일치한다.
 - scanner CBOM에 `ML-KEM-768`, `primitive=kem`, source occurrence가 존재한다.
+- GitHub-hosted 격리 Action artifact에도 같은 자산과 `main.go` occurrence가 존재한다.
 - CBOM은 CycloneDX 1.6 schema와 semantic validation을 통과한다.
 - IBM Zurich Viewer와 built-in policy가 자산을 `Quantum Safe`로 표시한다.
 

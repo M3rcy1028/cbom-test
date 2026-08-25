@@ -172,6 +172,15 @@
       "actualValid": true,
       "passed": true,
       "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: GitHub-hosted isolated ML-KEM-768 scan",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/quantum-safe/github/artifact/quantum-safe/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
     }
   ]
 }

@@ -1,0 +1,38 @@
+﻿2026-08-25T10:38:05.8376604Z ##[group]Run actions/setup-java@v5
+2026-08-25T10:38:05.8376904Z with:
+2026-08-25T10:38:05.8377101Z   distribution: temurin
+2026-08-25T10:38:05.8377325Z   java-version: 21
+2026-08-25T10:38:05.8377523Z   cache: maven
+2026-08-25T10:38:05.8377721Z   java-package: jdk
+2026-08-25T10:38:05.8378258Z   check-latest: false
+2026-08-25T10:38:05.8378592Z   set-default: true
+2026-08-25T10:38:05.8378817Z   verify-signature: false
+2026-08-25T10:38:05.8379048Z   server-id: github
+2026-08-25T10:38:05.8379261Z   server-username: GITHUB_ACTOR
+2026-08-25T10:38:05.8379516Z   server-password: GITHUB_TOKEN
+2026-08-25T10:38:05.8379763Z   overwrite-settings: true
+2026-08-25T10:38:05.8379992Z   job-status: success
+2026-08-25T10:38:05.8382269Z   token: ***
+2026-08-25T10:38:05.8382493Z   show-download-progress: false
+2026-08-25T10:38:05.8382740Z ##[endgroup]
+2026-08-25T10:38:05.9884007Z ##[group]Installed distributions
+2026-08-25T10:38:05.9964618Z Resolved Java 21.0.12+8 from tool-cache
+2026-08-25T10:38:05.9965178Z Setting Java 21.0.12+8 as the default
+2026-08-25T10:38:05.9975996Z Creating toolchains.xml for JDK version 21 from temurin
+2026-08-25T10:38:06.0052784Z Writing to /home/runner/.m2/toolchains.xml
+2026-08-25T10:38:06.0053228Z 
+2026-08-25T10:38:06.0053389Z Java configuration:
+2026-08-25T10:38:06.0053772Z   Distribution: temurin
+2026-08-25T10:38:06.0054161Z   Version: 21.0.12+8
+2026-08-25T10:38:06.0054680Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.0055160Z 
+2026-08-25T10:38:06.0055586Z ##[endgroup]
+2026-08-25T10:38:06.0084335Z Creating settings.xml with server-id: github
+2026-08-25T10:38:06.0084720Z Writing to /home/runner/.m2/settings.xml
+2026-08-25T10:38:06.0085628Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-08-25T10:38:06.1471707Z Cache hit for: setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6
+2026-08-25T10:38:06.3506769Z Received 17351306 of 17351306 (100.0%), 104.1 MBs/sec
+2026-08-25T10:38:06.3507588Z Cache Size: ~17 MB (17351306 B)
+2026-08-25T10:38:06.3546297Z [command]/usr/bin/tar -xf /home/runner/work/_temp/40f9e45f-b7ac-48f3-8fbf-032521e0967c/cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --use-compress-program unzstd
+2026-08-25T10:38:06.4198507Z Cache restored successfully
+2026-08-25T10:38:06.4210720Z Cache restored from key: setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6

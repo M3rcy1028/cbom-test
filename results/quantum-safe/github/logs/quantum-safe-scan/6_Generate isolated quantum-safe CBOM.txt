@@ -1,0 +1,20 @@
+﻿2026-08-25T10:38:22.0508901Z ##[group]Run cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae
+2026-08-25T10:38:22.0509336Z env:
+2026-08-25T10:38:22.0509528Z   GOTOOLCHAIN: local
+2026-08-25T10:38:22.0509751Z   CBOMKIT_LANGUAGES: go
+2026-08-25T10:38:22.0509985Z   CBOMKIT_GENERATE_MODULE_CBOMS: true
+2026-08-25T10:38:22.0510265Z   CBOMKIT_WRITE_EMPTY_CBOMS: false
+2026-08-25T10:38:22.0510693Z ##[endgroup]
+2026-08-25T10:38:22.0612866Z ##[command]/usr/bin/docker run --name c042728e158833804b8cb06ccdb2730a515e_fcb266 --label 05c042 --workdir /github/workspace --rm -e "GOTOOLCHAIN" -e "CBOMKIT_LANGUAGES" -e "CBOMKIT_GENERATE_MODULE_CBOMS" -e "CBOMKIT_WRITE_EMPTY_CBOMS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/cbom-test/cbom-test":"/github/workspace" 05c042:728e158833804b8cb06ccdb2730a515e
+2026-08-25T10:38:22.3995129Z [main] INFO org.pqca.Main - Writing CBOMs to cbom
+2026-08-25T10:38:22.5198584Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T10:38:22.5459284Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'quantum-safe-go' [2 .go files]
+2026-08-25T10:38:22.5460606Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 1 go projects
+2026-08-25T10:38:22.6610532Z [main] INFO org.pqca.scanning.ScannerService - Scanning go project quantum-safe-go (1/1)
+2026-08-25T10:38:22.6790052Z [main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+2026-08-25T10:38:22.7939076Z [main] INFO com.ibm.output.IAggregator - Detected (KeyEncapsulationMechanism) ML-KEM-768
+2026-08-25T10:38:22.8394236Z [main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+2026-08-25T10:38:22.8395749Z [main] INFO org.pqca.scanning.ScannerService - Scanned 1 go projects
+2026-08-25T10:38:23.1198106Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_quantum-safe-go.json with 1 findings
+2026-08-25T10:38:23.1201113Z [main] INFO org.pqca.Main - Scanned 2 files with 42 lines in 0.294 seconds.
+2026-08-25T10:38:23.1488703Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom.json with 1 findings

@@ -15,7 +15,7 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 
 | 대상 | 결과 |
 |---|---:|
-| Schema 정상·음성 case | 14/14 기대 일치 |
+| Schema 정상·음성 case | 15/15 기대 일치 |
 | 실제 quantum-safe code | ML-KEM-768 round-trip·탐지·Viewer 판정 성공 |
 | Sonar source scan | 38 components, source family 22/22 |
 | Action local scan | 49 components, Java/Python/Go module CBOM |
@@ -24,7 +24,7 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 | Sonar→Theia enrichment | 38→64 components |
 | Built-in/OPA policy fixture | exact 5/5 vs 3/5 |
 | 보완 후 Action | 49→44, MD5·CBC component 제거 |
-| GitHub Action run | success, 48초, CBOM artifact 1개 |
+| GitHub Action run | 전체 scan success + 격리 ML-KEM scan success |
 | CBOMkit public Git scan | 48 components, DB 저장 성공 |
 
 ![CBOMkit result](evidence/16-cbomkit-sonar-results.png)
@@ -42,7 +42,7 @@ python3 scripts/validate_schemas.py
 python3 scripts/capture_evidence.py
 ```
 
-IBM Zurich Viewer에서 `Quantum Safe` 결과를 바로 확인하려면 [quantum-safe CBOM](results/quantum-safe/action/cbom.json)을 다운로드해 업로드한다.
+IBM Zurich Viewer에서 `Quantum Safe` 결과를 바로 확인하려면 [GitHub-hosted quantum-safe CBOM](results/quantum-safe/github/artifact/quantum-safe/cbom.json)을 다운로드해 업로드한다.
 
 `tools/`와 `sources/`의 다운로드·upstream clone은 크기와 재배포 문제로 Git에서 제외한다. 단, offline schema 재검증에 필요한 JSON Schema snapshot과 출처 기록은 포함한다. 정확한 upstream URL과 commit은 [schema 출처](sources/SCHEMA_SOURCES.md), 작업 원장과 보고서에 기록했다.
 

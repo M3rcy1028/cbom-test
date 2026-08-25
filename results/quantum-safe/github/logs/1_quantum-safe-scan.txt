@@ -1,0 +1,364 @@
+﻿2026-08-25T10:37:58.5413456Z Current runner version: '2.336.0'
+2026-08-25T10:37:58.5438576Z ##[group]Runner Image Provisioner
+2026-08-25T10:37:58.5439611Z Hosted Compute Agent
+2026-08-25T10:37:58.5440240Z Version: 20260729.566
+2026-08-25T10:37:58.5440923Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+2026-08-25T10:37:58.5441696Z Build Date: 2026-07-29T19:17:02Z
+2026-08-25T10:37:58.5442389Z Worker ID: {bd4cf99a-c536-4b4e-98dc-12fd11bce1ea}
+2026-08-25T10:37:58.5443213Z Azure Region: westus2
+2026-08-25T10:37:58.5444032Z ##[endgroup]
+2026-08-25T10:37:58.5445718Z ##[group]Operating System
+2026-08-25T10:37:58.5446411Z Ubuntu
+2026-08-25T10:37:58.5446959Z 24.04.4
+2026-08-25T10:37:58.5447576Z LTS
+2026-08-25T10:37:58.5448106Z ##[endgroup]
+2026-08-25T10:37:58.5448651Z ##[group]Runner Image
+2026-08-25T10:37:58.5449352Z Image: ubuntu-24.04
+2026-08-25T10:37:58.5449935Z Version: 20260816.277.1
+2026-08-25T10:37:58.5451327Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260816.277/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-25T10:37:58.5452902Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260816.277
+2026-08-25T10:37:58.5454305Z ##[endgroup]
+2026-08-25T10:37:58.5455462Z ##[group]GITHUB_TOKEN Permissions
+2026-08-25T10:37:58.5457697Z Contents: read
+2026-08-25T10:37:58.5458336Z Metadata: read
+2026-08-25T10:37:58.5459035Z ##[endgroup]
+2026-08-25T10:37:58.5461106Z Secret source: Actions
+2026-08-25T10:37:58.5462718Z Prepare workflow directory
+2026-08-25T10:37:58.5858120Z Prepare all required actions
+2026-08-25T10:37:58.5907715Z Getting action download info
+2026-08-25T10:37:58.9574281Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-08-25T10:37:59.0613601Z Download action repository 'actions/setup-go@v6' (SHA:924ae3a1cded613372ab5595356fb5720e22ba16)
+2026-08-25T10:37:59.3301140Z Download action repository 'cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae' (SHA:e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae)
+2026-08-25T10:38:00.2145586Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-08-25T10:38:00.4277748Z Complete job name: quantum-safe-scan
+2026-08-25T10:38:00.4799781Z ##[group]Build container for action use: '/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae/Dockerfile'.
+2026-08-25T10:38:00.4859985Z ##[command]/usr/bin/docker build -t 05c042:728e158833804b8cb06ccdb2730a515e -f "/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae/Dockerfile" "/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae"
+2026-08-25T10:38:01.0076352Z #0 building with "default" instance using docker driver
+2026-08-25T10:38:01.0077092Z 
+2026-08-25T10:38:01.0077458Z #1 [internal] load build definition from Dockerfile
+2026-08-25T10:38:01.0078241Z #1 transferring dockerfile: 187B done
+2026-08-25T10:38:01.0078920Z #1 DONE 0.0s
+2026-08-25T10:38:01.0079192Z 
+2026-08-25T10:38:01.0079645Z #2 [internal] load metadata for ghcr.io/cbomkit/cbomkit-action:edge
+2026-08-25T10:38:01.7436110Z #2 DONE 0.9s
+2026-08-25T10:38:01.8606823Z 
+2026-08-25T10:38:01.8607666Z #3 [internal] load .dockerignore
+2026-08-25T10:38:01.8608671Z #3 transferring context: 2B done
+2026-08-25T10:38:01.8609499Z #3 DONE 0.0s
+2026-08-25T10:38:01.8609893Z 
+2026-08-25T10:38:01.8610933Z #4 [1/1] FROM ghcr.io/cbomkit/cbomkit-action:edge@sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856
+2026-08-25T10:38:01.8613285Z #4 resolve ghcr.io/cbomkit/cbomkit-action:edge@sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856 done
+2026-08-25T10:38:01.8615934Z #4 sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856 1.61kB / 1.61kB done
+2026-08-25T10:38:01.8618183Z #4 sha256:f260d6ce452a83ec0a95ffe76e03b92d68595dff07800d2a552201625e602c0a 1.06kB / 1.06kB done
+2026-08-25T10:38:01.8620568Z #4 sha256:86d4dccd26584d4426846696199866f4ede3abb779d130835e473e39ba316746 28.36kB / 28.36kB done
+2026-08-25T10:38:01.8623314Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 0B / 39.49MB 0.1s
+2026-08-25T10:38:01.8626022Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 0B / 118.98MB 0.1s
+2026-08-25T10:38:01.8628750Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 0B / 63.92MB 0.1s
+2026-08-25T10:38:02.0601361Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 2.10MB / 39.49MB 0.3s
+2026-08-25T10:38:02.0606797Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 6.29MB / 63.92MB 0.3s
+2026-08-25T10:38:02.1620868Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 7.34MB / 39.49MB 0.4s
+2026-08-25T10:38:02.1622222Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 10.49MB / 118.98MB 0.4s
+2026-08-25T10:38:02.1623560Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 10.49MB / 63.92MB 0.4s
+2026-08-25T10:38:02.3600754Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 18.87MB / 39.49MB 0.6s
+2026-08-25T10:38:02.3603360Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 16.78MB / 118.98MB 0.6s
+2026-08-25T10:38:02.3605244Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 20.97MB / 63.92MB 0.6s
+2026-08-25T10:38:02.4605420Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 25.17MB / 39.49MB 0.7s
+2026-08-25T10:38:02.5606455Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 31.46MB / 39.49MB 0.8s
+2026-08-25T10:38:02.5607883Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 31.46MB / 63.92MB 0.8s
+2026-08-25T10:38:02.7434497Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 34.60MB / 39.49MB 0.9s
+2026-08-25T10:38:02.7435766Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 26.21MB / 118.98MB 0.9s
+2026-08-25T10:38:02.7437453Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 35.65MB / 63.92MB 0.9s
+2026-08-25T10:38:02.7439621Z #4 extracting sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849
+2026-08-25T10:38:02.8438124Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 39.49MB / 39.49MB 1.0s done
+2026-08-25T10:38:02.8442548Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 41.94MB / 63.92MB 1.0s
+2026-08-25T10:38:02.8445448Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 0B / 14.81MB 1.0s
+2026-08-25T10:38:02.9444988Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 35.65MB / 118.98MB 1.1s
+2026-08-25T10:38:02.9446905Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 51.38MB / 63.92MB 1.1s
+2026-08-25T10:38:03.0480802Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 3.15MB / 14.81MB 1.2s
+2026-08-25T10:38:03.1496991Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 42.99MB / 118.98MB 1.3s
+2026-08-25T10:38:03.1499667Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 58.72MB / 63.92MB 1.3s
+2026-08-25T10:38:03.1500484Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 10.49MB / 14.81MB 1.3s
+2026-08-25T10:38:03.2535675Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 52.43MB / 118.98MB 1.4s
+2026-08-25T10:38:03.2536818Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 62.91MB / 63.92MB 1.4s
+2026-08-25T10:38:03.2538000Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 14.81MB / 14.81MB 1.4s done
+2026-08-25T10:38:03.3599435Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 62.91MB / 118.98MB 1.6s
+2026-08-25T10:38:03.3600655Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 63.92MB / 63.92MB 1.5s done
+2026-08-25T10:38:03.6598521Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 74.45MB / 118.98MB 1.9s
+2026-08-25T10:38:03.9604217Z #4 extracting sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 0.8s done
+2026-08-25T10:38:03.9605887Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 83.89MB / 118.98MB 2.2s
+2026-08-25T10:38:04.0606985Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 90.18MB / 118.98MB 2.3s
+2026-08-25T10:38:04.2609183Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 104.86MB / 118.98MB 2.5s
+2026-08-25T10:38:04.4606272Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 115.34MB / 118.98MB 2.7s
+2026-08-25T10:38:04.6597367Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 118.98MB / 118.98MB 2.9s done
+2026-08-25T10:38:04.8230172Z #4 extracting sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 0.1s
+2026-08-25T10:38:08.3855646Z #4 extracting sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 3.5s done
+2026-08-25T10:38:09.5825901Z #4 extracting sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b
+2026-08-25T10:38:09.9541536Z #4 extracting sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 0.3s done
+2026-08-25T10:38:09.9543585Z #4 extracting sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 0.1s done
+2026-08-25T10:38:10.0061509Z #4 DONE 8.2s
+2026-08-25T10:38:10.0061933Z 
+2026-08-25T10:38:10.0062346Z #5 exporting to image
+2026-08-25T10:38:10.0063345Z #5 exporting layers done
+2026-08-25T10:38:10.0064715Z #5 writing image sha256:86d4dccd26584d4426846696199866f4ede3abb779d130835e473e39ba316746 done
+2026-08-25T10:38:10.0065931Z #5 naming to docker.io/library/05c042:728e158833804b8cb06ccdb2730a515e done
+2026-08-25T10:38:10.0066521Z #5 DONE 0.0s
+2026-08-25T10:38:10.0113587Z ##[endgroup]
+2026-08-25T10:38:10.0449841Z ##[group]Run actions/checkout@v5
+2026-08-25T10:38:10.0450524Z with:
+2026-08-25T10:38:10.0450956Z   sparse-checkout: quantum-safe-go
+2026-08-25T10:38:10.0451330Z   repository: M3rcy1028/cbom-test
+2026-08-25T10:38:10.0454436Z   token: ***
+2026-08-25T10:38:10.0454762Z   ssh-strict: true
+2026-08-25T10:38:10.0455060Z   ssh-user: git
+2026-08-25T10:38:10.0455410Z   persist-credentials: true
+2026-08-25T10:38:10.0455731Z   clean: true
+2026-08-25T10:38:10.0456045Z   sparse-checkout-cone-mode: true
+2026-08-25T10:38:10.0456442Z   fetch-depth: 1
+2026-08-25T10:38:10.0456726Z   fetch-tags: false
+2026-08-25T10:38:10.0457103Z   show-progress: true
+2026-08-25T10:38:10.0457394Z   lfs: false
+2026-08-25T10:38:10.0457676Z   submodules: false
+2026-08-25T10:38:10.0458026Z   set-safe-directory: true
+2026-08-25T10:38:10.0458355Z   allow-unsafe-pr-checkout: false
+2026-08-25T10:38:10.0459033Z ##[endgroup]
+2026-08-25T10:38:10.1529937Z Syncing repository: M3rcy1028/cbom-test
+2026-08-25T10:38:10.1531746Z ##[group]Getting Git version info
+2026-08-25T10:38:10.1532377Z Working directory is '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T10:38:10.1533299Z [command]/usr/bin/git version
+2026-08-25T10:38:10.1544612Z git version 2.55.0
+2026-08-25T10:38:10.1591654Z ##[endgroup]
+2026-08-25T10:38:10.1607334Z Temporarily overriding HOME='/home/runner/work/_temp/ace68e08-88ac-448a-a09a-49f478b8108f' before making global git config changes
+2026-08-25T10:38:10.1608773Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-25T10:38:10.1612834Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:10.1660760Z Deleting the contents of '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T10:38:10.1668030Z ##[group]Initializing the repository
+2026-08-25T10:38:10.1673426Z [command]/usr/bin/git init /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:10.1779617Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-25T10:38:10.1780925Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-25T10:38:10.1785284Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-25T10:38:10.1786161Z hint: call:
+2026-08-25T10:38:10.1786527Z hint:
+2026-08-25T10:38:10.1787020Z hint: 	git config --global init.defaultBranch <name>
+2026-08-25T10:38:10.1787581Z hint:
+2026-08-25T10:38:10.1788156Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-25T10:38:10.1789119Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-25T10:38:10.1789816Z hint:
+2026-08-25T10:38:10.1790201Z hint: 	git branch -m <name>
+2026-08-25T10:38:10.1790620Z hint:
+2026-08-25T10:38:10.1791503Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-25T10:38:10.1792672Z Initialized empty Git repository in /home/runner/work/cbom-test/cbom-test/.git/
+2026-08-25T10:38:10.1797556Z [command]/usr/bin/git remote add origin https://github.com/M3rcy1028/cbom-test
+2026-08-25T10:38:10.1844978Z ##[endgroup]
+2026-08-25T10:38:10.1845841Z ##[group]Disabling automatic garbage collection
+2026-08-25T10:38:10.1849527Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-25T10:38:10.1882835Z ##[endgroup]
+2026-08-25T10:38:10.1883567Z ##[group]Setting up auth
+2026-08-25T10:38:10.1891617Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-25T10:38:10.1929774Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-25T10:38:10.2295642Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-25T10:38:10.2335417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-25T10:38:10.2572850Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-25T10:38:10.2610039Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-25T10:38:10.2831362Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-25T10:38:10.2870904Z ##[endgroup]
+2026-08-25T10:38:10.2871595Z ##[group]Fetching the repository
+2026-08-25T10:38:10.2881489Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +d5604b7289fb6579e6be1e447361c3eddbff19fb:refs/remotes/origin/main
+2026-08-25T10:38:10.6325321Z From https://github.com/M3rcy1028/cbom-test
+2026-08-25T10:38:10.6338574Z  * [new ref]         d5604b7289fb6579e6be1e447361c3eddbff19fb -> origin/main
+2026-08-25T10:38:10.6350620Z ##[endgroup]
+2026-08-25T10:38:10.6351505Z ##[group]Determining the checkout info
+2026-08-25T10:38:10.6352413Z ##[endgroup]
+2026-08-25T10:38:10.6353177Z ##[group]Setting up sparse checkout
+2026-08-25T10:38:10.6354192Z [command]/usr/bin/git sparse-checkout set quantum-safe-go
+2026-08-25T10:38:10.6386434Z ##[endgroup]
+2026-08-25T10:38:10.6387273Z ##[group]Checking out the ref
+2026-08-25T10:38:10.6392380Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-25T10:38:11.0680688Z Switched to a new branch 'main'
+2026-08-25T10:38:11.0684836Z branch 'main' set up to track 'origin/main'.
+2026-08-25T10:38:11.0690639Z ##[endgroup]
+2026-08-25T10:38:11.0757061Z [command]/usr/bin/git log -1 --format=%H
+2026-08-25T10:38:11.0784109Z d5604b7289fb6579e6be1e447361c3eddbff19fb
+2026-08-25T10:38:11.1016062Z ##[group]Run actions/setup-go@v6
+2026-08-25T10:38:11.1016339Z with:
+2026-08-25T10:38:11.1016538Z   go-version: 1.25.x
+2026-08-25T10:38:11.1016826Z   cache-dependency-path: quantum-safe-go/go.mod
+2026-08-25T10:38:11.1017259Z   check-latest: false
+2026-08-25T10:38:11.1019995Z   token: ***
+2026-08-25T10:38:11.1020196Z   cache: true
+2026-08-25T10:38:11.1020389Z ##[endgroup]
+2026-08-25T10:38:11.2217303Z Setup go version spec 1.25.x
+2026-08-25T10:38:11.2458612Z Found in cache @ /opt/hostedtoolcache/go/1.25.13/x64
+2026-08-25T10:38:11.2461560Z Added go to the path
+2026-08-25T10:38:11.2465726Z Successfully set up Go version 1.25.x
+2026-08-25T10:38:11.8094296Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:11.8137082Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:11.8170153Z /home/runner/go/pkg/mod
+2026-08-25T10:38:11.8194934Z /home/runner/.cache/go-build
+2026-08-25T10:38:12.0828508Z Cache is not found
+2026-08-25T10:38:12.0855607Z go version go1.25.13 linux/amd64
+2026-08-25T10:38:12.0855994Z 
+2026-08-25T10:38:12.0856445Z ##[group]go env
+2026-08-25T10:38:12.2263352Z AR='ar'
+2026-08-25T10:38:12.2263671Z CC='gcc'
+2026-08-25T10:38:12.2264249Z CGO_CFLAGS='-O2 -g'
+2026-08-25T10:38:12.2264525Z CGO_CPPFLAGS=''
+2026-08-25T10:38:12.2264783Z CGO_CXXFLAGS='-O2 -g'
+2026-08-25T10:38:12.2265045Z CGO_ENABLED='1'
+2026-08-25T10:38:12.2265312Z CGO_FFLAGS='-O2 -g'
+2026-08-25T10:38:12.2265569Z CGO_LDFLAGS='-O2 -g'
+2026-08-25T10:38:12.2265813Z CXX='g++'
+2026-08-25T10:38:12.2266038Z GCCGO='gccgo'
+2026-08-25T10:38:12.2266287Z GO111MODULE=''
+2026-08-25T10:38:12.2266519Z GOAMD64='v1'
+2026-08-25T10:38:12.2266745Z GOARCH='amd64'
+2026-08-25T10:38:12.2267074Z GOAUTH='netrc'
+2026-08-25T10:38:12.2267390Z GOBIN=''
+2026-08-25T10:38:12.2267752Z GOCACHE='/home/runner/.cache/go-build'
+2026-08-25T10:38:12.2268280Z GOCACHEPROG=''
+2026-08-25T10:38:12.2268710Z GODEBUG=''
+2026-08-25T10:38:12.2268984Z GOENV='/home/runner/.config/go/env'
+2026-08-25T10:38:12.2269347Z GOEXE=''
+2026-08-25T10:38:12.2269577Z GOEXPERIMENT=''
+2026-08-25T10:38:12.2269824Z GOFIPS140='off'
+2026-08-25T10:38:12.2270054Z GOFLAGS=''
+2026-08-25T10:38:12.2270859Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3103650015=/tmp/go-build -gno-record-gcc-switches'
+2026-08-25T10:38:12.2271698Z GOHOSTARCH='amd64'
+2026-08-25T10:38:12.2271984Z GOHOSTOS='linux'
+2026-08-25T10:38:12.2272224Z GOINSECURE=''
+2026-08-25T10:38:12.2272490Z GOMOD='/dev/null'
+2026-08-25T10:38:12.2272771Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-08-25T10:38:12.2273091Z GONOPROXY=''
+2026-08-25T10:38:12.2273314Z GONOSUMDB=''
+2026-08-25T10:38:12.2273555Z GOOS='linux'
+2026-08-25T10:38:12.2274179Z GOPATH='/home/runner/go'
+2026-08-25T10:38:12.2274541Z GOPRIVATE=''
+2026-08-25T10:38:12.2274891Z GOPROXY='https://proxy.golang.org,direct'
+2026-08-25T10:38:12.2275332Z GOROOT='/opt/hostedtoolcache/go/1.25.13/x64'
+2026-08-25T10:38:12.2275695Z GOSUMDB='sum.golang.org'
+2026-08-25T10:38:12.2275965Z GOTELEMETRY='local'
+2026-08-25T10:38:12.2276306Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-08-25T10:38:12.2276661Z GOTMPDIR=''
+2026-08-25T10:38:12.2276885Z GOTOOLCHAIN='local'
+2026-08-25T10:38:12.2277237Z GOTOOLDIR='/opt/hostedtoolcache/go/1.25.13/x64/pkg/tool/linux_amd64'
+2026-08-25T10:38:12.2277676Z GOVCS=''
+2026-08-25T10:38:12.2277872Z GOVERSION='go1.25.13'
+2026-08-25T10:38:12.2278106Z GOWORK=''
+2026-08-25T10:38:12.2278340Z PKG_CONFIG='pkg-config'
+2026-08-25T10:38:12.2278511Z 
+2026-08-25T10:38:12.2278925Z ##[endgroup]
+2026-08-25T10:38:12.2392867Z ##[group]Run go test -v ./...
+2026-08-25T10:38:12.2393197Z [36;1mgo test -v ./...[0m
+2026-08-25T10:38:12.2436897Z shell: /usr/bin/bash -e {0}
+2026-08-25T10:38:12.2437168Z env:
+2026-08-25T10:38:12.2437383Z   GOTOOLCHAIN: local
+2026-08-25T10:38:12.2437599Z ##[endgroup]
+2026-08-25T10:38:22.0133135Z === RUN   TestMLKEM768RoundTrip
+2026-08-25T10:38:22.0136354Z --- PASS: TestMLKEM768RoundTrip (0.00s)
+2026-08-25T10:38:22.0136910Z PASS
+2026-08-25T10:38:22.0144574Z ok  	example.com/cbom-lab/quantum-safe-go	0.002s
+2026-08-25T10:38:22.0508910Z ##[group]Run cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae
+2026-08-25T10:38:22.0509339Z env:
+2026-08-25T10:38:22.0509531Z   GOTOOLCHAIN: local
+2026-08-25T10:38:22.0509752Z   CBOMKIT_LANGUAGES: go
+2026-08-25T10:38:22.0509987Z   CBOMKIT_GENERATE_MODULE_CBOMS: true
+2026-08-25T10:38:22.0510268Z   CBOMKIT_WRITE_EMPTY_CBOMS: false
+2026-08-25T10:38:22.0510695Z ##[endgroup]
+2026-08-25T10:38:22.0612918Z ##[command]/usr/bin/docker run --name c042728e158833804b8cb06ccdb2730a515e_fcb266 --label 05c042 --workdir /github/workspace --rm -e "GOTOOLCHAIN" -e "CBOMKIT_LANGUAGES" -e "CBOMKIT_GENERATE_MODULE_CBOMS" -e "CBOMKIT_WRITE_EMPTY_CBOMS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/cbom-test/cbom-test":"/github/workspace" 05c042:728e158833804b8cb06ccdb2730a515e
+2026-08-25T10:38:22.3995169Z [main] INFO org.pqca.Main - Writing CBOMs to cbom
+2026-08-25T10:38:22.5198612Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T10:38:22.5459306Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'quantum-safe-go' [2 .go files]
+2026-08-25T10:38:22.5460615Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 1 go projects
+2026-08-25T10:38:22.6610570Z [main] INFO org.pqca.scanning.ScannerService - Scanning go project quantum-safe-go (1/1)
+2026-08-25T10:38:22.6790071Z [main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+2026-08-25T10:38:22.7939125Z [main] INFO com.ibm.output.IAggregator - Detected (KeyEncapsulationMechanism) ML-KEM-768
+2026-08-25T10:38:22.8394309Z [main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+2026-08-25T10:38:22.8395767Z [main] INFO org.pqca.scanning.ScannerService - Scanned 1 go projects
+2026-08-25T10:38:23.1198151Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_quantum-safe-go.json with 1 findings
+2026-08-25T10:38:23.1201125Z [main] INFO org.pqca.Main - Scanned 2 files with 42 lines in 0.294 seconds.
+2026-08-25T10:38:23.1488725Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom.json with 1 findings
+2026-08-25T10:38:23.2317958Z ##[group]Run import glob
+2026-08-25T10:38:23.2318285Z [36;1mimport glob[0m
+2026-08-25T10:38:23.2318505Z [36;1mimport json[0m
+2026-08-25T10:38:23.2318700Z [36;1m[0m
+2026-08-25T10:38:23.2318892Z [36;1mfiles = sorted(set([0m
+2026-08-25T10:38:23.2319271Z [36;1m    glob.glob("cbom*.json") + glob.glob("cbom/**/*.json", recursive=True)[0m
+2026-08-25T10:38:23.2319667Z [36;1m))[0m
+2026-08-25T10:38:23.2319865Z [36;1mif not files:[0m
+2026-08-25T10:38:23.2320161Z [36;1m    raise SystemExit("No CBOM JSON was generated")[0m
+2026-08-25T10:38:23.2320474Z [36;1m[0m
+2026-08-25T10:38:23.2320655Z [36;1mmatches = [][0m
+2026-08-25T10:38:23.2320879Z [36;1mfor path in files:[0m
+2026-08-25T10:38:23.2321167Z [36;1m    with open(path, encoding="utf-8") as handle:[0m
+2026-08-25T10:38:23.2321499Z [36;1m        document = json.load(handle)[0m
+2026-08-25T10:38:23.2322046Z [36;1m    for component in document.get("components", []):[0m
+2026-08-25T10:38:23.2322437Z [36;1m        if component.get("name") == "ML-KEM-768":[0m
+2026-08-25T10:38:23.2322791Z [36;1m            matches.append((path, component))[0m
+2026-08-25T10:38:23.2323078Z [36;1m[0m
+2026-08-25T10:38:23.2323270Z [36;1mif not matches:[0m
+2026-08-25T10:38:23.2323615Z [36;1m    raise SystemExit("ML-KEM-768 was not detected in generated CBOMs")[0m
+2026-08-25T10:38:23.2324451Z [36;1m[0m
+2026-08-25T10:38:23.2324667Z [36;1mfor path, component in matches:[0m
+2026-08-25T10:38:23.2325048Z [36;1m    evidence = component.get("evidence", {}).get("occurrences", [])[0m
+2026-08-25T10:38:23.2325420Z [36;1m    if not any([0m
+2026-08-25T10:38:23.2325765Z [36;1m        occurrence.get("location", "").endswith("quantum-safe-go/main.go")[0m
+2026-08-25T10:38:23.2326184Z [36;1m        for occurrence in evidence[0m
+2026-08-25T10:38:23.2326451Z [36;1m    ):[0m
+2026-08-25T10:38:23.2326764Z [36;1m        raise SystemExit(f"ML-KEM-768 in {path} has no main.go evidence")[0m
+2026-08-25T10:38:23.2327143Z [36;1m[0m
+2026-08-25T10:38:23.2327496Z [36;1mprint(f"quantum-safe-cbom-check-ok: {len(matches)} ML-KEM-768 component(s)")[0m
+2026-08-25T10:38:23.2354653Z shell: /usr/bin/python {0}
+2026-08-25T10:38:23.2354906Z env:
+2026-08-25T10:38:23.2355102Z   GOTOOLCHAIN: local
+2026-08-25T10:38:23.2355322Z ##[endgroup]
+2026-08-25T10:38:23.2590820Z quantum-safe-cbom-check-ok: 2 ML-KEM-768 component(s)
+2026-08-25T10:38:23.2701494Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-25T10:38:23.2702826Z ##[group]Run actions/upload-artifact@v4
+2026-08-25T10:38:23.2703106Z with:
+2026-08-25T10:38:23.2703311Z   name: CBOM-quantum-safe
+2026-08-25T10:38:23.2703559Z   path: cbom/cbom*.json
+2026-08-25T10:38:23.2704078Z   if-no-files-found: error
+2026-08-25T10:38:23.2704435Z   compression-level: 6
+2026-08-25T10:38:23.2704653Z   overwrite: false
+2026-08-25T10:38:23.2704861Z   include-hidden-files: false
+2026-08-25T10:38:23.2705085Z env:
+2026-08-25T10:38:23.2705261Z   GOTOOLCHAIN: local
+2026-08-25T10:38:23.2705457Z ##[endgroup]
+2026-08-25T10:38:23.4317655Z (node:3983) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-25T10:38:23.4318433Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-25T10:38:23.4382538Z With the provided path, there will be 2 files uploaded
+2026-08-25T10:38:23.4383512Z Artifact name is valid!
+2026-08-25T10:38:23.4384229Z Root directory input is valid!
+2026-08-25T10:38:23.8484281Z Beginning upload of artifact content to blob storage
+2026-08-25T10:38:23.8688105Z (node:3983) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-25T10:38:24.1374850Z Uploaded bytes 1494
+2026-08-25T10:38:24.2131450Z Finished uploading artifact content to blob storage!
+2026-08-25T10:38:24.2132547Z SHA256 digest of uploaded artifact zip is 2f937b6498d9ecd31157dec494dd1ca9e0c2df78c14bba977fd695e0c5d3bcc8
+2026-08-25T10:38:24.2134889Z Finalizing artifact upload
+2026-08-25T10:38:24.5050697Z Artifact CBOM-quantum-safe.zip successfully finalized. Artifact ID 9559448775
+2026-08-25T10:38:24.5052067Z Artifact CBOM-quantum-safe has been successfully uploaded! Final size is 1494 bytes. Artifact ID is 9559448775
+2026-08-25T10:38:24.5059090Z Artifact download URL: https://github.com/M3rcy1028/cbom-test/actions/runs/32838179278/artifacts/9559448775
+2026-08-25T10:38:24.5212991Z Post job cleanup.
+2026-08-25T10:38:24.6387573Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:24.6430856Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:24.6461976Z /home/runner/go/pkg/mod
+2026-08-25T10:38:24.6488266Z /home/runner/.cache/go-build
+2026-08-25T10:38:24.6496164Z [warning]Cache folder path is retrieved but doesn't exist on disk: /home/runner/go/pkg/mod
+2026-08-25T10:38:24.6692081Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --files-from manifest.txt --use-compress-program zstdmt
+2026-08-25T10:38:26.0907573Z Sent 12913012 of 12913012 (100.0%), 12.3 MBs/sec
+2026-08-25T10:38:26.5061231Z Cache saved with the key: setup-go-Linux-x64-ubuntu24-go-1.25.13-89b5b54836f64277560fcc19104278679423bc557483e85259cfd6dd8c1f0507
+2026-08-25T10:38:26.5194696Z Post job cleanup.
+2026-08-25T10:38:26.6077941Z [command]/usr/bin/git version
+2026-08-25T10:38:26.6119998Z git version 2.55.0
+2026-08-25T10:38:26.6159357Z Temporarily overriding HOME='/home/runner/work/_temp/22a9e858-83e1-40ec-982c-448769c4a006' before making global git config changes
+2026-08-25T10:38:26.6160756Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-25T10:38:26.6164850Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:26.6204773Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-25T10:38:26.6243040Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-25T10:38:26.6494728Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-25T10:38:26.6534387Z http.https://github.com/.extraheader
+2026-08-25T10:38:26.6548433Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-08-25T10:38:26.6575233Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-25T10:38:26.6839751Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-25T10:38:26.6877118Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-25T10:38:26.7263357Z Cleaning up orphan processes
+2026-08-25T10:38:26.7632466Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

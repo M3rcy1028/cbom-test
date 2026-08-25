@@ -1,0 +1,35 @@
+﻿2026-08-25T10:38:23.2317945Z ##[group]Run import glob
+2026-08-25T10:38:23.2318282Z [36;1mimport glob[0m
+2026-08-25T10:38:23.2318502Z [36;1mimport json[0m
+2026-08-25T10:38:23.2318698Z [36;1m[0m
+2026-08-25T10:38:23.2318890Z [36;1mfiles = sorted(set([0m
+2026-08-25T10:38:23.2319268Z [36;1m    glob.glob("cbom*.json") + glob.glob("cbom/**/*.json", recursive=True)[0m
+2026-08-25T10:38:23.2319664Z [36;1m))[0m
+2026-08-25T10:38:23.2319863Z [36;1mif not files:[0m
+2026-08-25T10:38:23.2320158Z [36;1m    raise SystemExit("No CBOM JSON was generated")[0m
+2026-08-25T10:38:23.2320472Z [36;1m[0m
+2026-08-25T10:38:23.2320653Z [36;1mmatches = [][0m
+2026-08-25T10:38:23.2320877Z [36;1mfor path in files:[0m
+2026-08-25T10:38:23.2321165Z [36;1m    with open(path, encoding="utf-8") as handle:[0m
+2026-08-25T10:38:23.2321497Z [36;1m        document = json.load(handle)[0m
+2026-08-25T10:38:23.2322036Z [36;1m    for component in document.get("components", []):[0m
+2026-08-25T10:38:23.2322417Z [36;1m        if component.get("name") == "ML-KEM-768":[0m
+2026-08-25T10:38:23.2322789Z [36;1m            matches.append((path, component))[0m
+2026-08-25T10:38:23.2323075Z [36;1m[0m
+2026-08-25T10:38:23.2323267Z [36;1mif not matches:[0m
+2026-08-25T10:38:23.2323613Z [36;1m    raise SystemExit("ML-KEM-768 was not detected in generated CBOMs")[0m
+2026-08-25T10:38:23.2324445Z [36;1m[0m
+2026-08-25T10:38:23.2324664Z [36;1mfor path, component in matches:[0m
+2026-08-25T10:38:23.2325045Z [36;1m    evidence = component.get("evidence", {}).get("occurrences", [])[0m
+2026-08-25T10:38:23.2325417Z [36;1m    if not any([0m
+2026-08-25T10:38:23.2325763Z [36;1m        occurrence.get("location", "").endswith("quantum-safe-go/main.go")[0m
+2026-08-25T10:38:23.2326182Z [36;1m        for occurrence in evidence[0m
+2026-08-25T10:38:23.2326449Z [36;1m    ):[0m
+2026-08-25T10:38:23.2326761Z [36;1m        raise SystemExit(f"ML-KEM-768 in {path} has no main.go evidence")[0m
+2026-08-25T10:38:23.2327141Z [36;1m[0m
+2026-08-25T10:38:23.2327490Z [36;1mprint(f"quantum-safe-cbom-check-ok: {len(matches)} ML-KEM-768 component(s)")[0m
+2026-08-25T10:38:23.2354645Z shell: /usr/bin/python {0}
+2026-08-25T10:38:23.2354903Z env:
+2026-08-25T10:38:23.2355099Z   GOTOOLCHAIN: local
+2026-08-25T10:38:23.2355320Z ##[endgroup]
+2026-08-25T10:38:23.2590800Z quantum-safe-cbom-check-ok: 2 ML-KEM-768 component(s)

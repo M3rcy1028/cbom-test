@@ -39,8 +39,8 @@ CBOMkit 생태계는 하나의 만능 프로그램이 아니라, **공통 Cyclon
 
 | 실험 | 핵심 결과 | 판정 |
 |---|---:|---|
-| JSON Schema | 정상·음성 14/14 기대 일치 | 통과 |
-| Semantic positive set | 13/13 참조 무결성 통과 | 통과 |
+| JSON Schema | 정상·음성 15/15 기대 일치 | 통과 |
+| Semantic positive set | 14/14 참조 무결성 통과 | 통과 |
 | 실제 ML-KEM-768 source | round-trip·scanner·policy·Viewer 성공 | quantum-safe |
 | Sonar source scan | 38 components, 23 dependencies, 32 issues | 성공 |
 | Sonar 고수준 family recall | 22/22 | 100% |
@@ -457,6 +457,8 @@ Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `jav
 `quantum-safe-go/main.go`는 Go 표준 라이브러리 `crypto/mlkem`으로 ML-KEM-768 decapsulation key를 생성하고, public encapsulation key로 shared key를 캡슐화한 뒤 ciphertext를 역캡슐화해 양쪽 32-byte shared key 일치를 검증했다.
 
 CBOMkit-action `e7a99fb` Go integration으로 이 디렉터리만 스캔한 결과 `ML-KEM-768` 1개를 탐지했다. 산출물은 CycloneDX 1.6, `primitive=kem`, parameter set `768`, NIST OID `2.16.840.1.101.3.4.4.2`, `main.go:13` occurrence를 포함하며 schema·semantic validation을 모두 통과했다.
+
+GitHub-hosted runner에서도 [run 32838179278](https://github.com/M3rcy1028/cbom-test/actions/runs/32838179278)을 실행했다. 전체 workspace 잡은 current Action image의 다중 Go module index 오염 때문에 `quantum-safe-go`를 0 findings로 만들었지만, sparse checkout으로 해당 module만 격리한 `quantum-safe-scan` 잡은 unit test, 탐지, `main.go` evidence assertion, artifact upload를 모두 통과했다. 원격 `CBOM-quantum-safe` artifact의 통합·module CBOM은 각각 정확히 1 component/0 dependencies이고 `ML-KEM-768`을 포함한다. artifact digest는 `sha256:2f937b6498d9ecd31157dec494dd1ca9e0c2df78c14bba977fd695e0c5d3bcc8`이며 원시 메타데이터·로그·ZIP은 `results/quantum-safe/github/`에 보존했다.
 
 내장 정책 API는 level 3 `Quantum Safe`, global true를 반환했다. 같은 `results/quantum-safe/action/cbom.json`을 IBM Zurich Viewer에 업로드했을 때도 `Compliant`, `Quantum Safe` 100%, `ML-KEM-768`, `KEM`, `main.go:13`이 실제로 표시됐다. 단, 이는 독립 KEM 실행 검증이며 기존 RSA 기반 protocol의 hybrid/PQC migration 완료를 의미하지 않는다.
 

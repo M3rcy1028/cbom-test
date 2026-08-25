@@ -18,7 +18,7 @@
 
 ### 02. Schema validation — `02-schema-validation.png`
 
-1. 무엇을 실행했는가: IBM CBOM 1.0, CycloneDX 1.6/1.7 공식 JSON Schema에 정상·음성 문서 14개를 검증했다.
+1. 무엇을 실행했는가: IBM CBOM 1.0, CycloneDX 1.6/1.7 공식 JSON Schema에 정상·음성 문서 15개를 검증했다.
 2. 어디를 볼 것인가: 각 case의 expected/actual 값과 PASS badge다.
 3. 결론: Sonar, Action, Theia directory/image 산출물이 대응 schema를 통과했고 음성 fixture는 의도대로 실패했다.
 4. 결론낼 수 없는 것: Schema 통과만으로 bom-ref나 dependency 참조가 존재한다고 보장하지 않는다.
@@ -26,7 +26,7 @@
 ### 03. Semantic validation — `03-semantic-validation.png`
 
 1. 무엇을 실행했는가: component bom-ref와 dependency root/target의 중복·누락·dangling 참조를 검사했다.
-2. 어디를 볼 것인가: 정상 13/13, Theia enriched 누락, schema-positive 음성 fixture 행이다.
+2. 어디를 볼 것인가: 정상 14/14, Theia enriched 누락, schema-positive 음성 fixture 행이다.
 3. 결론: 핵심 원본 산출물은 참조 무결성이 있고, enrichment 결과에는 bom-ref 없는 component가 1개 있다.
 4. 결론낼 수 없는 것: 알고리즘 속성의 암호학적 정확성까지 검증하는 도구는 아니다.
 

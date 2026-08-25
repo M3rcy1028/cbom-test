@@ -488,3 +488,13 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - 이는 로컬에서 해당 module만 격리해 source-built Action을 실행했을 때 ML-KEM이 정상 탐지된 결과와 대비되는 다중 Go module index 오염 경계임. 검증 gate를 제거하지 않고 workflow를 전체 인벤토리 잡과 quantum-safe 전용 잡으로 분리함.
 - 전용 잡은 sparse checkout으로 `quantum-safe-go`만 받아 unit test 후 Action을 실행하고, 생성 JSON에 `ML-KEM-768`과 `quantum-safe-go/main.go` evidence가 모두 있어야 성공하도록 구성함.
 - 1차 실패 run URL: `https://github.com/M3rcy1028/cbom-test/actions/runs/32837919108`. 격리 잡의 원격 성공·artifact 회수 결과는 후속 항목에 기록 예정.
+
+### 2026-08-25 — Quantum-safe 원격 Action 격리 재실행 성공
+
+- workflow 격리 수정 commit `d5604b7289fb6579e6be1e447361c3eddbff19fb`를 push한 뒤 run `32838179278`을 실행했으며 `cbom-scan`과 `quantum-safe-scan` 두 잡이 모두 success, 총 실행 시간은 약 39초임.
+- 전용 잡에서 Go 1.25 unit test, Action scan, ML-KEM component/source evidence assertion, artifact upload가 전부 성공함. log는 `Detected (KeyEncapsulationMechanism) ML-KEM-768`, module·통합 CBOM 각각 `with 1 findings`, gate는 `2 ML-KEM-768 component(s)`를 기록함.
+- `CBOM-quantum-safe` artifact ID는 `9559448775`, size 1,494 bytes, digest는 `sha256:2f937b6498d9ecd31157dec494dd1ca9e0c2df78c14bba977fd695e0c5d3bcc8`이며 다운로드 ZIP SHA-256과 일치함.
+- 원격 격리 CBOM은 CycloneDX 1.6, components 1, dependencies 0이며 `ML-KEM-768`, `kem`, parameter set 768, NIST OID, `quantum-safe-go/main.go:13` evidence를 포함함. schema·semantic 검증군을 각각 15/15, 14/14로 확장해 통과함.
+- 비교를 위해 같은 run의 전체 workspace artifact도 보존함. 전체 통합은 47 components/24 dependencies이나 `cbom_quantum-safe-go.json`은 0 components여서 upstream 다중-module 결함이 남아 있음을 다시 확인함. 성공 조건은 이 문제를 숨기는 것이 아니라 별도 격리 잡의 non-empty/evidence gate로 보완함.
+- raw run/jobs/artifact metadata, ZIP, 추출 CBOM, job log는 `results/quantum-safe/github/`에 보존함.
+- 게시 전 Go test/vet, workflow YAML, remote ML-KEM 필드·source evidence, artifact hash 9개, Markdown local link 49개, private-key/credential pattern 0건, 10 MiB file 상한을 확인함. staged tree를 `/tmp`에 독립 전개해 schema 15/15, semantic 14/14, Go test와 hash 검증을 재실행해 모두 통과함.

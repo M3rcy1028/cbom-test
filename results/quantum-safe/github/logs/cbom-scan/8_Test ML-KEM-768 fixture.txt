@@ -1,0 +1,13 @@
+﻿2026-08-25T10:38:15.2565185Z ##[group]Run go test -v ./...
+2026-08-25T10:38:15.2565536Z [36;1mgo test -v ./...[0m
+2026-08-25T10:38:15.2602476Z shell: /usr/bin/bash -e {0}
+2026-08-25T10:38:15.2602741Z env:
+2026-08-25T10:38:15.2603065Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:15.2603584Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:15.2603976Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:15.2604373Z   GOTOOLCHAIN: local
+2026-08-25T10:38:15.2604642Z ##[endgroup]
+2026-08-25T10:38:22.6524534Z === RUN   TestMLKEM768RoundTrip
+2026-08-25T10:38:22.6527645Z --- PASS: TestMLKEM768RoundTrip (0.00s)
+2026-08-25T10:38:22.6528377Z PASS
+2026-08-25T10:38:22.6530789Z ok  	example.com/cbom-lab/quantum-safe-go	0.002s

@@ -194,6 +194,21 @@
         "danglingDependencyTargets": [],
         "duplicateDependencyRoots": []
       }
+    },
+    {
+      "path": "results/quantum-safe/github/artifact/quantum-safe/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 1,
+      "dependencyCount": 0,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
     }
   ],
   "allValid": true

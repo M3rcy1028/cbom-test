@@ -1,0 +1,8 @@
+﻿2026-08-25T10:38:27.7614883Z Post job cleanup.
+2026-08-25T10:38:27.8818589Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:27.8866153Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:27.8893350Z /home/runner/go/pkg/mod
+2026-08-25T10:38:27.8915310Z /home/runner/.cache/go-build
+2026-08-25T10:38:27.8924907Z [warning]Cache folder path is retrieved but doesn't exist on disk: /home/runner/go/pkg/mod
+2026-08-25T10:38:27.9133535Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --files-from manifest.txt --use-compress-program zstdmt
+2026-08-25T10:38:28.1413373Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.25.13-89b5b54836f64277560fcc19104278679423bc557483e85259cfd6dd8c1f0507, another job may be creating this cache.

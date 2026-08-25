@@ -1,0 +1,9 @@
+﻿2026-08-25T10:38:24.5212982Z Post job cleanup.
+2026-08-25T10:38:24.6387526Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:24.6430681Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:24.6461961Z /home/runner/go/pkg/mod
+2026-08-25T10:38:24.6488252Z /home/runner/.cache/go-build
+2026-08-25T10:38:24.6496149Z [warning]Cache folder path is retrieved but doesn't exist on disk: /home/runner/go/pkg/mod
+2026-08-25T10:38:24.6692062Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --files-from manifest.txt --use-compress-program zstdmt
+2026-08-25T10:38:26.0907535Z Sent 12913012 of 12913012 (100.0%), 12.3 MBs/sec
+2026-08-25T10:38:26.5061193Z Cache saved with the key: setup-go-Linux-x64-ubuntu24-go-1.25.13-89b5b54836f64277560fcc19104278679423bc557483e85259cfd6dd8c1f0507

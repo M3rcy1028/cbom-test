@@ -124,6 +124,12 @@ def main() -> int:
             ROOT / "results/quantum-safe/action/cbom.json",
             True,
         ),
+        check(
+            "CycloneDX 1.6 positive: GitHub-hosted isolated ML-KEM-768 scan",
+            ROOT / "sources/cyclonedx-schema/bom-1.6.schema.json",
+            ROOT / "results/quantum-safe/github/artifact/quantum-safe/cbom.json",
+            True,
+        ),
     ]
     output = {"allPassed": all(case["passed"] for case in cases), "cases": cases}
     result_path = ROOT / "results/cyclonedx/schema-validation.json"

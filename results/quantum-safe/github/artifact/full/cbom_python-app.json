@@ -1,0 +1,378 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:fc754d6d-4f05-4dda-b31b-7422cca1e3c1",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-25T10:38:26Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "PQCA"
+          },
+          "name" : "CBOMkit"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "gitUrl",
+        "value" : "https://github.com/M3rcy1028/cbom-test"
+      },
+      {
+        "name" : "revision",
+        "value" : "main"
+      },
+      {
+        "name" : "commit",
+        "value" : "d5604b7289fb6579e6be1e447361c3eddbff19fb"
+      },
+      {
+        "name" : "subfolder",
+        "value" : "python-app"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1ecdd8c9-0e2b-4f1b-adc6-86f31ebd5611",
+      "name" : "AES-GCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 13,
+            "offset" : 16,
+            "additionalContext" : "Cipher"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "gcm",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "a21ec5a5-5008-4b05-9c13-9cee50ed8f2e",
+      "name" : "SHA256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 48,
+            "offset" : 11,
+            "additionalContext" : "PBKDF2HMAC"
+          },
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 55,
+            "offset" : 43,
+            "additionalContext" : "SHA256"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5c5b65e1-0b1a-4601-aacc-fc3922c9a4a3",
+      "name" : "private-key@5c5b65e1-0b1a-4601-aacc-fc3922c9a4a3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 59,
+            "offset" : 12,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "private-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "04764600-091d-4e44-a0b6-79a6bd8cd6f0",
+      "name" : "AES-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 19,
+            "offset" : 16,
+            "additionalContext" : "Cipher"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "cbc",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "131ffbe7-c047-459e-b478-10516b68320a",
+      "name" : "EC-secp256r1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 60,
+            "offset" : 10,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "curve" : "secp256r1",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "fddddeca-0b5c-4f4e-a859-32d0b533c2a1",
+      "name" : "private-key@fddddeca-0b5c-4f4e-a859-32d0b533c2a1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 24,
+            "offset" : 18,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "private-key",
+          "size" : 2048
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f5328f02-5075-4a72-9607-4193024e2d20",
+      "name" : "private-key@f5328f02-5075-4a72-9607-4193024e2d20",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 60,
+            "offset" : 10,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "private-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "141d642e-5e2c-484c-8473-a20fe1c60971",
+      "name" : "PBKDF2-SHA256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 48,
+            "offset" : 11,
+            "additionalContext" : "PBKDF2HMAC"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "keyderive"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f1d2335b-42a5-42eb-b2f6-02ab2fa9e967",
+      "name" : "ECDH",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 61,
+            "offset" : 11,
+            "additionalContext" : "exchange"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "key-agree",
+          "curve" : "secp256r1",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.3.132.1.12"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "71914c1e-64b3-494e-b3b7-470427a8e694",
+      "name" : "SHA256withECDSA",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 55,
+            "offset" : 11,
+            "additionalContext" : "sign"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "curve" : "secp256r1",
+          "cryptoFunctions" : [
+            "keygen",
+            "sign"
+          ]
+        },
+        "oid" : "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d8b339e2-da0f-4222-b204-7107f040101d",
+      "name" : "RSA-2048",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 24,
+            "offset" : 18,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "b049e939-f076-4b07-9f1e-1fe1391ed795",
+      "name" : "private-key@b049e939-f076-4b07-9f1e-1fe1391ed795",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "python-app/crypto_fixture.py",
+            "line" : 54,
+            "offset" : 18,
+            "additionalContext" : "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "private-key"
+        }
+      }
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "5c5b65e1-0b1a-4601-aacc-fc3922c9a4a3",
+      "dependsOn" : [
+        "f1d2335b-42a5-42eb-b2f6-02ab2fa9e967"
+      ]
+    },
+    {
+      "ref" : "fddddeca-0b5c-4f4e-a859-32d0b533c2a1",
+      "dependsOn" : [
+        "d8b339e2-da0f-4222-b204-7107f040101d"
+      ]
+    },
+    {
+      "ref" : "f5328f02-5075-4a72-9607-4193024e2d20",
+      "dependsOn" : [
+        "131ffbe7-c047-459e-b478-10516b68320a"
+      ]
+    },
+    {
+      "ref" : "141d642e-5e2c-484c-8473-a20fe1c60971",
+      "dependsOn" : [
+        "a21ec5a5-5008-4b05-9c13-9cee50ed8f2e"
+      ]
+    },
+    {
+      "ref" : "71914c1e-64b3-494e-b3b7-470427a8e694",
+      "dependsOn" : [
+        "a21ec5a5-5008-4b05-9c13-9cee50ed8f2e"
+      ]
+    },
+    {
+      "ref" : "b049e939-f076-4b07-9f1e-1fe1391ed795",
+      "dependsOn" : [
+        "71914c1e-64b3-494e-b3b7-470427a8e694"
+      ]
+    }
+  ]
+}

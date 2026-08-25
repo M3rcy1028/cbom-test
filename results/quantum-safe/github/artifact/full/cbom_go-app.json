@@ -1,0 +1,38 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:228bb0db-1e82-44af-8bd4-18cd057e29fe",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-25T10:38:26Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "PQCA"
+          },
+          "name" : "CBOMkit"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "gitUrl",
+        "value" : "https://github.com/M3rcy1028/cbom-test"
+      },
+      {
+        "name" : "revision",
+        "value" : "main"
+      },
+      {
+        "name" : "commit",
+        "value" : "d5604b7289fb6579e6be1e447361c3eddbff19fb"
+      },
+      {
+        "name" : "subfolder",
+        "value" : "go-app"
+      }
+    ]
+  },
+  "dependencies" : [ ]
+}

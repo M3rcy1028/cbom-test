@@ -1,0 +1,29 @@
+﻿2026-08-25T10:38:27.1274685Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-25T10:38:27.1276099Z ##[group]Run actions/upload-artifact@v4
+2026-08-25T10:38:27.1276388Z with:
+2026-08-25T10:38:27.1276580Z   name: CBOM
+2026-08-25T10:38:27.1276787Z   path: cbom/cbom*.json
+2026-08-25T10:38:27.1277027Z   if-no-files-found: error
+2026-08-25T10:38:27.1277276Z   compression-level: 6
+2026-08-25T10:38:27.1277496Z   overwrite: false
+2026-08-25T10:38:27.1277717Z   include-hidden-files: false
+2026-08-25T10:38:27.1278257Z env:
+2026-08-25T10:38:27.1278581Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:27.1279084Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:27.1279477Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:27.1279738Z   GOTOOLCHAIN: local
+2026-08-25T10:38:27.1279958Z ##[endgroup]
+2026-08-25T10:38:27.2879925Z (node:4225) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-25T10:38:27.2880713Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-25T10:38:27.2948459Z With the provided path, there will be 7 files uploaded
+2026-08-25T10:38:27.2955996Z Artifact name is valid!
+2026-08-25T10:38:27.2956632Z Root directory input is valid!
+2026-08-25T10:38:27.4738919Z Beginning upload of artifact content to blob storage
+2026-08-25T10:38:27.5053615Z (node:4225) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-25T10:38:27.5299787Z Uploaded bytes 10904
+2026-08-25T10:38:27.5458119Z Finished uploading artifact content to blob storage!
+2026-08-25T10:38:27.5459569Z SHA256 digest of uploaded artifact zip is 2dd8c9e5dbe0fede5d876eb2d4f5fdd22d63f5ccd3d31b0156898a7b93e4ff3b
+2026-08-25T10:38:27.5461545Z Finalizing artifact upload
+2026-08-25T10:38:27.7449326Z Artifact CBOM.zip successfully finalized. Artifact ID 9559450366
+2026-08-25T10:38:27.7450491Z Artifact CBOM has been successfully uploaded! Final size is 10904 bytes. Artifact ID is 9559450366
+2026-08-25T10:38:27.7457432Z Artifact download URL: https://github.com/M3rcy1028/cbom-test/actions/runs/32838179278/artifacts/9559450366

@@ -1,0 +1,494 @@
+﻿2026-08-25T10:37:56.6909208Z Current runner version: '2.336.0'
+2026-08-25T10:37:56.6945441Z ##[group]Runner Image Provisioner
+2026-08-25T10:37:56.6946827Z Hosted Compute Agent
+2026-08-25T10:37:56.6947895Z Version: 20260729.566
+2026-08-25T10:37:56.6949238Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+2026-08-25T10:37:56.6950600Z Build Date: 2026-07-29T19:17:02Z
+2026-08-25T10:37:56.6951714Z Worker ID: {ea77be96-43fb-4b82-87fa-b35e137d7741}
+2026-08-25T10:37:56.6952945Z Azure Region: eastus
+2026-08-25T10:37:56.6954098Z ##[endgroup]
+2026-08-25T10:37:56.6956882Z ##[group]Operating System
+2026-08-25T10:37:56.6958288Z Ubuntu
+2026-08-25T10:37:56.6959214Z 24.04.4
+2026-08-25T10:37:56.6960107Z LTS
+2026-08-25T10:37:56.6961130Z ##[endgroup]
+2026-08-25T10:37:56.6962042Z ##[group]Runner Image
+2026-08-25T10:37:56.6963122Z Image: ubuntu-24.04
+2026-08-25T10:37:56.6964078Z Version: 20260816.277.1
+2026-08-25T10:37:56.6966312Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260816.277/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-25T10:37:56.6969258Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260816.277
+2026-08-25T10:37:56.6971527Z ##[endgroup]
+2026-08-25T10:37:56.6973346Z ##[group]GITHUB_TOKEN Permissions
+2026-08-25T10:37:56.6976552Z Contents: read
+2026-08-25T10:37:56.6977516Z Metadata: read
+2026-08-25T10:37:56.6978756Z ##[endgroup]
+2026-08-25T10:37:56.6982283Z Secret source: Actions
+2026-08-25T10:37:56.6984455Z Prepare workflow directory
+2026-08-25T10:37:56.7475415Z Prepare all required actions
+2026-08-25T10:37:56.7548709Z Getting action download info
+2026-08-25T10:37:56.9893098Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-08-25T10:37:57.1270381Z Download action repository 'actions/setup-java@v5' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+2026-08-25T10:37:57.3668602Z Download action repository 'actions/setup-go@v6' (SHA:924ae3a1cded613372ab5595356fb5720e22ba16)
+2026-08-25T10:37:57.5331317Z Download action repository 'cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae' (SHA:e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae)
+2026-08-25T10:37:58.4144125Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-08-25T10:37:58.6752822Z Complete job name: cbom-scan
+2026-08-25T10:37:58.7340031Z ##[group]Build container for action use: '/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae/Dockerfile'.
+2026-08-25T10:37:58.7411477Z ##[command]/usr/bin/docker build -t b366c3:f23e015ba67e4c29958b49e38b9c2465 -f "/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae/Dockerfile" "/home/runner/work/_actions/cbomkit/cbomkit-action/e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae"
+2026-08-25T10:37:59.3367353Z #0 building with "default" instance using docker driver
+2026-08-25T10:37:59.3367782Z 
+2026-08-25T10:37:59.3368297Z #1 [internal] load build definition from Dockerfile
+2026-08-25T10:37:59.3368862Z #1 transferring dockerfile: 187B done
+2026-08-25T10:37:59.3369350Z #1 DONE 0.0s
+2026-08-25T10:37:59.3369555Z 
+2026-08-25T10:37:59.3369879Z #2 [internal] load metadata for ghcr.io/cbomkit/cbomkit-action:edge
+2026-08-25T10:37:59.5439331Z #2 DONE 0.4s
+2026-08-25T10:37:59.6686796Z 
+2026-08-25T10:37:59.6687682Z #3 [internal] load .dockerignore
+2026-08-25T10:37:59.6688406Z #3 transferring context: 2B done
+2026-08-25T10:37:59.6689049Z #3 DONE 0.0s
+2026-08-25T10:37:59.6690295Z 
+2026-08-25T10:37:59.6691340Z #4 [1/1] FROM ghcr.io/cbomkit/cbomkit-action:edge@sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856
+2026-08-25T10:37:59.6692801Z #4 resolve ghcr.io/cbomkit/cbomkit-action:edge@sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856 done
+2026-08-25T10:37:59.6694732Z #4 sha256:648e7c744ccfd699390467c5bf776bb83988778b4843a165ca3a62135868a856 1.61kB / 1.61kB done
+2026-08-25T10:37:59.6696565Z #4 sha256:f260d6ce452a83ec0a95ffe76e03b92d68595dff07800d2a552201625e602c0a 1.06kB / 1.06kB done
+2026-08-25T10:37:59.6698466Z #4 sha256:86d4dccd26584d4426846696199866f4ede3abb779d130835e473e39ba316746 28.36kB / 28.36kB done
+2026-08-25T10:37:59.6708447Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 22.02MB / 39.49MB 0.1s
+2026-08-25T10:37:59.6710300Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 2.10MB / 118.98MB 0.1s
+2026-08-25T10:37:59.6714111Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 0B / 63.92MB 0.1s
+2026-08-25T10:37:59.8483396Z #4 sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 39.49MB / 39.49MB 0.1s done
+2026-08-25T10:37:59.8485174Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 50.33MB / 118.98MB 0.2s
+2026-08-25T10:37:59.8486522Z #4 extracting sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 0.1s
+2026-08-25T10:37:59.8487874Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 0B / 14.81MB 0.2s
+2026-08-25T10:37:59.9684508Z #4 sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 118.98MB / 118.98MB 0.4s done
+2026-08-25T10:37:59.9686116Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 31.46MB / 63.92MB 0.4s
+2026-08-25T10:37:59.9687576Z #4 sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 14.81MB / 14.81MB 0.4s done
+2026-08-25T10:38:00.0685053Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 41.94MB / 63.92MB 0.5s
+2026-08-25T10:38:00.1919629Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 52.43MB / 63.92MB 0.6s
+2026-08-25T10:38:00.2928385Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 63.92MB / 63.92MB 0.7s
+2026-08-25T10:38:00.4031193Z #4 sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 63.92MB / 63.92MB 0.7s done
+2026-08-25T10:38:00.6834650Z #4 extracting sha256:facd750fb859fb92d818cca9dde2ff1a25f3b34b5ad1d1516971eec61cbf4849 0.9s done
+2026-08-25T10:38:00.6835949Z #4 extracting sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042
+2026-08-25T10:38:03.5305332Z #4 extracting sha256:be0fa6423fb01e8b2b5c462b71b765c9635d5b87325680e14f012888637da042 2.7s done
+2026-08-25T10:38:04.1980494Z #4 extracting sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b
+2026-08-25T10:38:04.5575997Z #4 extracting sha256:f323d271f9dc4abfa74798ab3e4bea448a5182c82f2a571d7ab3601b9195d78b 0.3s done
+2026-08-25T10:38:04.5589499Z #4 extracting sha256:36d9c26ae03c936026ed07c1d696afb4a6f997e1287a1ec211467255afdd8509 0.1s done
+2026-08-25T10:38:04.6046220Z #4 DONE 5.0s
+2026-08-25T10:38:04.6046865Z 
+2026-08-25T10:38:04.6047149Z #5 exporting to image
+2026-08-25T10:38:04.6047665Z #5 exporting layers done
+2026-08-25T10:38:04.6048924Z #5 writing image sha256:86d4dccd26584d4426846696199866f4ede3abb779d130835e473e39ba316746 done
+2026-08-25T10:38:04.6049885Z #5 naming to docker.io/library/b366c3:f23e015ba67e4c29958b49e38b9c2465 done
+2026-08-25T10:38:04.6050421Z #5 DONE 0.0s
+2026-08-25T10:38:04.6096887Z ##[endgroup]
+2026-08-25T10:38:04.6444715Z ##[group]Run actions/checkout@v5
+2026-08-25T10:38:04.6445522Z with:
+2026-08-25T10:38:04.6445756Z   repository: M3rcy1028/cbom-test
+2026-08-25T10:38:04.6448472Z   token: ***
+2026-08-25T10:38:04.6448688Z   ssh-strict: true
+2026-08-25T10:38:04.6448892Z   ssh-user: git
+2026-08-25T10:38:04.6449103Z   persist-credentials: true
+2026-08-25T10:38:04.6449336Z   clean: true
+2026-08-25T10:38:04.6449561Z   sparse-checkout-cone-mode: true
+2026-08-25T10:38:04.6449816Z   fetch-depth: 1
+2026-08-25T10:38:04.6450019Z   fetch-tags: false
+2026-08-25T10:38:04.6450233Z   show-progress: true
+2026-08-25T10:38:04.6450451Z   lfs: false
+2026-08-25T10:38:04.6450653Z   submodules: false
+2026-08-25T10:38:04.6450871Z   set-safe-directory: true
+2026-08-25T10:38:04.6451150Z   allow-unsafe-pr-checkout: false
+2026-08-25T10:38:04.6451677Z ##[endgroup]
+2026-08-25T10:38:04.7453882Z Syncing repository: M3rcy1028/cbom-test
+2026-08-25T10:38:04.7456302Z ##[group]Getting Git version info
+2026-08-25T10:38:04.7457434Z Working directory is '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T10:38:04.7458674Z [command]/usr/bin/git version
+2026-08-25T10:38:04.7464074Z git version 2.55.0
+2026-08-25T10:38:04.7487618Z ##[endgroup]
+2026-08-25T10:38:04.7503441Z Temporarily overriding HOME='/home/runner/work/_temp/fe52edd6-6fe7-4079-a895-c6374a9b22a9' before making global git config changes
+2026-08-25T10:38:04.7504899Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-25T10:38:04.7509497Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:04.7572069Z Deleting the contents of '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T10:38:04.7577013Z ##[group]Initializing the repository
+2026-08-25T10:38:04.7582771Z [command]/usr/bin/git init /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:04.7741441Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-25T10:38:04.7742341Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-25T10:38:04.7742920Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-25T10:38:04.7743313Z hint: call:
+2026-08-25T10:38:04.7743510Z hint:
+2026-08-25T10:38:04.7743938Z hint: 	git config --global init.defaultBranch <name>
+2026-08-25T10:38:04.7744535Z hint:
+2026-08-25T10:38:04.7745106Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-25T10:38:04.7745913Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-25T10:38:04.7746568Z hint:
+2026-08-25T10:38:04.7746960Z hint: 	git branch -m <name>
+2026-08-25T10:38:04.7747417Z hint:
+2026-08-25T10:38:04.7748234Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-25T10:38:04.7749347Z Initialized empty Git repository in /home/runner/work/cbom-test/cbom-test/.git/
+2026-08-25T10:38:04.7758975Z [command]/usr/bin/git remote add origin https://github.com/M3rcy1028/cbom-test
+2026-08-25T10:38:04.7814972Z ##[endgroup]
+2026-08-25T10:38:04.7815601Z ##[group]Disabling automatic garbage collection
+2026-08-25T10:38:04.7820730Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-25T10:38:04.7851236Z ##[endgroup]
+2026-08-25T10:38:04.7851825Z ##[group]Setting up auth
+2026-08-25T10:38:04.7859725Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-25T10:38:04.7896750Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-25T10:38:04.8324734Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-25T10:38:04.8366196Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-25T10:38:04.8596530Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-25T10:38:04.8631930Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-25T10:38:04.8860568Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-25T10:38:04.8900222Z ##[endgroup]
+2026-08-25T10:38:04.8900992Z ##[group]Fetching the repository
+2026-08-25T10:38:04.8910234Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d5604b7289fb6579e6be1e447361c3eddbff19fb:refs/remotes/origin/main
+2026-08-25T10:38:05.7584853Z From https://github.com/M3rcy1028/cbom-test
+2026-08-25T10:38:05.7588372Z  * [new ref]         d5604b7289fb6579e6be1e447361c3eddbff19fb -> origin/main
+2026-08-25T10:38:05.7590434Z ##[endgroup]
+2026-08-25T10:38:05.7591381Z ##[group]Determining the checkout info
+2026-08-25T10:38:05.7593514Z ##[endgroup]
+2026-08-25T10:38:05.7602017Z [command]/usr/bin/git sparse-checkout disable
+2026-08-25T10:38:05.7653001Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-25T10:38:05.7685608Z ##[group]Checking out the ref
+2026-08-25T10:38:05.7690840Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-25T10:38:05.7993626Z Switched to a new branch 'main'
+2026-08-25T10:38:05.7998935Z branch 'main' set up to track 'origin/main'.
+2026-08-25T10:38:05.8009725Z ##[endgroup]
+2026-08-25T10:38:05.8057197Z [command]/usr/bin/git log -1 --format=%H
+2026-08-25T10:38:05.8084197Z d5604b7289fb6579e6be1e447361c3eddbff19fb
+2026-08-25T10:38:05.8376615Z ##[group]Run actions/setup-java@v5
+2026-08-25T10:38:05.8376907Z with:
+2026-08-25T10:38:05.8377104Z   distribution: temurin
+2026-08-25T10:38:05.8377327Z   java-version: 21
+2026-08-25T10:38:05.8377525Z   cache: maven
+2026-08-25T10:38:05.8377723Z   java-package: jdk
+2026-08-25T10:38:05.8378264Z   check-latest: false
+2026-08-25T10:38:05.8378595Z   set-default: true
+2026-08-25T10:38:05.8378820Z   verify-signature: false
+2026-08-25T10:38:05.8379050Z   server-id: github
+2026-08-25T10:38:05.8379263Z   server-username: GITHUB_ACTOR
+2026-08-25T10:38:05.8379518Z   server-password: GITHUB_TOKEN
+2026-08-25T10:38:05.8379765Z   overwrite-settings: true
+2026-08-25T10:38:05.8379994Z   job-status: success
+2026-08-25T10:38:05.8382277Z   token: ***
+2026-08-25T10:38:05.8382495Z   show-download-progress: false
+2026-08-25T10:38:05.8382742Z ##[endgroup]
+2026-08-25T10:38:05.9884034Z ##[group]Installed distributions
+2026-08-25T10:38:05.9964635Z Resolved Java 21.0.12+8 from tool-cache
+2026-08-25T10:38:05.9965243Z Setting Java 21.0.12+8 as the default
+2026-08-25T10:38:05.9976010Z Creating toolchains.xml for JDK version 21 from temurin
+2026-08-25T10:38:06.0052797Z Writing to /home/runner/.m2/toolchains.xml
+2026-08-25T10:38:06.0053237Z 
+2026-08-25T10:38:06.0053393Z Java configuration:
+2026-08-25T10:38:06.0053775Z   Distribution: temurin
+2026-08-25T10:38:06.0054165Z   Version: 21.0.12+8
+2026-08-25T10:38:06.0054685Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.0055164Z 
+2026-08-25T10:38:06.0055590Z ##[endgroup]
+2026-08-25T10:38:06.0084348Z Creating settings.xml with server-id: github
+2026-08-25T10:38:06.0084723Z Writing to /home/runner/.m2/settings.xml
+2026-08-25T10:38:06.0085633Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-08-25T10:38:06.1471728Z Cache hit for: setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6
+2026-08-25T10:38:06.3506844Z Received 17351306 of 17351306 (100.0%), 104.1 MBs/sec
+2026-08-25T10:38:06.3507596Z Cache Size: ~17 MB (17351306 B)
+2026-08-25T10:38:06.3546320Z [command]/usr/bin/tar -xf /home/runner/work/_temp/40f9e45f-b7ac-48f3-8fbf-032521e0967c/cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --use-compress-program unzstd
+2026-08-25T10:38:06.4198540Z Cache restored successfully
+2026-08-25T10:38:06.4210731Z Cache restored from key: setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6
+2026-08-25T10:38:06.4721620Z ##[group]Run actions/setup-go@v6
+2026-08-25T10:38:06.4721908Z with:
+2026-08-25T10:38:06.4722113Z   go-version: 1.25.x
+2026-08-25T10:38:06.4722384Z   cache-dependency-path: quantum-safe-go/go.mod
+2026-08-25T10:38:06.4722692Z   check-latest: false
+2026-08-25T10:38:06.4724991Z   token: ***
+2026-08-25T10:38:06.4725192Z   cache: true
+2026-08-25T10:38:06.4725386Z env:
+2026-08-25T10:38:06.4725683Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.4726183Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.4726564Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:06.4726772Z ##[endgroup]
+2026-08-25T10:38:06.5984492Z Setup go version spec 1.25.x
+2026-08-25T10:38:06.6049441Z Found in cache @ /opt/hostedtoolcache/go/1.25.13/x64
+2026-08-25T10:38:06.6051909Z Added go to the path
+2026-08-25T10:38:06.6055879Z Successfully set up Go version 1.25.x
+2026-08-25T10:38:06.6834147Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:06.6879328Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:06.6911740Z /home/runner/go/pkg/mod
+2026-08-25T10:38:06.6953447Z /home/runner/.cache/go-build
+2026-08-25T10:38:06.7611221Z Cache is not found
+2026-08-25T10:38:06.7621062Z go version go1.25.13 linux/amd64
+2026-08-25T10:38:06.7621300Z 
+2026-08-25T10:38:06.7621598Z ##[group]go env
+2026-08-25T10:38:06.9044223Z AR='ar'
+2026-08-25T10:38:06.9044626Z CC='gcc'
+2026-08-25T10:38:06.9045014Z CGO_CFLAGS='-O2 -g'
+2026-08-25T10:38:06.9045401Z CGO_CPPFLAGS=''
+2026-08-25T10:38:06.9045759Z CGO_CXXFLAGS='-O2 -g'
+2026-08-25T10:38:06.9046141Z CGO_ENABLED='1'
+2026-08-25T10:38:06.9046508Z CGO_FFLAGS='-O2 -g'
+2026-08-25T10:38:06.9046951Z CGO_LDFLAGS='-O2 -g'
+2026-08-25T10:38:06.9047322Z CXX='g++'
+2026-08-25T10:38:06.9047714Z GCCGO='gccgo'
+2026-08-25T10:38:06.9048393Z GO111MODULE=''
+2026-08-25T10:38:06.9048755Z GOAMD64='v1'
+2026-08-25T10:38:06.9049107Z GOARCH='amd64'
+2026-08-25T10:38:06.9049471Z GOAUTH='netrc'
+2026-08-25T10:38:06.9049815Z GOBIN=''
+2026-08-25T10:38:06.9050206Z GOCACHE='/home/runner/.cache/go-build'
+2026-08-25T10:38:06.9050669Z GOCACHEPROG=''
+2026-08-25T10:38:06.9050999Z GODEBUG=''
+2026-08-25T10:38:06.9051356Z GOENV='/home/runner/.config/go/env'
+2026-08-25T10:38:06.9051796Z GOEXE=''
+2026-08-25T10:38:06.9052131Z GOEXPERIMENT=''
+2026-08-25T10:38:06.9052520Z GOFIPS140='off'
+2026-08-25T10:38:06.9052848Z GOFLAGS=''
+2026-08-25T10:38:06.9053899Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build446472974=/tmp/go-build -gno-record-gcc-switches'
+2026-08-25T10:38:06.9054968Z GOHOSTARCH='amd64'
+2026-08-25T10:38:06.9055296Z GOHOSTOS='linux'
+2026-08-25T10:38:06.9055638Z GOINSECURE=''
+2026-08-25T10:38:06.9055954Z GOMOD='/dev/null'
+2026-08-25T10:38:06.9056335Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-08-25T10:38:06.9056776Z GONOPROXY=''
+2026-08-25T10:38:06.9057117Z GONOSUMDB=''
+2026-08-25T10:38:06.9057432Z GOOS='linux'
+2026-08-25T10:38:06.9057784Z GOPATH='/home/runner/go'
+2026-08-25T10:38:06.9058419Z GOPRIVATE=''
+2026-08-25T10:38:06.9058874Z GOPROXY='https://proxy.golang.org,direct'
+2026-08-25T10:38:06.9059440Z GOROOT='/opt/hostedtoolcache/go/1.25.13/x64'
+2026-08-25T10:38:06.9059932Z GOSUMDB='sum.golang.org'
+2026-08-25T10:38:06.9060347Z GOTELEMETRY='local'
+2026-08-25T10:38:06.9060844Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-08-25T10:38:06.9061380Z GOTMPDIR=''
+2026-08-25T10:38:06.9061768Z GOTOOLCHAIN='local'
+2026-08-25T10:38:06.9062386Z GOTOOLDIR='/opt/hostedtoolcache/go/1.25.13/x64/pkg/tool/linux_amd64'
+2026-08-25T10:38:06.9063006Z GOVCS=''
+2026-08-25T10:38:06.9063334Z GOVERSION='go1.25.13'
+2026-08-25T10:38:06.9063674Z GOWORK=''
+2026-08-25T10:38:06.9063998Z PKG_CONFIG='pkg-config'
+2026-08-25T10:38:06.9064237Z 
+2026-08-25T10:38:06.9064721Z ##[endgroup]
+2026-08-25T10:38:06.9185912Z ##[group]Run mvn -B -f java-app/pom.xml clean package -DskipTests
+2026-08-25T10:38:06.9186462Z [36;1mmvn -B -f java-app/pom.xml clean package -DskipTests[0m
+2026-08-25T10:38:06.9226146Z shell: /usr/bin/bash -e {0}
+2026-08-25T10:38:06.9226412Z env:
+2026-08-25T10:38:06.9226737Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.9227241Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:06.9227628Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:06.9227840Z   GOTOOLCHAIN: local
+2026-08-25T10:38:06.9228391Z ##[endgroup]
+2026-08-25T10:38:10.4582157Z [INFO] Scanning for projects...
+2026-08-25T10:38:10.5400671Z [INFO] 
+2026-08-25T10:38:10.5401733Z [INFO] --------------------< lab.cbom:java-crypto-fixture >--------------------
+2026-08-25T10:38:10.5402717Z [INFO] Building java-crypto-fixture 1.0.0
+2026-08-25T10:38:10.5403388Z [INFO]   from pom.xml
+2026-08-25T10:38:10.5404342Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-08-25T10:38:10.6999265Z [INFO] 
+2026-08-25T10:38:10.7028817Z [INFO] --- clean:3.2.0:clean (default-clean) @ java-crypto-fixture ---
+2026-08-25T10:38:10.8287469Z [INFO] 
+2026-08-25T10:38:10.8288660Z [INFO] --- resources:3.4.0:resources (default-resources) @ java-crypto-fixture ---
+2026-08-25T10:38:10.9526315Z [INFO] skip non existing resourceDirectory /home/runner/work/cbom-test/cbom-test/java-app/src/main/resources
+2026-08-25T10:38:10.9538937Z [INFO] 
+2026-08-25T10:38:10.9541309Z [INFO] --- compiler:3.13.0:compile (default-compile) @ java-crypto-fixture ---
+2026-08-25T10:38:11.1414915Z [INFO] Recompiling the module because of changed source code.
+2026-08-25T10:38:11.1488334Z [INFO] Compiling 1 source file with javac [debug release 11] to target/classes
+2026-08-25T10:38:12.5571030Z [INFO] 
+2026-08-25T10:38:12.5572039Z [INFO] --- resources:3.4.0:testResources (default-testResources) @ java-crypto-fixture ---
+2026-08-25T10:38:12.5619399Z [INFO] skip non existing resourceDirectory /home/runner/work/cbom-test/cbom-test/java-app/src/test/resources
+2026-08-25T10:38:12.5620850Z [INFO] 
+2026-08-25T10:38:12.5622039Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ java-crypto-fixture ---
+2026-08-25T10:38:12.5675741Z [INFO] No sources to compile
+2026-08-25T10:38:12.5677363Z [INFO] 
+2026-08-25T10:38:12.5678523Z [INFO] --- surefire:3.5.4:test (default-test) @ java-crypto-fixture ---
+2026-08-25T10:38:12.6937193Z [INFO] Tests are skipped.
+2026-08-25T10:38:12.6958535Z [INFO] 
+2026-08-25T10:38:12.6972189Z [INFO] --- jar:3.5.0:jar (default-jar) @ java-crypto-fixture ---
+2026-08-25T10:38:12.9872933Z [INFO] Building jar: /home/runner/work/cbom-test/cbom-test/java-app/target/java-crypto-fixture-1.0.0.jar
+2026-08-25T10:38:13.0429387Z [INFO] ------------------------------------------------------------------------
+2026-08-25T10:38:13.0439123Z [INFO] BUILD SUCCESS
+2026-08-25T10:38:13.0440035Z [INFO] ------------------------------------------------------------------------
+2026-08-25T10:38:13.0441509Z [INFO] Total time:  2.624 s
+2026-08-25T10:38:13.0443828Z [INFO] Finished at: 2026-08-25T10:38:13Z
+2026-08-25T10:38:13.0444791Z [INFO] ------------------------------------------------------------------------
+2026-08-25T10:38:13.0810606Z ##[group]Run python -m pip install -r python-app/requirements.txt
+2026-08-25T10:38:13.0811150Z [36;1mpython -m pip install -r python-app/requirements.txt[0m
+2026-08-25T10:38:13.0848699Z shell: /usr/bin/bash -e {0}
+2026-08-25T10:38:13.0848960Z env:
+2026-08-25T10:38:13.0849276Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:13.0849791Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:13.0850198Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:13.0850413Z   GOTOOLCHAIN: local
+2026-08-25T10:38:13.0850632Z ##[endgroup]
+2026-08-25T10:38:14.2289079Z Defaulting to user installation because normal site-packages is not writeable
+2026-08-25T10:38:14.9290770Z Requirement already satisfied: cryptography<47,>=41 in /usr/lib/python3/dist-packages (from -r python-app/requirements.txt (line 1)) (41.0.7)
+2026-08-25T10:38:15.2565199Z ##[group]Run go test -v ./...
+2026-08-25T10:38:15.2565539Z [36;1mgo test -v ./...[0m
+2026-08-25T10:38:15.2602483Z shell: /usr/bin/bash -e {0}
+2026-08-25T10:38:15.2602744Z env:
+2026-08-25T10:38:15.2603068Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:15.2603587Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:15.2603979Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:15.2604379Z   GOTOOLCHAIN: local
+2026-08-25T10:38:15.2604645Z ##[endgroup]
+2026-08-25T10:38:22.6524578Z === RUN   TestMLKEM768RoundTrip
+2026-08-25T10:38:22.6527657Z --- PASS: TestMLKEM768RoundTrip (0.00s)
+2026-08-25T10:38:22.6528391Z PASS
+2026-08-25T10:38:22.6530802Z ok  	example.com/cbom-lab/quantum-safe-go	0.002s
+2026-08-25T10:38:22.6892600Z ##[group]Run cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae
+2026-08-25T10:38:22.6893197Z env:
+2026-08-25T10:38:22.6893513Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:22.6894006Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:22.6894390Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:22.6894614Z   GOTOOLCHAIN: local
+2026-08-25T10:38:22.6894845Z   CBOMKIT_LANGUAGES: java, python, go
+2026-08-25T10:38:22.6895124Z   CBOMKIT_GENERATE_MODULE_CBOMS: true
+2026-08-25T10:38:22.6895387Z   CBOMKIT_WRITE_EMPTY_CBOMS: true
+2026-08-25T10:38:22.6895649Z   CBOMKIT_JAVA_REQUIRE_BUILD: true
+2026-08-25T10:38:22.6895897Z ##[endgroup]
+2026-08-25T10:38:22.6992063Z ##[command]/usr/bin/docker run --name b366c3f23e015ba67e4c29958b49e38b9c2465_23fe3c --label b366c3 --workdir /github/workspace --rm -e "JAVA_HOME" -e "JAVA_HOME_21_X64" -e "MAVEN_ARGS" -e "GOTOOLCHAIN" -e "CBOMKIT_LANGUAGES" -e "CBOMKIT_GENERATE_MODULE_CBOMS" -e "CBOMKIT_WRITE_EMPTY_CBOMS" -e "CBOMKIT_JAVA_REQUIRE_BUILD" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/cbom-test/cbom-test":"/github/workspace" b366c3:f23e015ba67e4c29958b49e38b9c2465
+2026-08-25T10:38:23.0712385Z [main] INFO org.pqca.Main - Writing CBOMs to cbom
+2026-08-25T10:38:23.1982093Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T10:38:23.2416238Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'java-app' [1 .java files]
+2026-08-25T10:38:23.2481406Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'remediated/java-app' [1 .java files]
+2026-08-25T10:38:23.2961237Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 2 java projects
+2026-08-25T10:38:24.2848697Z [main] INFO org.pqca.scanning.ScannerService - Scanning java project java-app (1/2)
+2026-08-25T10:38:24.2850611Z [main] INFO org.sonar.java.JavaFrontend - Server-side caching is not enabled. The Java analyzer will not try to leverage data from a previous analysis.
+2026-08-25T10:38:24.2889233Z [main] INFO org.sonar.java.JavaFrontend - Using ECJ batch to parse 1 Main java source files with batch size 8388608 KB.
+2026-08-25T10:38:24.5360163Z [main] INFO org.sonar.java.ProgressMonitor - Starting batch processing.
+2026-08-25T10:38:25.0105980Z [main] INFO org.sonar.java.SonarComponents - The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+2026-08-25T10:38:25.2618790Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T10:38:25.3216896Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T10:38:25.3586151Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T10:38:25.3847742Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T10:38:25.4157143Z [main] INFO com.ibm.output.IAggregator - Detected (Key) RSA
+2026-08-25T10:38:25.4466521Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-OAEP
+2026-08-25T10:38:25.4765733Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:25.4871736Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) MD5
+2026-08-25T10:38:25.5123409Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) PBKDF2
+2026-08-25T10:38:25.5198542Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T10:38:25.5199599Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T10:38:25.5371153Z [main] INFO com.ibm.output.IAggregator - Detected (Signature) SHA256withECDSA
+2026-08-25T10:38:25.5515129Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T10:38:25.5516120Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T10:38:25.5659363Z [main] INFO com.ibm.output.IAggregator - Detected (KeyAgreement) ECDH
+2026-08-25T10:38:25.6240430Z [main] INFO org.sonar.java.ProgressMonitor - 100% analyzed
+2026-08-25T10:38:25.6241550Z [main] INFO org.sonar.java.ProgressMonitor - Batch processing: Done.
+2026-08-25T10:38:25.6260413Z [main] INFO org.sonar.java.model.VisitorsBridge - Did not optimize analysis for any files, performed a full analysis for all 1 files.
+2026-08-25T10:38:25.6271642Z [main] INFO org.sonar.java.JavaFrontend - No "Test" source files to scan.
+2026-08-25T10:38:25.6272636Z [main] INFO org.sonar.java.JavaFrontend - No "Generated" source files to scan.
+2026-08-25T10:38:25.6291908Z [main] INFO org.pqca.scanning.ScannerService - Scanning java project remediated/java-app (2/2)
+2026-08-25T10:38:25.6300041Z [main] INFO org.sonar.java.JavaFrontend - Server-side caching is not enabled. The Java analyzer will not try to leverage data from a previous analysis.
+2026-08-25T10:38:25.6309189Z [main] INFO org.sonar.java.JavaFrontend - Using ECJ batch to parse 1 Main java source files with batch size 8388608 KB.
+2026-08-25T10:38:25.6329787Z [main] INFO org.sonar.java.ProgressMonitor - Starting batch processing.
+2026-08-25T10:38:25.7367224Z [main] INFO org.sonar.java.ProgressMonitor - 100% analyzed
+2026-08-25T10:38:25.7374990Z [main] INFO org.sonar.java.ProgressMonitor - Batch processing: Done.
+2026-08-25T10:38:25.7376832Z [main] INFO org.sonar.java.model.VisitorsBridge - Did not optimize analysis for any files, performed a full analysis for all 2 files.
+2026-08-25T10:38:25.7378508Z [main] INFO org.sonar.java.JavaFrontend - No "Test" source files to scan.
+2026-08-25T10:38:25.7379776Z [main] INFO org.sonar.java.JavaFrontend - No "Generated" source files to scan.
+2026-08-25T10:38:25.7391078Z [main] INFO org.pqca.scanning.ScannerService - Scanned 2 java projects
+2026-08-25T10:38:26.0387765Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_remediated.java-app.json with 0 findings
+2026-08-25T10:38:26.0951245Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_java-app.json with 34 findings
+2026-08-25T10:38:26.0957208Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T10:38:26.1119435Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'python-app' [1 .py files]
+2026-08-25T10:38:26.1331489Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 1 python projects
+2026-08-25T10:38:26.1342240Z [main] INFO org.pqca.scanning.ScannerService - Scanning python project python-app (1/1)
+2026-08-25T10:38:26.6474955Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES-GCM
+2026-08-25T10:38:26.6652386Z [main] INFO com.ibm.output.IAggregator - Detected (BlockCipher) AES-CBC
+2026-08-25T10:38:26.6765009Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) RSA
+2026-08-25T10:38:26.6900089Z [main] INFO com.ibm.output.IAggregator - Detected (PasswordBasedKeyDerivationFunction) PBKDF2-SHA256
+2026-08-25T10:38:26.6959173Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T10:38:26.7023351Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T10:38:26.7050346Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T10:38:26.7178169Z [main] INFO org.pqca.scanning.ScannerService - Scanned 1 python projects
+2026-08-25T10:38:26.7433069Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_python-app.json with 13 findings
+2026-08-25T10:38:26.7440041Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T10:38:26.7459204Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'go-app' [2 .go files]
+2026-08-25T10:38:26.7507129Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'quantum-safe-go' [2 .go files]
+2026-08-25T10:38:26.7549212Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'remediated/go-app' [2 .go files]
+2026-08-25T10:38:26.7558282Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 3 go projects
+2026-08-25T10:38:26.7736301Z [main] INFO org.pqca.scanning.ScannerService - Scanning go project go-app (1/3)
+2026-08-25T10:38:26.7839804Z [main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+2026-08-25T10:38:26.8529485Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES128-GCM
+2026-08-25T10:38:26.8606309Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-2048
+2026-08-25T10:38:26.8630191Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-OAEP
+2026-08-25T10:38:26.8666817Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.8690752Z [main] INFO com.ibm.output.IAggregator - Detected (Signature) ECDSA
+2026-08-25T10:38:26.8720124Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.8727327Z [main] INFO com.ibm.output.IAggregator - Detected (KeyAgreement) ECDH
+2026-08-25T10:38:26.8789100Z [main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+2026-08-25T10:38:26.8796291Z [main] INFO org.pqca.scanning.ScannerService - Scanning go project quantum-safe-go (2/3)
+2026-08-25T10:38:26.8797305Z [main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+2026-08-25T10:38:26.8943501Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES128-GCM
+2026-08-25T10:38:26.8979510Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-2048
+2026-08-25T10:38:26.8988724Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-OAEP
+2026-08-25T10:38:26.9020305Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.9038410Z [main] INFO com.ibm.output.IAggregator - Detected (Signature) ECDSA
+2026-08-25T10:38:26.9051608Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.9063508Z [main] INFO com.ibm.output.IAggregator - Detected (KeyAgreement) ECDH
+2026-08-25T10:38:26.9105166Z [main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+2026-08-25T10:38:26.9107851Z [main] INFO org.pqca.scanning.ScannerService - Scanning go project remediated/go-app (3/3)
+2026-08-25T10:38:26.9114083Z [main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+2026-08-25T10:38:26.9243360Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES128-GCM
+2026-08-25T10:38:26.9269399Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-2048
+2026-08-25T10:38:26.9284493Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-OAEP
+2026-08-25T10:38:26.9309088Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.9323389Z [main] INFO com.ibm.output.IAggregator - Detected (Signature) ECDSA
+2026-08-25T10:38:26.9336991Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T10:38:26.9346487Z [main] INFO com.ibm.output.IAggregator - Detected (KeyAgreement) ECDH
+2026-08-25T10:38:26.9370414Z [main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+2026-08-25T10:38:26.9371725Z [main] INFO org.pqca.scanning.ScannerService - Scanned 3 go projects
+2026-08-25T10:38:26.9573378Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_remediated.go-app.json with 9 findings
+2026-08-25T10:38:26.9658824Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_go-app.json with 0 findings
+2026-08-25T10:38:26.9728692Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_quantum-safe-go.json with 0 findings
+2026-08-25T10:38:26.9739220Z [main] INFO org.pqca.Main - Scanned 9 files with 451 lines in 2.224 seconds.
+2026-08-25T10:38:27.0024465Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom.json with 56 findings
+2026-08-25T10:38:27.1274700Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-25T10:38:27.1276103Z ##[group]Run actions/upload-artifact@v4
+2026-08-25T10:38:27.1276390Z with:
+2026-08-25T10:38:27.1276583Z   name: CBOM
+2026-08-25T10:38:27.1276789Z   path: cbom/cbom*.json
+2026-08-25T10:38:27.1277036Z   if-no-files-found: error
+2026-08-25T10:38:27.1277278Z   compression-level: 6
+2026-08-25T10:38:27.1277498Z   overwrite: false
+2026-08-25T10:38:27.1277719Z   include-hidden-files: false
+2026-08-25T10:38:27.1278261Z env:
+2026-08-25T10:38:27.1278584Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:27.1279086Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T10:38:27.1279513Z   MAVEN_ARGS: -ntp
+2026-08-25T10:38:27.1279741Z   GOTOOLCHAIN: local
+2026-08-25T10:38:27.1279961Z ##[endgroup]
+2026-08-25T10:38:27.2879958Z (node:4225) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-25T10:38:27.2880716Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-25T10:38:27.2948488Z With the provided path, there will be 7 files uploaded
+2026-08-25T10:38:27.2956008Z Artifact name is valid!
+2026-08-25T10:38:27.2956638Z Root directory input is valid!
+2026-08-25T10:38:27.4738943Z Beginning upload of artifact content to blob storage
+2026-08-25T10:38:27.5053636Z (node:4225) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-25T10:38:27.5299802Z Uploaded bytes 10904
+2026-08-25T10:38:27.5458165Z Finished uploading artifact content to blob storage!
+2026-08-25T10:38:27.5459581Z SHA256 digest of uploaded artifact zip is 2dd8c9e5dbe0fede5d876eb2d4f5fdd22d63f5ccd3d31b0156898a7b93e4ff3b
+2026-08-25T10:38:27.5461552Z Finalizing artifact upload
+2026-08-25T10:38:27.7449352Z Artifact CBOM.zip successfully finalized. Artifact ID 9559450366
+2026-08-25T10:38:27.7450503Z Artifact CBOM has been successfully uploaded! Final size is 10904 bytes. Artifact ID is 9559450366
+2026-08-25T10:38:27.7457449Z Artifact download URL: https://github.com/M3rcy1028/cbom-test/actions/runs/32838179278/artifacts/9559450366
+2026-08-25T10:38:27.7614892Z Post job cleanup.
+2026-08-25T10:38:27.8818625Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOMODCACHE
+2026-08-25T10:38:27.8866169Z [command]/opt/hostedtoolcache/go/1.25.13/x64/bin/go env GOCACHE
+2026-08-25T10:38:27.8893363Z /home/runner/go/pkg/mod
+2026-08-25T10:38:27.8915326Z /home/runner/.cache/go-build
+2026-08-25T10:38:27.8924918Z [warning]Cache folder path is retrieved but doesn't exist on disk: /home/runner/go/pkg/mod
+2026-08-25T10:38:27.9133572Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --files-from manifest.txt --use-compress-program zstdmt
+2026-08-25T10:38:28.1413413Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.25.13-89b5b54836f64277560fcc19104278679423bc557483e85259cfd6dd8c1f0507, another job may be creating this cache.
+2026-08-25T10:38:28.1551780Z Post job cleanup.
+2026-08-25T10:38:28.2804185Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6, not saving cache.
+2026-08-25T10:38:28.2956196Z Post job cleanup.
+2026-08-25T10:38:28.3876739Z [command]/usr/bin/git version
+2026-08-25T10:38:28.3922482Z git version 2.55.0
+2026-08-25T10:38:28.3968707Z Temporarily overriding HOME='/home/runner/work/_temp/9d8df4bf-8801-4ea4-b174-51fc22cc005e' before making global git config changes
+2026-08-25T10:38:28.3970918Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-25T10:38:28.3973773Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cbom-test/cbom-test
+2026-08-25T10:38:28.4016537Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-25T10:38:28.4055277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-25T10:38:28.4304384Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-25T10:38:28.4332346Z http.https://github.com/.extraheader
+2026-08-25T10:38:28.4343869Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-08-25T10:38:28.4378822Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-25T10:38:28.4687125Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-25T10:38:28.4736205Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-25T10:38:28.5228892Z Cleaning up orphan processes
+2026-08-25T10:38:28.5582148Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
