@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "path": "results/action/github/artifact/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 41,
+      "dependencyCount": 22,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/github/artifact/cbom_java-app.json",
+      "specVersion": "1.6",
+      "componentCount": 29,
+      "dependencyCount": 16,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/github/artifact/cbom_python-app.json",
+      "specVersion": "1.6",
+      "componentCount": 12,
+      "dependencyCount": 6,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/github/artifact/cbom_remediated.java-app.json",
+      "specVersion": "1.6",
+      "componentCount": 0,
+      "dependencyCount": 0,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    }
+  ],
+  "allValid": true
+}

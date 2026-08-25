@@ -1,0 +1,5 @@
+8fb665a1dbdeb3a6873061dc3896e95d7f0ce74ab759d6c5cb6d98f7fad6a74d  results/action/github/CBOM.zip
+e2142a83ae7163f6d3c7fd338854a00d0947b86d0fe7865fcdbc068d549f0b98  results/action/github/artifact/cbom.json
+c0f8d89a6014f26b538f410d53a2a825a44cc961bc4feae524d7659688a8fb81  results/action/github/artifact/cbom_java-app.json
+da5c592494134047f4f86d22a58c2be6862c59a2d1cc56375871ba527c311213  results/action/github/artifact/cbom_python-app.json
+8476e4315d26abc2af31c4928d6ac6a6750dc9c96c6c068a01c18b26816384c5  results/action/github/artifact/cbom_remediated.java-app.json

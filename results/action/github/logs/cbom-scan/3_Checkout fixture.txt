@@ -1,0 +1,73 @@
+﻿2026-08-25T08:27:32.3821761Z ##[group]Run actions/checkout@v5
+2026-08-25T08:27:32.3822455Z with:
+2026-08-25T08:27:32.3822897Z   repository: M3rcy1028/cbom-test
+2026-08-25T08:27:32.3825480Z   token: ***
+2026-08-25T08:27:32.3825837Z   ssh-strict: true
+2026-08-25T08:27:32.3826193Z   ssh-user: git
+2026-08-25T08:27:32.3826487Z   persist-credentials: true
+2026-08-25T08:27:32.3826920Z   clean: true
+2026-08-25T08:27:32.3827477Z   sparse-checkout-cone-mode: true
+2026-08-25T08:27:32.3827882Z   fetch-depth: 1
+2026-08-25T08:27:32.3828196Z   fetch-tags: false
+2026-08-25T08:27:32.3828496Z   show-progress: true
+2026-08-25T08:27:32.3828835Z   lfs: false
+2026-08-25T08:27:32.3911237Z   submodules: false
+2026-08-25T08:27:32.3911857Z   set-safe-directory: true
+2026-08-25T08:27:32.3912277Z   allow-unsafe-pr-checkout: false
+2026-08-25T08:27:32.3913550Z ##[endgroup]
+2026-08-25T08:27:32.4945843Z Syncing repository: M3rcy1028/cbom-test
+2026-08-25T08:27:32.4948707Z ##[group]Getting Git version info
+2026-08-25T08:27:32.4949486Z Working directory is '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T08:27:32.4950754Z [command]/usr/bin/git version
+2026-08-25T08:27:32.4951275Z git version 2.55.0
+2026-08-25T08:27:32.4974580Z ##[endgroup]
+2026-08-25T08:27:32.4993256Z Temporarily overriding HOME='/home/runner/work/_temp/cf982590-efa6-4029-a741-4e5f26f3e526' before making global git config changes
+2026-08-25T08:27:32.4995151Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-25T08:27:32.5000297Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cbom-test/cbom-test
+2026-08-25T08:27:32.5056113Z Deleting the contents of '/home/runner/work/cbom-test/cbom-test'
+2026-08-25T08:27:32.5088388Z ##[group]Initializing the repository
+2026-08-25T08:27:32.5089661Z [command]/usr/bin/git init /home/runner/work/cbom-test/cbom-test
+2026-08-25T08:27:32.5184389Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-25T08:27:32.5185250Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-25T08:27:32.5185876Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-25T08:27:32.5186307Z hint: call:
+2026-08-25T08:27:32.5186507Z hint:
+2026-08-25T08:27:32.5186798Z hint: 	git config --global init.defaultBranch <name>
+2026-08-25T08:27:32.5187388Z hint:
+2026-08-25T08:27:32.5187727Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-25T08:27:32.5188283Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-25T08:27:32.5188694Z hint:
+2026-08-25T08:27:32.5188909Z hint: 	git branch -m <name>
+2026-08-25T08:27:32.5189397Z hint:
+2026-08-25T08:27:32.5189748Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-25T08:27:32.5195504Z Initialized empty Git repository in /home/runner/work/cbom-test/cbom-test/.git/
+2026-08-25T08:27:32.5206837Z [command]/usr/bin/git remote add origin https://github.com/M3rcy1028/cbom-test
+2026-08-25T08:27:32.5261312Z ##[endgroup]
+2026-08-25T08:27:32.5262321Z ##[group]Disabling automatic garbage collection
+2026-08-25T08:27:32.5267784Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-25T08:27:32.5310631Z ##[endgroup]
+2026-08-25T08:27:32.5311327Z ##[group]Setting up auth
+2026-08-25T08:27:32.5319729Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-25T08:27:32.5356269Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-25T08:27:32.5723353Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-25T08:27:32.5767366Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-25T08:27:32.6044063Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-25T08:27:32.6083805Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-25T08:27:32.6316039Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-25T08:27:32.6358924Z ##[endgroup]
+2026-08-25T08:27:32.6359653Z ##[group]Fetching the repository
+2026-08-25T08:27:32.6369305Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +066b89efca6623f15f380478752e7c1e188047e2:refs/remotes/origin/main
+2026-08-25T08:27:33.3271924Z From https://github.com/M3rcy1028/cbom-test
+2026-08-25T08:27:33.3272873Z  * [new ref]         066b89efca6623f15f380478752e7c1e188047e2 -> origin/main
+2026-08-25T08:27:33.3276680Z ##[endgroup]
+2026-08-25T08:27:33.3277620Z ##[group]Determining the checkout info
+2026-08-25T08:27:33.3280685Z ##[endgroup]
+2026-08-25T08:27:33.3286613Z [command]/usr/bin/git sparse-checkout disable
+2026-08-25T08:27:33.3336189Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-25T08:27:33.3370957Z ##[group]Checking out the ref
+2026-08-25T08:27:33.3375876Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-25T08:27:33.3622281Z Switched to a new branch 'main'
+2026-08-25T08:27:33.3627431Z branch 'main' set up to track 'origin/main'.
+2026-08-25T08:27:33.3637874Z ##[endgroup]
+2026-08-25T08:27:33.3693245Z [command]/usr/bin/git log -1 --format=%H
+2026-08-25T08:27:33.3720745Z 066b89efca6623f15f380478752e7c1e188047e2

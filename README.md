@@ -5,7 +5,8 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 ## 먼저 볼 문서
 
 - [통합 기능 명세 및 실증 보고서](CBOM_통합_기능_명세서.md): 도구별 20항목 명세, 결과 비교, 결함, 운영 권고
-- [실행 계획·작업 원장](CBOM_LAB_PLAN.md): revision, 실행 순서, 원본 결과와 차단 사유
+- [게시 계획과 현재 상태](plan.md): 사용자 지정 Git 게시 절차와 재개 지점
+- [상세 실행 계획·작업 원장](CBOM_LAB_PLAN.md): revision, 실행 순서, 원본 결과와 차단 사유
 - [Ground truth](ground-truth.md): scanner 실행 전에 고정한 기대 자산·line·정책
 - [캡처 manifest](evidence/CAPTURE_MANIFEST.md): 각 그림이 증명하는 것과 증명하지 않는 것
 
@@ -13,7 +14,7 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 
 | 대상 | 결과 |
 |---|---:|
-| Schema 정상·음성 case | 11/11 기대 일치 |
+| Schema 정상·음성 case | 13/13 기대 일치 |
 | Sonar source scan | 38 components, source family 22/22 |
 | Action local scan | 49 components, Java/Python/Go module CBOM |
 | Theia directory | 25 components, filesystem 6/7 |
@@ -21,6 +22,8 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 | Sonar→Theia enrichment | 38→64 components |
 | Built-in/OPA policy fixture | exact 5/5 vs 3/5 |
 | 보완 후 Action | 49→44, MD5·CBC component 제거 |
+| GitHub Action run | success, 48초, CBOM artifact 1개 |
+| CBOMkit public Git scan | 48 components, DB 저장 성공 |
 
 ![CBOMkit result](evidence/16-cbomkit-sonar-results.png)
 
@@ -36,7 +39,7 @@ python3 scripts/validate_schemas.py
 python3 scripts/capture_evidence.py
 ```
 
-`tools/`와 `sources/`의 다운로드·upstream clone은 크기와 재배포 문제로 Git에서 제외한다. 정확한 upstream URL과 commit은 작업 원장과 보고서에 기록했다.
+`tools/`와 `sources/`의 다운로드·upstream clone은 크기와 재배포 문제로 Git에서 제외한다. 단, offline schema 재검증에 필요한 JSON Schema snapshot과 출처 기록은 포함한다. 정확한 upstream URL과 commit은 [schema 출처](sources/SCHEMA_SOURCES.md), 작업 원장과 보고서에 기록했다.
 
 ## 안전 주의
 

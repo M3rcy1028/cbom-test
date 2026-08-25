@@ -1,0 +1,68 @@
+﻿2026-08-25T08:27:49.9749977Z ##[group]Run cbomkit/cbomkit-action@v2.1.1
+2026-08-25T08:27:49.9750330Z env:
+2026-08-25T08:27:49.9750642Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:49.9751143Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:49.9751533Z   MAVEN_ARGS: -ntp
+2026-08-25T08:27:49.9751766Z   CBOMKIT_LANGUAGES: java, python
+2026-08-25T08:27:49.9752035Z   CBOMKIT_GENERATE_MODULE_CBOMS: true
+2026-08-25T08:27:49.9752306Z   CBOMKIT_WRITE_EMPTY_CBOMS: true
+2026-08-25T08:27:49.9752565Z   CBOMKIT_JAVA_REQUIRE_BUILD: true
+2026-08-25T08:27:49.9752810Z ##[endgroup]
+2026-08-25T08:27:49.9870927Z ##[command]/usr/bin/docker run --name aaae334c3bb14f1da19228e24f9447ed_11cc78 --label 821522 --workdir /github/workspace --rm -e "JAVA_HOME" -e "JAVA_HOME_21_X64" -e "MAVEN_ARGS" -e "CBOMKIT_LANGUAGES" -e "CBOMKIT_GENERATE_MODULE_CBOMS" -e "CBOMKIT_WRITE_EMPTY_CBOMS" -e "CBOMKIT_JAVA_REQUIRE_BUILD" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/cbom-test/cbom-test":"/github/workspace" 821522:aaae334c3bb14f1da19228e24f9447ed
+2026-08-25T08:27:50.3291134Z [main] INFO org.pqca.Main - Writing CBOMs to cbom
+2026-08-25T08:27:50.3544332Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T08:27:50.4291053Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'java-app' [1 .java files]
+2026-08-25T08:27:50.4366458Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'remediated/java-app' [1 .java files]
+2026-08-25T08:27:50.4849261Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 2 java projects
+2026-08-25T08:27:51.4396448Z [main] INFO org.pqca.scanning.ScannerService - Scanning java project java-app (1/2)
+2026-08-25T08:27:51.4398012Z [main] INFO org.sonar.java.JavaFrontend - Server-side caching is not enabled. The Java analyzer will not try to leverage data from a previous analysis.
+2026-08-25T08:27:51.4414532Z [main] INFO org.sonar.java.JavaFrontend - Using ECJ batch to parse 1 Main java source files with batch size 8388608 KB.
+2026-08-25T08:27:51.6984469Z [main] INFO org.sonar.java.ProgressMonitor - Starting batch processing.
+2026-08-25T08:27:52.1768838Z [main] INFO org.sonar.java.SonarComponents - The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+2026-08-25T08:27:52.3870009Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T08:27:52.4909379Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES128-GCM
+2026-08-25T08:27:52.5161647Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) AES
+2026-08-25T08:27:52.5281839Z [main] INFO com.ibm.output.IAggregator - Detected (BlockCipher) AES128-CBC-PKCS5
+2026-08-25T08:27:52.5628464Z [main] INFO com.ibm.output.IAggregator - Detected (Key) RSA
+2026-08-25T08:27:52.5898834Z [main] INFO com.ibm.output.IAggregator - Detected (PublicKeyEncryption) RSA-OAEP
+2026-08-25T08:27:52.6201385Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) SHA256
+2026-08-25T08:27:52.6267425Z [main] INFO com.ibm.output.IAggregator - Detected (MessageDigest) MD5
+2026-08-25T08:27:52.6450222Z [main] INFO com.ibm.output.IAggregator - Detected (SecretKey) PBKDF2
+2026-08-25T08:27:52.6519565Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T08:27:52.6520847Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T08:27:52.6677707Z [main] INFO com.ibm.output.IAggregator - Detected (Signature) SHA256withECDSA
+2026-08-25T08:27:52.6815573Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T08:27:52.6816859Z [main] INFO com.ibm.output.IAggregator - Detected (Key) EC
+2026-08-25T08:27:52.6936031Z [main] INFO com.ibm.output.IAggregator - Detected (KeyAgreement) ECDH
+2026-08-25T08:27:52.7432218Z [main] INFO org.sonar.java.ProgressMonitor - 100% analyzed
+2026-08-25T08:27:52.7433863Z [main] INFO org.sonar.java.ProgressMonitor - Batch processing: Done.
+2026-08-25T08:27:52.7444686Z [main] INFO org.sonar.java.model.VisitorsBridge - Did not optimize analysis for any files, performed a full analysis for all 1 files.
+2026-08-25T08:27:52.7453929Z [main] INFO org.sonar.java.JavaFrontend - No "Test" source files to scan.
+2026-08-25T08:27:52.7455504Z [main] INFO org.sonar.java.JavaFrontend - No "Generated" source files to scan.
+2026-08-25T08:27:52.7471836Z [main] INFO org.pqca.scanning.ScannerService - Scanning java project remediated/java-app (2/2)
+2026-08-25T08:27:52.7480075Z [main] INFO org.sonar.java.JavaFrontend - Server-side caching is not enabled. The Java analyzer will not try to leverage data from a previous analysis.
+2026-08-25T08:27:52.7482174Z [main] INFO org.sonar.java.JavaFrontend - Using ECJ batch to parse 1 Main java source files with batch size 8388608 KB.
+2026-08-25T08:27:52.7492984Z [main] INFO org.sonar.java.ProgressMonitor - Starting batch processing.
+2026-08-25T08:27:52.8301754Z [main] INFO org.sonar.java.ProgressMonitor - 100% analyzed
+2026-08-25T08:27:52.8303431Z [main] INFO org.sonar.java.ProgressMonitor - Batch processing: Done.
+2026-08-25T08:27:52.8311993Z [main] INFO org.sonar.java.model.VisitorsBridge - Did not optimize analysis for any files, performed a full analysis for all 2 files.
+2026-08-25T08:27:52.8313754Z [main] INFO org.sonar.java.JavaFrontend - No "Test" source files to scan.
+2026-08-25T08:27:52.8314913Z [main] INFO org.sonar.java.JavaFrontend - No "Generated" source files to scan.
+2026-08-25T08:27:52.8316025Z [main] INFO org.pqca.scanning.ScannerService - Scanned 2 java projects
+2026-08-25T08:27:53.1588894Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_remediated.java-app.json with 0 findings
+2026-08-25T08:27:53.2317368Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_java-app.json with 35 findings
+2026-08-25T08:27:53.2327395Z [main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+2026-08-25T08:27:53.2448335Z [main] INFO org.pqca.indexing.IndexingService - Found project module 'python-app' [1 .py files]
+2026-08-25T08:27:53.2630152Z [main] INFO org.pqca.scanning.ScannerService - Start scanning 1 python projects
+2026-08-25T08:27:53.2637416Z [main] INFO org.pqca.scanning.ScannerService - Scanning python project python-app (1/1)
+2026-08-25T08:27:53.7526009Z [main] INFO com.ibm.output.IAggregator - Detected (AuthenticatedEncryption) AES-GCM
+2026-08-25T08:27:53.7704538Z [main] INFO com.ibm.output.IAggregator - Detected (BlockCipher) AES-CBC
+2026-08-25T08:27:53.7818174Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) RSA
+2026-08-25T08:27:53.7966251Z [main] INFO com.ibm.output.IAggregator - Detected (PasswordBasedKeyDerivationFunction) PBKDF2-SHA256
+2026-08-25T08:27:53.8038329Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T08:27:53.8102778Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T08:27:53.8122517Z [main] INFO com.ibm.output.IAggregator - Detected (PrivateKey) EC-secp256r1
+2026-08-25T08:27:53.8239480Z [main] INFO org.pqca.scanning.ScannerService - Scanned 1 python projects
+2026-08-25T08:27:53.8507476Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom_python-app.json with 13 findings
+2026-08-25T08:27:53.8514121Z [main] INFO org.pqca.Main - Scanned 3 files with 280 lines in 1.958 seconds.
+2026-08-25T08:27:53.8810915Z [main] INFO org.pqca.BomGenerator - Wrote cbom cbom/cbom.json with 48 findings

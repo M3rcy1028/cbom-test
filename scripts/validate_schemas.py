@@ -106,6 +106,18 @@ def main() -> int:
             ROOT / "results/remediated-theia/cbom.json",
             True,
         ),
+        check(
+            "CycloneDX 1.6 positive: GitHub-hosted Action CBOM",
+            ROOT / "sources/cyclonedx-schema/bom-1.6.schema.json",
+            ROOT / "results/action/github/artifact/cbom.json",
+            True,
+        ),
+        check(
+            "CycloneDX 1.6 positive: CBOMkit public Git scan",
+            ROOT / "sources/cyclonedx-schema/bom-1.6.schema.json",
+            ROOT / "results/cbomkit/git-scan-cbom.json",
+            True,
+        ),
     ]
     output = {"allPassed": all(case["passed"] for case in cases), "cases": cases}
     result_path = ROOT / "results/cyclonedx/schema-validation.json"

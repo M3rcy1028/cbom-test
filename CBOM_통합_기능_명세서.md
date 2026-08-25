@@ -39,11 +39,13 @@ CBOMkit 생태계는 하나의 만능 프로그램이 아니라, **공통 Cyclon
 
 | 실험 | 핵심 결과 | 판정 |
 |---|---:|---|
-| JSON Schema | 정상·음성 11/11 기대 일치 | 통과 |
-| Semantic positive set | 10/10 참조 무결성 통과 | 통과 |
+| JSON Schema | 정상·음성 13/13 기대 일치 | 통과 |
+| Semantic positive set | 12/12 참조 무결성 통과 | 통과 |
 | Sonar source scan | 38 components, 23 dependencies, 32 issues | 성공 |
 | Sonar 고수준 family recall | 22/22 | 100% |
 | Action local | 49 components, 24 dependencies, module 3개 | 성공 |
+| GitHub Action | run success, 48초, artifact 1개, 통합 41/22 | 성공·module 주의 |
+| CBOMkit public Git scan | 48 components, 24 dependencies, DB 저장 | 성공·coverage 주의 |
 | Theia directory | 25 components, 4 dependencies | 성공 |
 | Theia filesystem recall | 6/7, standalone public key 누락 | 85.7% |
 | Theia registry `alpine:3.22` | 2,858 components, 476 dependencies | 성공 |
@@ -95,7 +97,7 @@ IBM의 초기 CBOM 1.0은 CycloneDX 1.4를 확장했다. IBM 저장소는 2024-0
 
 ![IBM/CycloneDX schema validation](evidence/02-schema-validation.png)
 
-1. IBM 1.0과 CycloneDX 1.6/1.7의 정상·음성 case 11개를 실행했다.
+1. IBM 1.0과 CycloneDX 1.6/1.7의 정상·음성 case 13개를 실행했다.
 2. IBM의 `blockcipher/keyagree`와 현대 CycloneDX의 `block-cipher/key-agree` enum 차이가 실제 검증 결과에 나타났다.
 3. Sonar, Action, Theia directory·image 결과는 해당 공식 schema를 통과했다.
 4. 그러나 schema-positive dangling dependency fixture도 만들 수 있었으므로 별도 semantic validator가 필요하다.
@@ -241,7 +243,7 @@ Docker client와 Compose는 있었지만 현재 사용자에게 `/var/run/docker
 | 9 | 주요 옵션 | production/dev/coeus/ext-compliance profiles, DB·OPA 설정 |
 | 10 | CBOM 요소 | 입력 전체 document를 보존하고 viewer에서 component/evidence/dependency 전개 |
 | 11 | 연계 | Sonar/Action/Theia CBOM 소비, OPA 위임, PostgreSQL 영속화 |
-| 12 | 정상 증거 | 4개 CBOM 저장·재조회, DB 4 row 대조, release UI 정상 |
+| 12 | 정상 증거 | manual upload 5개+Git scan 1개 저장·재조회, release UI 정상 |
 | 13 | 오류 증거 | enriched file component에서 built-in compliance NPE/HTTP 500 |
 | 14 | 결과 해석 | CRUD 성공과 모든 CBOM policy 처리 성공은 분리해야 함 |
 | 15 | Ground truth | 이 실험에서는 소비 계층이므로 source recall 점수 대상 아님 |
@@ -344,7 +346,7 @@ directory scan은 certificate 2, related material 4, protocol 2, algorithm 16, f
 | 9 | 주요 옵션 | output dir, exclude, languages, module CBOM, empty CBOM, Java require build/JAR dir |
 | 10 | CBOM 요소 | Sonar core와 유사한 algorithm/material/evidence/dependency |
 | 11 | 연계 | artifact를 release evidence, CBOMkit upload, Theia enrichment에 전달 |
-| 12 | 정상 증거 | local workspace CWD에서 Java 28, Python 13, Go 8, 통합 49 |
+| 12 | 정상 증거 | local Java 28/Python 13/Go 8/통합 49; GitHub run success·artifact 확보 |
 | 13 | 오류 증거 | workspace 밖 CWD에서는 module CBOM이 비었고 통합만 생성 |
 | 14 | 결과 해석 | Action은 언어 간 같은 algorithm을 별 component로 유지해 Sonar보다 11개 많음 |
 | 15 | Ground truth | current local 엔진 22/22 family evidence |
@@ -421,6 +423,32 @@ UUID `bom-ref`로 두 CBOM을 직접 diff하면 전부 add/remove처럼 보인�
 
 Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `java.security` 제한 속성이 기존 component에 반영되지 않았고, JDK 설정의 `KeyUpdate` 문자열을 `generic-api-key`로 오탐해 bom-ref 없는 component를 추가했다. 따라서 enrich 후에는 schema뿐 아니라 semantic validation과 before/after modification assertion이 필요하다.
 
+### 8.3 GitHub-hosted Action과 CBOMkit public Git scan
+
+![GitHub Action success](evidence/22-github-action-success.png)
+
+최초 commit `066b89e`를 push한 뒤 [GitHub Action run 32826680204](https://github.com/M3rcy1028/cbom-test/actions/runs/32826680204)를 `workflow_dispatch`로 실행했다. 모든 step이 성공했고 48초 만에 `CBOM` artifact 1개를 만들었다. artifact SHA-256은 `8fb665a1dbdeb3a6873061dc3896e95d7f0ce74ab759d6c5cb6d98f7fad6a74d`다.
+
+| GitHub artifact file | Components | Dependencies | 해석 |
+|---|---:|---:|---|
+| `cbom.json` | 41 | 22 | Java/Python 통합 |
+| `cbom_java-app.json` | 29 | 16 | baseline Java, 35 findings |
+| `cbom_python-app.json` | 12 | 6 | baseline Python, 13 findings |
+| `cbom_remediated.java-app.json` | 0 | 0 | build하지 않은 module도 empty CBOM으로 upload |
+
+원격 release `v2.1.1` workflow는 문서 범위대로 Java/Python만 요청했다. 따라서 Go가 artifact에 없는 것은 실패가 아니다. 반면 repository 안의 보완 Java module을 발견하고도 baseline만 build했기 때문에 empty module CBOM이 생겼다. workflow success 외에 “expected module CBOM이 non-empty인가”를 별도 gate로 검사해야 한다. GitHub는 `actions/upload-artifact@v4`의 Node.js 20 deprecation warning도 표시했다.
+
+같은 공개 URL을 CBOMkit `/api/v1/scan`에 보내자 HTTP 202 후 commit `066b89e`를 clone하고 `pkg:github/m3rcy1028/cbom-test@066b89e`로 PostgreSQL에 저장했다.
+
+| CBOMkit Git scan language row | Scanned files | Lines | Language CBOM components |
+|---|---:|---:|---:|
+| Java | 2 | 212 | 28 |
+| Python | 1 | 68 | 13 |
+| Go | 4 | 129 | 7 |
+| Aggregated | 7 | 409 | 48 components / 24 dependencies |
+
+통합 CBOM은 schema와 semantic validation을 통과했다. local Action current와 semantic signature 집합은 같았고 MD5 component/occurrence만 3→2였다. 그러나 evidence를 보면 보완 Go만 포함되고 보완 Java/Python은 결과에 없었다. CBOMkit service가 repository를 build하지 않는 공식 동작과 module indexing/aggregation 특성 때문에, 중앙 Git scan은 편리하지만 build-aware Sonar/Action의 대체재로 간주하면 안 된다.
+
 ## 9. Compliance 비교
 
 | Asset | Ground truth | Built-in | coeus local | External OPA |
@@ -485,6 +513,7 @@ Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `jav
 | F-12 | Medium | frontend supply chain | current audit 48, release current audit 59 | known dependency risk | lockfile update·SCA gate·runtime regression test |
 | F-13 | Medium | CBOMkit logging | 전체 CBOM JSON INFO 기록 | source/evidence metadata 노출 | structure-only log, redaction, size limit |
 | F-14 | Medium | coeus validator | standard schema와 mandatory field 판단 차이 | 사용자 혼동·부분 처리 | validator contract 통일, invalid 시 명확한 정책 |
+| F-15 | High | CI/Git scan coverage | 성공했지만 empty/누락 module 존재 | false completeness | expected module·language·evidence assertion |
 
 Frontend audit 수치는 같은 날 별도 `npm audit --json`으로 재측정한 값이다. release 설치 직후 npm summary의 25건과 별도 audit의 59건이 달랐으므로 package manager/version/audit scope를 결과와 함께 고정해야 한다.
 
@@ -574,6 +603,15 @@ opa eval --data sources/cbomkit/opa/quantum_safe.rego \
 python3 scripts/capture_evidence.py
 ```
 
+### 13.6 원격 Action·CBOMkit Git scan
+
+```bash
+# GitHub UI/API에서 workflow_dispatch: .github/workflows/cbom.yml, ref=main
+# CBOMkit public Git scan
+curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:8081/api/v1/scan \
+  --data '{"scanUrl":"https://github.com/M3rcy1028/cbom-test.git","branch":"main"}'
+```
+
 전체 source build command, service endpoint, workaround, 결과 경로와 차단 사유는 [CBOM_LAB_PLAN.md](CBOM_LAB_PLAN.md)에 시간순으로 보존했다.
 
 ## 14. 검증 범위와 제한
@@ -585,7 +623,7 @@ python3 scripts/capture_evidence.py
 - performance benchmark와 대규모 repository scan은 범위 밖이다.
 - 인증서·private key는 lab 전용이며 private key 파일은 Git 추적에서 제외한다.
 - 실제 RSA→PQC code migration은 하지 않았다.
-- GitHub-hosted Action과 CBOMkit public Git scan 결과는 최초 push 뒤 원격 검증 절에 추가한다.
+- GitHub-hosted Action과 CBOMkit public Git scan은 완료했지만, private repository credential 경로와 PURL scan은 실행하지 않았다.
 
 ## 15. 공식 자료
 

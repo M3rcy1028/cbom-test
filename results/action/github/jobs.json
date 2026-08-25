@@ -1,0 +1,121 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 97736135997,
+      "run_id": 32826680204,
+      "workflow_name": "CBOM generation experiment",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/M3rcy1028/cbom-test/actions/runs/32826680204",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUDfVss8AAAAWwYcVPQ",
+      "head_sha": "066b89efca6623f15f380478752e7c1e188047e2",
+      "url": "https://api.github.com/repos/M3rcy1028/cbom-test/actions/jobs/97736135997",
+      "html_url": "https://github.com/M3rcy1028/cbom-test/actions/runs/32826680204/job/97736135997",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-08-25T08:27:15Z",
+      "started_at": "2026-08-25T08:27:18Z",
+      "completed_at": "2026-08-25T08:27:59Z",
+      "name": "cbom-scan",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-25T08:27:19Z",
+          "completed_at": "2026-08-25T08:27:21Z"
+        },
+        {
+          "name": "Build cbomkit/cbomkit-action@v2.1.1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-25T08:27:21Z",
+          "completed_at": "2026-08-25T08:27:32Z"
+        },
+        {
+          "name": "Checkout fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-25T08:27:32Z",
+          "completed_at": "2026-08-25T08:27:33Z"
+        },
+        {
+          "name": "Set up Java 21",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-25T08:27:33Z",
+          "completed_at": "2026-08-25T08:27:33Z"
+        },
+        {
+          "name": "Build Java fixture before scanning",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-25T08:27:33Z",
+          "completed_at": "2026-08-25T08:27:48Z"
+        },
+        {
+          "name": "Install Python dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-08-25T08:27:48Z",
+          "completed_at": "2026-08-25T08:27:49Z"
+        },
+        {
+          "name": "Generate module and consolidated CBOMs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-08-25T08:27:49Z",
+          "completed_at": "2026-08-25T08:27:53Z"
+        },
+        {
+          "name": "Upload CBOM evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-08-25T08:27:53Z",
+          "completed_at": "2026-08-25T08:27:55Z"
+        },
+        {
+          "name": "Post Set up Java 21",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-08-25T08:27:55Z",
+          "completed_at": "2026-08-25T08:27:57Z"
+        },
+        {
+          "name": "Post Checkout fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-08-25T08:27:57Z",
+          "completed_at": "2026-08-25T08:27:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-08-25T08:27:57Z",
+          "completed_at": "2026-08-25T08:27:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/M3rcy1028/cbom-test/check-runs/97736135997",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000875,
+      "runner_name": "GitHub Actions 1000000875",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

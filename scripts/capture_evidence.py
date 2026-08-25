@@ -167,7 +167,8 @@ def main() -> int:
         ], "로컬 엔진은 실제 실행했으며 원격 GitHub workflow 결과는 push 뒤 별도 캡처한다.")
         render_card(card, "11-cbomkit-api-db.png", "CBOMkit API·PostgreSQL", "results/cbomkit/api-transcript.txt · postgres-query.log", [
             ("pass", "Runtime", "PostgreSQL 14.24 :5433 · Quarkus backend :8081 · health UP"),
-            ("pass", "Stored CBOMs", "lab-sonar 38 · lab-theia 25 · lab-enriched 64 · lab-policy 5; API 재조회와 DB 4 rows 대조"),
+            ("pass", "Stored CBOMs", "manual upload 5개 + public Git scan 1개; API 재조회와 DB 6 rows 대조"),
+            ("pass", "Git scan", "pkg:github/m3rcy1028/cbom-test@066b89e · 48 components · 24 dependencies"),
             ("fail", "Interoperability", "schema-valid enriched CBOM의 file component에 cryptoProperties가 없어 compliance HTTP 500/NPE"),
             ("warn", "Logging", "StoreCBOMCommand가 전체 CBOM JSON을 INFO log에 기록"),
         ], "API 저장 성공과 모든 CBOM의 정책 평가 성공은 다른 주장이다. enriched 입력은 실제로 정책 평가에 실패했다.")
@@ -220,6 +221,23 @@ def main() -> int:
         broken.screenshot(path=str(EVIDENCE / "14-current-main-blank-screen.png"), full_page=False)
         browser_results["currentMain"] = {"bodyLength": len(broken.locator("body").inner_text()), "errors": broken_errors}
         broken.close()
+
+        github_run = ROOT / "results/action/github/workflow-run.json"
+        if github_run.exists():
+            run = json.loads(github_run.read_text(encoding="utf-8"))
+            github = browser.new_page(viewport={"width": 1440, "height": 1100})
+            github_errors: list[str] = []
+            github.on("pageerror", lambda err: github_errors.append(f"pageerror:{err}"))
+            github.goto(run["html_url"], wait_until="domcontentloaded", timeout=60000)
+            github.wait_for_timeout(4000)
+            github.screenshot(path=str(EVIDENCE / "22-github-action-success.png"), full_page=False)
+            browser_results["githubAction"] = {
+                "url": github.url,
+                "title": github.title(),
+                "bodyLength": len(github.locator("body").inner_text()),
+                "errors": github_errors,
+            }
+            github.close()
         browser.close()
 
     (ROOT / "results/ui/browser-validation.json").parent.mkdir(parents=True, exist_ok=True)

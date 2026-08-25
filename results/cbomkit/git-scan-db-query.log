@@ -1,0 +1,7 @@
+                  id                  |                 giturl                 | commithash | revision | packagefolder | language | numberofscannedfiles | numberofscannedlines | components 
+--------------------------------------+----------------------------------------+------------+----------+---------------+----------+----------------------+----------------------+------------
+ 325b06f5-4b4c-4f5f-b6b4-779f6e431142 | https://github.com/M3rcy1028/cbom-test | 066b89e    | main     |               |        0 |                    2 |                  212 |         28
+ 325b06f5-4b4c-4f5f-b6b4-779f6e431142 | https://github.com/M3rcy1028/cbom-test | 066b89e    | main     |               |        1 |                    1 |                   68 |         13
+ 325b06f5-4b4c-4f5f-b6b4-779f6e431142 | https://github.com/M3rcy1028/cbom-test | 066b89e    | main     |               |        2 |                    4 |                  129 |          7
+(3 rows)
+

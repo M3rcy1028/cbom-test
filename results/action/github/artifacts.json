@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 9555171808,
+      "node_id": "MDg6QXJ0aWZhY3Q5NTU1MTcxODA4",
+      "name": "CBOM",
+      "size_in_bytes": 8307,
+      "url": "https://api.github.com/repos/M3rcy1028/cbom-test/actions/artifacts/9555171808",
+      "archive_download_url": "https://api.github.com/repos/M3rcy1028/cbom-test/actions/artifacts/9555171808/zip",
+      "expired": false,
+      "digest": "sha256:8fb665a1dbdeb3a6873061dc3896e95d7f0ce74ab759d6c5cb6d98f7fad6a74d",
+      "created_at": "2026-08-25T08:27:55Z",
+      "updated_at": "2026-08-25T08:27:55Z",
+      "expires_at": "2026-11-23T08:27:14Z",
+      "workflow_run": {
+        "id": 32826680204,
+        "repository_id": 1345836466,
+        "head_repository_id": 1345836466,
+        "head_branch": "main",
+        "head_sha": "066b89efca6623f15f380478752e7c1e188047e2"
+      }
+    }
+  ]
+}

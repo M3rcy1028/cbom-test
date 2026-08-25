@@ -113,9 +113,9 @@ Recall    = TP / (TP + FN)
 - [ ] Compose 실행 — v2.35.1 확인, daemon 권한 때문에 실제 기동 대기
 - [x] JDK 21·Maven
 - [x] Python·Go 1.25+
-- [ ] GitHub Actions 실행 가능한 테스트 저장소
+- [x] GitHub Actions 실행 가능한 테스트 저장소
 - [x] 각 저장소 commit 고정
-- [ ] 환경 캡처
+- [x] 환경 캡처
 
 ### P1. 공통 fixture와 ground truth
 
@@ -146,11 +146,11 @@ Recall    = TP / (TP + FN)
 
 ### P4. CBOMkit-action
 
-- [x] 테스트 GitHub 저장소와 workflow — 로컬 저장소·workflow 준비, 원격 push 대기
+- [x] 테스트 GitHub 저장소와 workflow
 - [x] build-before-scan — Java build 선행 후 세 언어 로컬 Action 엔진 실행
-- [ ] workflow_dispatch 실행
+- [x] workflow_dispatch 실행 — run `32826680204`, success
 - [x] 모듈별 CBOM과 consolidated `cbom.json` — 로컬 Action 엔진 기준 확보
-- [x] 로컬 `CBOM.zip` artifact 등가물 생성
+- [x] 로컬 `CBOM.zip` 등가물과 원격 공식 artifact 확보
 - [x] Sonar 결과와 비교 — Action은 언어 간 동일 알고리즘을 병합하지 않아 49개, Sonar는 38개
 
 ### P5. CBOMkit-theia
@@ -167,7 +167,7 @@ Recall    = TP / (TP + FN)
 
 - [x] `production` profile — standalone Quarkus API 2개 기동(내장 정책 8081, OPA 외부 정책 8082)
 - [x] health와 CBOM CRUD API
-- [ ] example/sonar/action/theia/enriched CBOM 업로드 — sonar/theia/enriched/policy 완료, Action 원격 산출물 대기
+- [x] sonar/action/theia/enriched/policy CBOM 업로드와 public Git scan 저장
 - [x] inventory, detail, evidence 화면 — release 2.2.0 full/coeus 실제 화면 캡처
 - [x] PostgreSQL 저장·재조회
 - [x] `coeus` viewer-only profile 비교 — CBOMkit frontend의 별도 build profile이며 독립 저장소가 아님을 확인
@@ -188,7 +188,7 @@ Recall    = TP / (TP + FN)
 - [x] TLS 1.2 → TLS 1.3
 - [x] RSA → PQC/hybrid 명세 fixture — 실제 구현 교체가 아니라 ML-KEM 정책 평가 fixture로 범위를 명시
 - [ ] 모든 생성기 재실행 — Action·Theia 완료, Sonar 재실행은 로컬 관리 credential 유실로 제외
-- [x] asset·property·relationship·policy semantic diff — 정규화 비교 결과 생성 중
+- [x] asset·property·relationship·policy semantic diff — 정규화 JSON·Markdown 완료
 
 ### P9. 통합 기능 명세서
 
@@ -204,10 +204,10 @@ Recall    = TP / (TP + FN)
 - [x] 최종 README 제목을 `cbom-test`로 정리
 - [x] 대용량 도구·upstream clone·개인키·credential 제외 확인
 - [x] 결과 JSON·로그·캡처·보고서·재현 스크립트 추적
-- [ ] `git init`, 기본 branch `main`, 최초 commit `first commit` — init/main 완료, commit 직전
+- [x] `git init`, 기본 branch `main`, 최초 commit `first commit` — `066b89e`
 - [x] remote `https://github.com/M3rcy1028/cbom-test.git` 설정
-- [ ] `git push -u origin main`
-- [ ] 원격 commit과 workflow 실행 상태 확인
+- [x] `git push -u origin main`
+- [x] 원격 commit과 workflow 실행 상태 확인 — remote hash 일치, run success, artifact 확보
 
 ## 7. 도구별 기능 명세 템플릿
 
@@ -260,26 +260,24 @@ evidence/<tool>/<figure-number>-<short-description>.png
 
 | 단계 | 상태 | 핵심 결과/차단 |
 |---|---|---|
-| 계획 원장 | 진행 중 | 이 파일을 단일 진행 기준으로 사용 중 |
+| 계획 원장 | 완료 대기 | 원격 증거 검증까지 기록, 후속 push 상태만 남음 |
 | 환경 점검 | 부분 완료 | Docker 29.1.3/Compose 2.35.1 확인; `/var/run/docker.sock` 접근 거부 |
 | fixture | 부분 완료 | Java·Python·Go 실행 성공, 인증서·키·OpenSSL 설정 완료; image build만 Docker 권한 대기 |
 | IBM/CycloneDX | 완료 | IBM 1.0·CycloneDX 1.6/1.7 schema 정상/음성 및 schema-vs-semantic 분리 검증 |
 | Sonar | 완료 | standalone SonarQube 26.1, source-built plugin, 3언어 scan, 38-component CBOM·32 issues |
-| Action | 진행 중 | source-built 로컬 3언어 scan 성공; 모듈·통합 CBOM 확보, 원격 workflow만 대기 |
+| Action | 완료 | local 3언어 + GitHub run 32826680204 success; artifact·로그 확보, empty module 경계 확인 |
 | theia | 완료 | dir·registry image·OCI amd64·enrichment 성공; multi-arch exit-code, secret 오탐, 수정 유실 결함 확인 |
-| CBOMkit | 진행 중 | PostgreSQL+Quarkus API·release 2.2.0 UI/coeus 검증; current main frontend blank-screen 회귀 확인 |
+| CBOMkit | 완료 | API·DB·release UI/coeus + public Git scan 48 components; current main blank-screen 회귀 확인 |
 | Compliance | 완료 | 내장·frontend local·OPA CLI/HTTP/backend 연동과 golden matrix 완료 |
-| 변경 전후 | 진행 중 | Action 49→44, MD5 3·CBC 2 제거; Theia TLS 1.2 제거 확인, 보고용 diff 생성 중 |
+| 변경 전후 | 범위 완료 | Action 49→44, MD5 3·CBC 2 제거; Theia TLS 1.2 제거와 정규화 diff 완료 |
 | 최종 명세 | 완료 | 도구별 20항목, 실제 캡처, 비교·결함·운영 권고·재현 명령 작성 |
-| GitHub 공개 | 예약 | 모든 결과 생성·민감/대용량 파일 검증 후 `M3rcy1028/cbom-test`에 push |
+| GitHub 공개 | 완료 | 최초 commit `066b89e` push, 원격 Action success; 원격 증거 후속 commit 준비 |
 
 ## 11. 다음 작업
 
-1. Action·Theia 변경 전후 정규화 diff와 전체 schema/semantic 검증을 완료한다.
-2. 실제 UI 화면과 원본 로그를 기반으로 evidence PNG·캡처 manifest를 완성한다.
-3. 도구별 20항목을 포함한 한국어 통합 기능 명세서와 README를 완성한다.
-4. 대용량 도구·개인키·credential·upstream clone 제외를 검증하고 최초 commit을 만든다.
-5. `https://github.com/M3rcy1028/cbom-test.git`에 push한 뒤 `workflow_dispatch`를 실행·검증하고 원격 증거를 반영한다.
+1. [x] 원격 Action·CBOMkit Git scan 결과를 schema/semantic validator와 보고서에 반영한다.
+2. [x] 후속 변경의 민감정보·크기·링크를 재검증한다.
+3. [ ] 원격 증거 후속 commit을 push하고 최종 remote 상태를 확인한다.
 
 ## 12. 실행 로그
 
@@ -424,7 +422,7 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - `scripts/capture_evidence.py`로 JSON·로그 기반 실행 증거 카드와 실제 CBOMkit/coeus 브라우저 화면을 생성함.
 - 각 그림마다 실행 내용, 확인 지점, 가능한 결론, 결론낼 수 없는 내용을 `evidence/CAPTURE_MANIFEST.md`에 기록함.
 - misleading한 Sonar consent/login 화면은 실제 scanner log·issue API·CBOM 기반 결과 카드로 덮어씀. Sonar UI 성공 화면으로 가장하지 않음.
-- `CBOM_통합_기능_명세서.md`에 CBOM 정의·요소·생태계 설치 관계, 도구 7종의 20항목 명세, 정량 비교, compliance matrix, 변경 전후, 14개 결함, 운영 gate와 재현 명령을 작성함.
+- `CBOM_통합_기능_명세서.md`에 CBOM 정의·요소·생태계 설치 관계, 도구 7종의 20항목 명세, 정량 비교, compliance matrix, 변경 전후, 15개 결함, 운영 gate와 재현 명령을 작성함.
 - CBOMkit release 2.2.0 full/coeus 화면은 실제 실행 화면이며 current main blank screen은 별도 console error JSON과 함께 보존함.
 - 별도 `npm audit --json` 재측정은 current main 48건(critical 2/high 24), release 2.2.0 worktree 59건(critical 3/high 27)을 보고함. release 설치 직후 summary 25건과 차이가 있어 npm version·audit 시점·scope도 결과와 함께 고정해야 함.
 
@@ -434,4 +432,25 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - `tools/` 약 4.8 GiB, `sources/` 약 2.8 GiB, UI build bundle 48 MiB, target/binary, Action 임시 workspace를 `.gitignore`로 제외함.
 - 테스트 private key 2개는 제외했고 public certificate/public key만 추적함.
 - tracked content에서 private-key PEM header, GitHub token, Sonar token, Bearer authorization, AWS key 형태를 파일 내용 노출 없이 검사했으며 hit 0개임.
-- Python script compile, local Markdown link, schema 11 cases, semantic positive 10 cases를 재검증해 모두 통과함.
+- Python script compile, local Markdown link, schema 13 cases, semantic positive set을 재검증해 모두 통과함.
+
+### 2026-08-25 — 최초 push·GitHub Action·CBOMkit public Git scan
+
+- 최초 commit `066b89efca6623f15f380478752e7c1e188047e2`를 정확히 `first commit` 메시지로 만들고 지정한 `origin/main`에 push함. `git ls-remote` hash와 로컬 hash가 일치함.
+- GitHub REST API로 workflow_dispatch를 실행함. run `32826680204`는 48초에 success, 모든 job step success, `CBOM` artifact ID `9555171808`, size 8,307 bytes임.
+- 원격 artifact digest는 `8fb665a1dbdeb3a6873061dc3896e95d7f0ce74ab759d6c5cb6d98f7fad6a74d`로 GitHub log와 다운로드 파일이 일치함.
+- artifact는 통합 41 components/22 dependencies, Java 29/16, Python 12/6, 미빌드 보완 Java module 0/0을 포함함. workflow success가 모든 module의 non-empty inventory를 보장하지 않음을 확인함.
+- 공개 저장소 URL을 CBOMkit `/api/v1/scan`에 POST해 HTTP 202를 받고 commit `066b89e`를 clone·scan함. DB key는 `pkg:github/m3rcy1028/cbom-test@066b89e`, 통합 48 components/24 dependencies임.
+- Git scan language row: Java 2 files/212 lines/28 components, Python 1/68/13, Go 4/129/7. evidence에는 보완 Go만 포함되고 보완 Java/Python이 없어 module/language coverage assertion의 필요성을 확인함.
+- 원격 Action CBOM을 `lab-action-github`로 API 저장·재조회하고 built-in compliance를 실행함. 41 findings, `error:false`, global false임.
+- 실제 GitHub run 화면은 `evidence/22-github-action-success.png`, raw API·artifact·logs는 `results/action/github/`, public Git scan 원본은 `results/cbomkit/git-scan-*`에 보존함.
+
+### 2026-08-25 — 원격 증거 게시 전 최종 검증
+
+- GitHub Action artifact ZIP과 추출한 CBOM 4개를 `SHA256SUMS.txt`로 대조해 모두 일치함.
+- 원격 Action CBOM과 CBOMkit public Git scan CBOM을 schema 검증군과 semantic positive 검증군에 추가함. 최종 결과는 schema 13/13, semantic 12/12임.
+- Python script compile, workflow YAML parse, Markdown local link 34개, staged file 10 MiB 상한을 검사해 모두 통과함.
+- staged content에서 private-key PEM, GitHub/Sonar/AWS token 형태와 unredacted Bearer credential hit가 모두 0개임.
+- 새 clone에서도 schema 검증을 재현할 수 있도록 전체 upstream clone 대신 Apache-2.0 JSON Schema snapshot 7개, IBM license와 SHA-256 출처표만 추적함.
+- staged tree를 임시 디렉터리에 독립 전개하고 upstream clone 없이 schema 13건과 semantic 12건을 다시 실행해 통과함.
+- GitHub에서 받은 원본 log/header의 후행 공백과 CRLF는 증거 원형 보존을 위해 정규화하지 않음.

@@ -1,0 +1,41 @@
+﻿2026-08-25T08:27:33.9241074Z ##[group]Run mvn -B -f java-app/pom.xml clean package -DskipTests
+2026-08-25T08:27:33.9241655Z [36;1mmvn -B -f java-app/pom.xml clean package -DskipTests[0m
+2026-08-25T08:27:33.9285145Z shell: /usr/bin/bash -e {0}
+2026-08-25T08:27:33.9285419Z env:
+2026-08-25T08:27:33.9285732Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:33.9286254Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:33.9286656Z   MAVEN_ARGS: -ntp
+2026-08-25T08:27:33.9286862Z ##[endgroup]
+2026-08-25T08:27:40.1288767Z [INFO] Scanning for projects...
+2026-08-25T08:27:40.2058273Z [INFO] 
+2026-08-25T08:27:40.2062377Z [INFO] --------------------< lab.cbom:java-crypto-fixture >--------------------
+2026-08-25T08:27:40.2063552Z [INFO] Building java-crypto-fixture 1.0.0
+2026-08-25T08:27:40.2064521Z [INFO]   from pom.xml
+2026-08-25T08:27:40.2065391Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-08-25T08:27:43.3090194Z [INFO] 
+2026-08-25T08:27:43.3091077Z [INFO] --- clean:3.2.0:clean (default-clean) @ java-crypto-fixture ---
+2026-08-25T08:27:43.7082909Z [INFO] 
+2026-08-25T08:27:43.7084261Z [INFO] --- resources:3.4.0:resources (default-resources) @ java-crypto-fixture ---
+2026-08-25T08:27:44.4369697Z [INFO] skip non existing resourceDirectory /home/runner/work/cbom-test/cbom-test/java-app/src/main/resources
+2026-08-25T08:27:44.4397730Z [INFO] 
+2026-08-25T08:27:44.4442649Z [INFO] --- compiler:3.13.0:compile (default-compile) @ java-crypto-fixture ---
+2026-08-25T08:27:45.3163328Z [INFO] Recompiling the module because of changed source code.
+2026-08-25T08:27:45.3225606Z [INFO] Compiling 1 source file with javac [debug release 11] to target/classes
+2026-08-25T08:27:47.1548518Z [INFO] 
+2026-08-25T08:27:47.1549534Z [INFO] --- resources:3.4.0:testResources (default-testResources) @ java-crypto-fixture ---
+2026-08-25T08:27:47.1580095Z [INFO] skip non existing resourceDirectory /home/runner/work/cbom-test/cbom-test/java-app/src/test/resources
+2026-08-25T08:27:47.1594610Z [INFO] 
+2026-08-25T08:27:47.1638318Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ java-crypto-fixture ---
+2026-08-25T08:27:47.1672974Z [INFO] No sources to compile
+2026-08-25T08:27:47.1673426Z [INFO] 
+2026-08-25T08:27:47.1673975Z [INFO] --- surefire:3.5.4:test (default-test) @ java-crypto-fixture ---
+2026-08-25T08:27:47.8168574Z [INFO] Tests are skipped.
+2026-08-25T08:27:47.8197850Z [INFO] 
+2026-08-25T08:27:47.8229394Z [INFO] --- jar:3.5.0:jar (default-jar) @ java-crypto-fixture ---
+2026-08-25T08:27:48.8075104Z [INFO] Building jar: /home/runner/work/cbom-test/cbom-test/java-app/target/java-crypto-fixture-1.0.0.jar
+2026-08-25T08:27:48.8705611Z [INFO] ------------------------------------------------------------------------
+2026-08-25T08:27:48.8706920Z [INFO] BUILD SUCCESS
+2026-08-25T08:27:48.8708164Z [INFO] ------------------------------------------------------------------------
+2026-08-25T08:27:48.8719442Z [INFO] Total time:  8.780 s
+2026-08-25T08:27:48.8722548Z [INFO] Finished at: 2026-08-25T08:27:48Z
+2026-08-25T08:27:48.8724116Z [INFO] ------------------------------------------------------------------------

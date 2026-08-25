@@ -1,6 +1,6 @@
 {
   "releaseFullHome": {
-    "bodyLength": 1650,
+    "bodyLength": 1728,
     "errors": [
       "console:error:Refused to set unsafe header \"origin\""
     ]
@@ -49,5 +49,11 @@
     "errors": [
       "pageerror:Cannot read properties of undefined (reading 'use')"
     ]
+  },
+  "githubAction": {
+    "url": "https://github.com/M3rcy1028/cbom-test/actions/runs/32826680204",
+    "title": "CBOM generation experiment · M3rcy1028/cbom-test@066b89e · GitHub",
+    "bodyLength": 1016,
+    "errors": []
   }
 }

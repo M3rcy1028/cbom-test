@@ -2,7 +2,22 @@
 **/__pycache__/
 tools/*
 !tools/.gitkeep
-sources/
+# Upstream clones stay excluded. Only the exact JSON Schema snapshots used by
+# scripts/validate_schemas.py and their provenance note are versioned.
+sources/*
+!sources/SCHEMA_SOURCES.md
+!sources/ibm-cbom/
+sources/ibm-cbom/*
+!sources/ibm-cbom/LICENSE
+!sources/ibm-cbom/bom-1.4-cbom-1.0.schema.json
+!sources/ibm-cbom/jsf-0.82.schema.json
+!sources/ibm-cbom/spdx.schema.json
+!sources/cyclonedx-schema/
+sources/cyclonedx-schema/*
+!sources/cyclonedx-schema/bom-1.6.schema.json
+!sources/cyclonedx-schema/bom-1.7.schema.json
+!sources/cyclonedx-schema/jsf-0.82.schema.json
+!sources/cyclonedx-schema/spdx.schema.json
 results/**/*.tmp
 certs/*.srl
 certs/*private-key.pem

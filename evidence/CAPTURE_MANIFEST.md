@@ -26,7 +26,7 @@
 ### 03. Semantic validation — `03-semantic-validation.png`
 
 1. 무엇을 실행했는가: component bom-ref와 dependency root/target의 중복·누락·dangling 참조를 검사했다.
-2. 어디를 볼 것인가: 정상 10/10, Theia enriched 누락, schema-positive 음성 fixture 행이다.
+2. 어디를 볼 것인가: 정상 12/12, Theia enriched 누락, schema-positive 음성 fixture 행이다.
 3. 결론: 핵심 원본 산출물은 참조 무결성이 있고, enrichment 결과에는 bom-ref 없는 component가 1개 있다.
 4. 결론낼 수 없는 것: 알고리즘 속성의 암호학적 정확성까지 검증하는 도구는 아니다.
 
@@ -120,3 +120,10 @@
 2. 어디를 볼 것인가: 5개 자산의 네 compliance category와 우상단 `Invalid CBOM` 경고다.
 3. 결론: local engine은 ML-KEM을 safe로 표시하고, 동시에 frontend validator가 `serialNumber` 누락을 경고하면서도 결과를 렌더링한다.
 4. 결론낼 수 없는 것: 경고가 있는 fixture를 완전한 CycloneDX production 문서로 간주할 수 없다. Schema validator와 frontend validation contract 차이를 별도로 다뤄야 한다.
+
+### 22. GitHub-hosted Action — `22-github-action-success.png`
+
+1. 무엇을 실행했는가: `main`의 최초 commit `066b89e`에서 workflow_dispatch로 `cbomkit-action@v2.1.1`을 실행했다.
+2. 어디를 볼 것인가: Status Success, 48초 duration, artifact 1개, CBOM digest다.
+3. 결론: GitHub-hosted runner에서 build·Java/Python scan·artifact upload가 모두 성공했고 공식 `CBOM.zip`을 회수했다.
+4. 결론낼 수 없는 것: workflow success가 모든 module의 non-empty CBOM을 뜻하지 않는다. 실제 artifact에는 build하지 않은 보완 Java module의 0-component CBOM이 포함됐다.

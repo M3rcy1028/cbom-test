@@ -149,6 +149,36 @@
         "danglingDependencyTargets": [],
         "duplicateDependencyRoots": []
       }
+    },
+    {
+      "path": "results/action/github/artifact/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 41,
+      "dependencyCount": 22,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/cbomkit/git-scan-cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 48,
+      "dependencyCount": 24,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
     }
   ],
   "allValid": true

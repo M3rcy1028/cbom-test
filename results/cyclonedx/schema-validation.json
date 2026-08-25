@@ -145,6 +145,24 @@
       "actualValid": true,
       "passed": true,
       "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: GitHub-hosted Action CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/action/github/artifact/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: CBOMkit public Git scan",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/cbomkit/git-scan-cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
     }
   ]
 }

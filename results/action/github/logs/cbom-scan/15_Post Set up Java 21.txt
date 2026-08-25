@@ -1,0 +1,4 @@
+﻿2026-08-25T08:27:55.2336640Z Post job cleanup.
+2026-08-25T08:27:55.3877454Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/cbom-test/cbom-test --files-from manifest.txt --use-compress-program zstdmt
+2026-08-25T08:27:56.7663920Z Sent 17351306 of 17351306 (100.0%), 16.5 MBs/sec
+2026-08-25T08:27:57.1872802Z Cache saved with the key: setup-java-Linux-x64-maven-f952c15b8ac98c9257accf2b1d0d9ff19537b3d3e50cef36c4cc019f0dd82fb6

@@ -1,0 +1,1385 @@
+{
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "services": [
+        {
+          "name": "CBOMkit",
+          "provider": {
+            "name": "PQCA"
+          }
+        }
+      ]
+    },
+    "timestamp": "2026-08-25T08:29:30Z",
+    "properties": [
+      {
+        "name": "gitUrl",
+        "value": "https://github.com/M3rcy1028/cbom-test"
+      },
+      {
+        "name": "revision",
+        "value": "main"
+      },
+      {
+        "name": "commit",
+        "value": "066b89e"
+      }
+    ]
+  },
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "name": "ECDH",
+      "type": "cryptographic-asset",
+      "bom-ref": "a5becd3b-41f0-41e6-b9cf-729afd4304ee",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 84,
+            "offset": 33,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.KeyAgreement#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.3.132.1.12",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree"
+        }
+      }
+    },
+    {
+      "name": "AES-128",
+      "type": "cryptographic-asset",
+      "bom-ref": "958940cc-2ecb-48e0-b0dd-4b2d479eff05",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 30,
+            "offset": 28,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          },
+          {
+            "line": 38,
+            "offset": 28,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "cryptoFunctions": [
+            "keygen"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "iv@938b3be7-3817-41ac-a8ed-cc7789581019",
+      "type": "cryptographic-asset",
+      "bom-ref": "938b3be7-3817-41ac-a8ed-cc7789581019",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 31,
+            "offset": 38,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.GCMParameterSpec#<init>(I[B)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 96,
+          "type": "initialization-vector"
+        }
+      }
+    },
+    {
+      "name": "RSA-OAEP",
+      "type": "cryptographic-asset",
+      "bom-ref": "d7e57317-789e-4733-9c60-011fc4c534ba",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 48,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.7",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "ecb",
+          "padding": "oaep",
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "encrypt"
+          ],
+          "parameterSetIdentifier": "2048"
+        }
+      }
+    },
+    {
+      "name": "PBKDF2-HMAC-SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "41b2d102-ae08-47df-9b8d-02963d8f5d8f",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 64,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "kdf",
+          "cryptoFunctions": [
+            "keyderive"
+          ],
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "name": "ECDSA-SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "c6edcc11-4a40-4e88-85dc-477ae173c1d2",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 73,
+            "offset": 30,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.10045.4.3.2",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        }
+      }
+    },
+    {
+      "name": "secret-key@99d41213-b3f8-4159-81d4-7ea4fc3c99b5",
+      "type": "cryptographic-asset",
+      "bom-ref": "99d41213-b3f8-4159-81d4-7ea4fc3c99b5",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 30,
+            "offset": 28,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "key@dfca23e2-95bd-4c41-827d-59cf2f162e23",
+      "type": "cryptographic-asset",
+      "bom-ref": "dfca23e2-95bd-4c41-827d-59cf2f162e23",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 70,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "AES-128-GCM",
+      "type": "cryptographic-asset",
+      "bom-ref": "fd8a90a0-9c7d-4778-8691-591ef40f6aba",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 32,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1.6",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "gcm",
+          "primitive": "ae",
+          "cryptoFunctions": [
+            "encrypt"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "RSA-2048",
+      "type": "cryptographic-asset",
+      "bom-ref": "1509a45b-f829-41af-896b-891cc70cf0f5",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 45,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "keygen"
+          ],
+          "parameterSetIdentifier": "2048"
+        }
+      }
+    },
+    {
+      "name": "salt@19350819-f0e3-4747-b4a4-d9b2d894229e",
+      "type": "cryptographic-asset",
+      "bom-ref": "19350819-f0e3-4747-b4a4-d9b2d894229e",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 63,
+            "offset": 30,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "salt"
+        }
+      }
+    },
+    {
+      "name": "EC",
+      "type": "cryptographic-asset",
+      "bom-ref": "92597328-c1b9-417d-a58a-43f5d28fe0e6",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 70,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "line": 80,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "name": "key@374ef0c6-4670-42d6-bea5-e5fde30899da",
+      "type": "cryptographic-asset",
+      "bom-ref": "374ef0c6-4670-42d6-bea5-e5fde30899da",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 80,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "password@467b4ef0-8cca-4b6c-b651-46539ffe227c",
+      "type": "cryptographic-asset",
+      "bom-ref": "467b4ef0-8cca-4b6c-b651-46539ffe227c",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 63,
+            "offset": 30,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 72,
+          "type": "password"
+        }
+      }
+    },
+    {
+      "name": "MGF1",
+      "type": "cryptographic-asset",
+      "bom-ref": "55f422e6-b1a5-4776-b095-1ec2be91a928",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 48,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.8",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "other"
+        }
+      }
+    },
+    {
+      "name": "key@31662dfa-0add-4e49-8b15-19b3a6e70059",
+      "type": "cryptographic-asset",
+      "bom-ref": "31662dfa-0add-4e49-8b15-19b3a6e70059",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 80,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "HMAC-SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "dd8f7217-6ad2-4a26-bd76-1e04ed141d8e",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 64,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.2.9",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "name": "secret-key@421514c1-a43a-4c5d-b4ed-5cf86ca9c216",
+      "type": "cryptographic-asset",
+      "bom-ref": "421514c1-a43a-4c5d-b4ed-5cf86ca9c216",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 64,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 256,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "secret-key@b2a9d2ca-f6cb-4569-a3fe-bc7adc38024e",
+      "type": "cryptographic-asset",
+      "bom-ref": "b2a9d2ca-f6cb-4569-a3fe-bc7adc38024e",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 39,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "secret-key@01bac620-d22e-4447-9506-2ee1ca5df62c",
+      "type": "cryptographic-asset",
+      "bom-ref": "01bac620-d22e-4447-9506-2ee1ca5df62c",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 38,
+            "offset": 28,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "key@86b00d08-4ef3-400d-83bb-a7a6c791a42c",
+      "type": "cryptographic-asset",
+      "bom-ref": "86b00d08-4ef3-400d-83bb-a7a6c791a42c",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 70,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "key@5d90fd98-3513-4e45-a695-7a3cb731d7e5",
+      "type": "cryptographic-asset",
+      "bom-ref": "5d90fd98-3513-4e45-a695-7a3cb731d7e5",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 45,
+            "offset": 37,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 2048,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "secret-key@2efc63c1-3ae7-4272-80af-ed87968719a4",
+      "type": "cryptographic-asset",
+      "bom-ref": "2efc63c1-3ae7-4272-80af-ed87968719a4",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 32,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "secret-key"
+        }
+      }
+    },
+    {
+      "name": "iv@50015a0c-4e35-4c8f-bdcd-702087e8a507",
+      "type": "cryptographic-asset",
+      "bom-ref": "50015a0c-4e35-4c8f-bdcd-702087e8a507",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 40,
+            "offset": 50,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 128,
+          "type": "initialization-vector"
+        }
+      }
+    },
+    {
+      "name": "AES-128-CBC-PKCS5",
+      "type": "cryptographic-asset",
+      "bom-ref": "2e56d20a-5192-47b7-994a-35afd14029ff",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 39,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1.2",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "cbc",
+          "padding": "pkcs5",
+          "primitive": "block-cipher",
+          "cryptoFunctions": [
+            "encrypt"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "71d36271-d28d-4312-bbbb-010d76bf56d8",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 48,
+            "offset": 24,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "line": 54,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+          },
+          {
+            "line": 64,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          },
+          {
+            "line": 73,
+            "offset": 30,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.2.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "cryptoFunctions": [
+            "digest"
+          ],
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "name": "MD5",
+      "type": "cryptographic-asset",
+      "bom-ref": "0ed547d7-6a58-44c6-97f0-bf40e9f55c29",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 59,
+            "offset": 15,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "cryptoFunctions": [
+            "digest"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "EC-secp256r1",
+      "type": "cryptographic-asset",
+      "bom-ref": "1467845e-3734-4145-95b8-c9402a836c2a",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 71,
+            "offset": 33,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.spec.ECGenParameterSpec#<init>(Ljava/lang/String;)V"
+          },
+          {
+            "line": 81,
+            "offset": 33,
+            "location": "java-app/src/main/java/lab/CryptoFixture.java",
+            "additionalContext": "java.security.spec.ECGenParameterSpec#<init>(Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.10045.2.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ECDH",
+      "type": "cryptographic-asset",
+      "bom-ref": "5e8936f2-32db-4636-8c59-e98506a831aa",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 61,
+            "offset": 11,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "exchange"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.3.132.1.12",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "key-agree",
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PBKDF2-SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "4f2e891f-3144-4e52-aacd-43db2328069e",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 48,
+            "offset": 11,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "PBKDF2HMAC"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "kdf",
+          "cryptoFunctions": [
+            "keyderive"
+          ],
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "name": "AES-GCM",
+      "type": "cryptographic-asset",
+      "bom-ref": "13fdf4a4-2b0c-44c9-98df-2e3cddb5c7fc",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 13,
+            "offset": 16,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "Cipher"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "gcm",
+          "primitive": "ae",
+          "cryptoFunctions": [
+            "encrypt"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "private-key@c531d58a-7fd2-4a8e-845c-5ce4361bdb3c",
+      "type": "cryptographic-asset",
+      "bom-ref": "c531d58a-7fd2-4a8e-845c-5ce4361bdb3c",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 60,
+            "offset": 10,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "name": "RSA-2048",
+      "type": "cryptographic-asset",
+      "bom-ref": "e62bd722-f7d8-46d9-b96a-7f168c51387a",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 24,
+            "offset": 18,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "keygen"
+          ],
+          "parameterSetIdentifier": "2048"
+        }
+      }
+    },
+    {
+      "name": "private-key@81ded691-e2e5-42cc-850f-9f4e2c9dca9a",
+      "type": "cryptographic-asset",
+      "bom-ref": "81ded691-e2e5-42cc-850f-9f4e2c9dca9a",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 24,
+            "offset": 18,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "size": 2048,
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "name": "private-key@f15145bf-802b-4077-8bc4-7421ead9442e",
+      "type": "cryptographic-asset",
+      "bom-ref": "f15145bf-802b-4077-8bc4-7421ead9442e",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 59,
+            "offset": 12,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "name": "ECDSA-secp256r1-SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "2d67b840-a881-41a8-9e4d-4fb6209f85a1",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 55,
+            "offset": 11,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "sign"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.10045.4.3.2",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "keygen",
+            "sign"
+          ]
+        }
+      }
+    },
+    {
+      "name": "SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "bb6ac628-90d3-47c0-8a9c-67c6fb7d1515",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 36,
+            "offset": 13,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "Hash"
+          },
+          {
+            "line": 48,
+            "offset": 11,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "PBKDF2HMAC"
+          },
+          {
+            "line": 55,
+            "offset": 43,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "SHA256"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.2.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "cryptoFunctions": [
+            "digest"
+          ],
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "name": "AES-CBC",
+      "type": "cryptographic-asset",
+      "bom-ref": "2aa1fc24-8b6b-40d2-a97c-92da3f589251",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 19,
+            "offset": 16,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "Cipher"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "cbc",
+          "primitive": "block-cipher",
+          "cryptoFunctions": [
+            "encrypt"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "MD5",
+      "type": "cryptographic-asset",
+      "bom-ref": "e90e7d55-a9d9-407a-9bf9-10bd63bc277a",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 42,
+            "offset": 13,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "Hash"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "cryptoFunctions": [
+            "digest"
+          ],
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "private-key@2c66b841-a8d1-4cd8-976b-70a11f4825cf",
+      "type": "cryptographic-asset",
+      "bom-ref": "2c66b841-a8d1-4cd8-976b-70a11f4825cf",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 54,
+            "offset": 18,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "name": "EC-secp256r1",
+      "type": "cryptographic-asset",
+      "bom-ref": "bffcc510-3cc2-4aad-9574-d2a93f27a534",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 60,
+            "offset": 10,
+            "location": "python-app/crypto_fixture.py",
+            "additionalContext": "generate_private_key"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.10045.2.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ECDH",
+      "type": "cryptographic-asset",
+      "bom-ref": "d402d041-9612-481e-8d45-39f2172de01a",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 43,
+            "offset": 10,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "P256"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.3.132.1.12",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "key-agree"
+        }
+      }
+    },
+    {
+      "name": "RSA-OAEP",
+      "type": "cryptographic-asset",
+      "bom-ref": "82e8ce88-d99a-45a1-a8d6-871c26767c3d",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 24,
+            "offset": 18,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.7",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "padding": "oaep",
+          "primitive": "pke",
+          "parameterSetIdentifier": "2048"
+        }
+      }
+    },
+    {
+      "name": "SHA-256",
+      "type": "cryptographic-asset",
+      "bom-ref": "6a544a4a-9201-4667-b5bc-fadb4c4b87b5",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 25,
+            "offset": 30,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "New"
+          },
+          {
+            "line": 31,
+            "offset": 16,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "Sum256"
+          },
+          {
+            "line": 37,
+            "offset": 11,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "Sum256"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.2.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "cryptoFunctions": [
+            "digest"
+          ],
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "name": "AES-128-GCM",
+      "type": "cryptographic-asset",
+      "bom-ref": "ee2df0aa-ea97-4f46-bfb5-3967667a65b8",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 18,
+            "offset": 13,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "NewCipher"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "2.16.840.1.101.3.4.1.6",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "mode": "gcm",
+          "primitive": "ae",
+          "parameterSetIdentifier": "128"
+        }
+      }
+    },
+    {
+      "name": "RSA-2048",
+      "type": "cryptographic-asset",
+      "bom-ref": "407b93eb-0c8e-4479-bf4f-d6a7e1ff915b",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 24,
+            "offset": 18,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "oid": "1.2.840.113549.1.1.1",
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "parameterSetIdentifier": "2048"
+        }
+      }
+    },
+    {
+      "name": "NATIVEPRNG",
+      "type": "cryptographic-asset",
+      "bom-ref": "68825877-8ec1-4c41-9b90-3330e4ad9137",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 36,
+            "offset": 46,
+            "location": "remediated/go-app/main.go"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "drbg"
+        }
+      }
+    },
+    {
+      "name": "ECDSA-secp256r1",
+      "type": "cryptographic-asset",
+      "bom-ref": "9bc61986-d2bc-4da4-9c91-3eeef9d51cee",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 36,
+            "offset": 11,
+            "location": "remediated/go-app/main.go",
+            "additionalContext": "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "curve": "secp256r1",
+          "primitive": "signature"
+        }
+      }
+    }
+  ],
+  "specVersion": "1.6",
+  "dependencies": [
+    {
+      "ref": "01bac620-d22e-4447-9506-2ee1ca5df62c",
+      "dependsOn": [
+        "958940cc-2ecb-48e0-b0dd-4b2d479eff05"
+      ]
+    },
+    {
+      "ref": "b2a9d2ca-f6cb-4569-a3fe-bc7adc38024e",
+      "dependsOn": [
+        "2e56d20a-5192-47b7-994a-35afd14029ff"
+      ]
+    },
+    {
+      "ref": "31662dfa-0add-4e49-8b15-19b3a6e70059",
+      "dependsOn": [
+        "92597328-c1b9-417d-a58a-43f5d28fe0e6"
+      ]
+    },
+    {
+      "ref": "dd8f7217-6ad2-4a26-bd76-1e04ed141d8e",
+      "dependsOn": [
+        "71d36271-d28d-4312-bbbb-010d76bf56d8"
+      ]
+    },
+    {
+      "ref": "dfca23e2-95bd-4c41-827d-59cf2f162e23",
+      "dependsOn": [
+        "92597328-c1b9-417d-a58a-43f5d28fe0e6"
+      ]
+    },
+    {
+      "ref": "2e56d20a-5192-47b7-994a-35afd14029ff",
+      "dependsOn": [
+        "50015a0c-4e35-4c8f-bdcd-702087e8a507"
+      ]
+    },
+    {
+      "ref": "5d90fd98-3513-4e45-a695-7a3cb731d7e5",
+      "dependsOn": [
+        "1509a45b-f829-41af-896b-891cc70cf0f5"
+      ]
+    },
+    {
+      "ref": "2efc63c1-3ae7-4272-80af-ed87968719a4",
+      "dependsOn": [
+        "fd8a90a0-9c7d-4778-8691-591ef40f6aba"
+      ]
+    },
+    {
+      "ref": "d7e57317-789e-4733-9c60-011fc4c534ba",
+      "dependsOn": [
+        "55f422e6-b1a5-4776-b095-1ec2be91a928",
+        "71d36271-d28d-4312-bbbb-010d76bf56d8"
+      ]
+    },
+    {
+      "ref": "c6edcc11-4a40-4e88-85dc-477ae173c1d2",
+      "dependsOn": [
+        "71d36271-d28d-4312-bbbb-010d76bf56d8"
+      ]
+    },
+    {
+      "ref": "fd8a90a0-9c7d-4778-8691-591ef40f6aba",
+      "dependsOn": [
+        "938b3be7-3817-41ac-a8ed-cc7789581019"
+      ]
+    },
+    {
+      "ref": "374ef0c6-4670-42d6-bea5-e5fde30899da",
+      "dependsOn": [
+        "1467845e-3734-4145-95b8-c9402a836c2a"
+      ]
+    },
+    {
+      "ref": "86b00d08-4ef3-400d-83bb-a7a6c791a42c",
+      "dependsOn": [
+        "1467845e-3734-4145-95b8-c9402a836c2a"
+      ]
+    },
+    {
+      "ref": "41b2d102-ae08-47df-9b8d-02963d8f5d8f",
+      "dependsOn": [
+        "dd8f7217-6ad2-4a26-bd76-1e04ed141d8e"
+      ]
+    },
+    {
+      "ref": "421514c1-a43a-4c5d-b4ed-5cf86ca9c216",
+      "dependsOn": [
+        "41b2d102-ae08-47df-9b8d-02963d8f5d8f",
+        "467b4ef0-8cca-4b6c-b651-46539ffe227c",
+        "19350819-f0e3-4747-b4a4-d9b2d894229e"
+      ]
+    },
+    {
+      "ref": "99d41213-b3f8-4159-81d4-7ea4fc3c99b5",
+      "dependsOn": [
+        "958940cc-2ecb-48e0-b0dd-4b2d479eff05"
+      ]
+    },
+    {
+      "ref": "f15145bf-802b-4077-8bc4-7421ead9442e",
+      "dependsOn": [
+        "5e8936f2-32db-4636-8c59-e98506a831aa"
+      ]
+    },
+    {
+      "ref": "c531d58a-7fd2-4a8e-845c-5ce4361bdb3c",
+      "dependsOn": [
+        "bffcc510-3cc2-4aad-9574-d2a93f27a534"
+      ]
+    },
+    {
+      "ref": "4f2e891f-3144-4e52-aacd-43db2328069e",
+      "dependsOn": [
+        "bb6ac628-90d3-47c0-8a9c-67c6fb7d1515"
+      ]
+    },
+    {
+      "ref": "2d67b840-a881-41a8-9e4d-4fb6209f85a1",
+      "dependsOn": [
+        "bb6ac628-90d3-47c0-8a9c-67c6fb7d1515"
+      ]
+    },
+    {
+      "ref": "81ded691-e2e5-42cc-850f-9f4e2c9dca9a",
+      "dependsOn": [
+        "e62bd722-f7d8-46d9-b96a-7f168c51387a"
+      ]
+    },
+    {
+      "ref": "2c66b841-a8d1-4cd8-976b-70a11f4825cf",
+      "dependsOn": [
+        "2d67b840-a881-41a8-9e4d-4fb6209f85a1"
+      ]
+    },
+    {
+      "ref": "9bc61986-d2bc-4da4-9c91-3eeef9d51cee",
+      "dependsOn": [
+        "68825877-8ec1-4c41-9b90-3330e4ad9137"
+      ]
+    },
+    {
+      "ref": "82e8ce88-d99a-45a1-a8d6-871c26767c3d",
+      "dependsOn": [
+        "6a544a4a-9201-4667-b5bc-fadb4c4b87b5"
+      ]
+    }
+  ],
+  "serialNumber": "urn:uuid:d43bd9c5-dae4-4c1d-8964-b7dac3d45579"
+}

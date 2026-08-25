@@ -1,0 +1,10 @@
+﻿2026-08-25T08:27:48.9034877Z ##[group]Run python -m pip install -r python-app/requirements.txt
+2026-08-25T08:27:48.9035430Z [36;1mpython -m pip install -r python-app/requirements.txt[0m
+2026-08-25T08:27:48.9072837Z shell: /usr/bin/bash -e {0}
+2026-08-25T08:27:48.9073100Z env:
+2026-08-25T08:27:48.9073410Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:48.9073924Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+2026-08-25T08:27:48.9074308Z   MAVEN_ARGS: -ntp
+2026-08-25T08:27:48.9074507Z ##[endgroup]
+2026-08-25T08:27:49.3440311Z Defaulting to user installation because normal site-packages is not writeable
+2026-08-25T08:27:49.6619609Z Requirement already satisfied: cryptography<47,>=41 in /usr/lib/python3/dist-packages (from -r python-app/requirements.txt (line 1)) (41.0.7)
