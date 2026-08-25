@@ -43,6 +43,7 @@ git push -u origin main
 
 ## 산출물 위치
 
+- [한눈에 보는 결과 요약](RESULTS_OVERVIEW.md)
 - [통합 기능 명세서](CBOM_%ED%86%B5%ED%95%A9_%EA%B8%B0%EB%8A%A5_%EB%AA%85%EC%84%B8%EC%84%9C.md)
 - [상세 실행 원장](CBOM_LAB_PLAN.md)
 - [Ground truth](ground-truth.md)

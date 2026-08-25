@@ -460,3 +460,9 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - 원격 Action artifact·CBOMkit public Git scan·갱신 보고서·캡처·재현 schema를 commit `fe54298394571ca90da14a674059e0e753fe309f` (`docs: add remote CBOM validation evidence`)로 생성함.
 - `origin/main` push 후 `git rev-parse HEAD`와 `git ls-remote origin refs/heads/main`이 모두 위 해시로 일치함을 확인함.
 - 사용자 지정 최초 commit `066b89e`와 메시지 `first commit`은 변경하지 않고 후속 실행 증거를 별도 commit으로 보존함.
+
+### 2026-08-25 — 한눈에 보는 결과 요약 추가
+
+- 영어 파일명 `RESULTS_OVERVIEW.md`로 도구 흐름, 핵심 수치, `results/` 디렉터리 역할, IBM Zurich Viewer 입력 파일과 주요 한계를 한 문서에 요약함.
+- README와 `plan.md`에서 결과 요약으로 바로 이동할 수 있도록 링크함.
+- 이번 사용자 요청 범위는 local commit까지이며 원격 push는 포함하지 않음.

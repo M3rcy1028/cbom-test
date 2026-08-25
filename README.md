@@ -4,6 +4,7 @@ IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로
 
 ## 먼저 볼 문서
 
+- [한눈에 보는 결과 요약](RESULTS_OVERVIEW.md): 결과 디렉터리, 핵심 수치, Viewer 입력 파일
 - [통합 기능 명세 및 실증 보고서](CBOM_통합_기능_명세서.md): 도구별 20항목 명세, 결과 비교, 결함, 운영 권고
 - [게시 계획과 현재 상태](plan.md): 사용자 지정 Git 게시 절차와 재개 지점
 - [상세 실행 계획·작업 원장](CBOM_LAB_PLAN.md): revision, 실행 순서, 원본 결과와 차단 사유
