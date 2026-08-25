@@ -260,7 +260,7 @@ evidence/<tool>/<figure-number>-<short-description>.png
 
 | 단계 | 상태 | 핵심 결과/차단 |
 |---|---|---|
-| 계획 원장 | 완료 대기 | 원격 증거 검증까지 기록, 후속 push 상태만 남음 |
+| 계획 원장 | 완료 | 원격 증거 검증·push·remote hash 대조까지 기록 |
 | 환경 점검 | 부분 완료 | Docker 29.1.3/Compose 2.35.1 확인; `/var/run/docker.sock` 접근 거부 |
 | fixture | 부분 완료 | Java·Python·Go 실행 성공, 인증서·키·OpenSSL 설정 완료; image build만 Docker 권한 대기 |
 | IBM/CycloneDX | 완료 | IBM 1.0·CycloneDX 1.6/1.7 schema 정상/음성 및 schema-vs-semantic 분리 검증 |
@@ -271,13 +271,13 @@ evidence/<tool>/<figure-number>-<short-description>.png
 | Compliance | 완료 | 내장·frontend local·OPA CLI/HTTP/backend 연동과 golden matrix 완료 |
 | 변경 전후 | 범위 완료 | Action 49→44, MD5 3·CBC 2 제거; Theia TLS 1.2 제거와 정규화 diff 완료 |
 | 최종 명세 | 완료 | 도구별 20항목, 실제 캡처, 비교·결함·운영 권고·재현 명령 작성 |
-| GitHub 공개 | 완료 | 최초 commit `066b89e` push, 원격 Action success; 원격 증거 후속 commit 준비 |
+| GitHub 공개 | 완료 | 최초 `066b89e`, 원격 증거 `fe54298` push; 원격 Action success와 remote hash 일치 확인 |
 
 ## 11. 다음 작업
 
 1. [x] 원격 Action·CBOMkit Git scan 결과를 schema/semantic validator와 보고서에 반영한다.
 2. [x] 후속 변경의 민감정보·크기·링크를 재검증한다.
-3. [ ] 원격 증거 후속 commit을 push하고 최종 remote 상태를 확인한다.
+3. [x] 원격 증거 후속 commit을 push하고 최종 remote 상태를 확인한다.
 
 ## 12. 실행 로그
 
@@ -454,3 +454,9 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - 새 clone에서도 schema 검증을 재현할 수 있도록 전체 upstream clone 대신 Apache-2.0 JSON Schema snapshot 7개, IBM license와 SHA-256 출처표만 추적함.
 - staged tree를 임시 디렉터리에 독립 전개하고 upstream clone 없이 schema 13건과 semantic 12건을 다시 실행해 통과함.
 - GitHub에서 받은 원본 log/header의 후행 공백과 CRLF는 증거 원형 보존을 위해 정규화하지 않음.
+
+### 2026-08-25 — 원격 증거 후속 push 완료
+
+- 원격 Action artifact·CBOMkit public Git scan·갱신 보고서·캡처·재현 schema를 commit `fe54298394571ca90da14a674059e0e753fe309f` (`docs: add remote CBOM validation evidence`)로 생성함.
+- `origin/main` push 후 `git rev-parse HEAD`와 `git ls-remote origin refs/heads/main`이 모두 위 해시로 일치함을 확인함.
+- 사용자 지정 최초 commit `066b89e`와 메시지 `first commit`은 변경하지 않고 후속 실행 증거를 별도 commit으로 보존함.

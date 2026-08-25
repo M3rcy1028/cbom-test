@@ -10,7 +10,8 @@
 - 최초 커밋: `066b89efca6623f15f380478752e7c1e188047e2`
 - 최초 push: 완료
 - GitHub-hosted Action: [run 32826680204](https://github.com/M3rcy1028/cbom-test/actions/runs/32826680204), `success`
-- 최종 산출물 후속 push: 원격 실행 증거와 검증 결과를 반영한 뒤 수행
+- 원격 증거 결과 커밋: `fe54298394571ca90da14a674059e0e753fe309f`
+- 최종 산출물 후속 push: 완료, 당시 local `HEAD`와 `origin/main` 일치 확인
 
 ## 사용자 요청 명령과 적용 방식
 
@@ -38,7 +39,7 @@ git push -u origin main
 - [x] GitHub-hosted CBOMkit Action 실행 및 artifact 회수
 - [x] CBOMkit public Git scan, API, DB, compliance 검증
 - [x] schema 13/13, semantic 12/12, 링크·크기·민감정보·독립 staged tree 검증
-- [ ] 원격 증거 후속 커밋 push 및 remote hash 최종 대조
+- [x] 원격 증거 후속 커밋 push 및 remote hash 최종 대조
 
 ## 산출물 위치
 
