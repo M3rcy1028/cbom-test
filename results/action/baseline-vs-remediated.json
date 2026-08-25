@@ -1,0 +1,793 @@
+{
+  "comparisonMethod": "asset type + normalized name + canonical crypto properties; bom-ref UUID excluded",
+  "beforeLabel": "Action baseline",
+  "afterLabel": "Action remediated",
+  "before": {
+    "path": "results/action/local-workspace-cwd/cbom.json",
+    "sha256": "9827b277809782de94c444ab6854ccc585798912e9f2415fa5299e71a8a4b805",
+    "specVersion": "1.6",
+    "components": 49,
+    "dependencies": 24,
+    "assetTypes": {
+      "algorithm": 31,
+      "related-crypto-material": 18
+    }
+  },
+  "after": {
+    "path": "results/action/remediated/cbom.json",
+    "sha256": "1f847b0fb79d82477d5b1ab47fc71a329ff6a4805ca3aa153ffd352e6c23a9b6",
+    "specVersion": "1.6",
+    "components": 44,
+    "dependencies": 23,
+    "assetTypes": {
+      "algorithm": 26,
+      "related-crypto-material": 18
+    }
+  },
+  "summary": {
+    "semanticSignatures": 35,
+    "removedSignatures": 4,
+    "addedSignatures": 0,
+    "changedComponentCounts": 5,
+    "changedOccurrenceCounts": 8
+  },
+  "rows": [
+    {
+      "signature": "algorithm | AES-128 | block-cipher",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen"
+        ],
+        "parameterSetIdentifier": "128",
+        "primitive": "block-cipher"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 2,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:30",
+        "java-app/src/main/java/lab/CryptoFixture.java:38"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:29",
+        "java-app/src/main/java/lab/CryptoFixture.java:37"
+      ]
+    },
+    {
+      "signature": "algorithm | AES-128-CBC-PKCS5 | block-cipher",
+      "properties": {
+        "cryptoFunctions": [
+          "encrypt"
+        ],
+        "mode": "cbc",
+        "padding": "pkcs5",
+        "parameterSetIdentifier": "128",
+        "primitive": "block-cipher"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 0,
+      "componentDelta": -1,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 0,
+      "occurrenceDelta": -1,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:39"
+      ],
+      "afterLocations": []
+    },
+    {
+      "signature": "algorithm | AES-128-GCM | ae",
+      "properties": {
+        "cryptoFunctions": [
+          "encrypt"
+        ],
+        "mode": "gcm",
+        "parameterSetIdentifier": "128",
+        "primitive": "ae"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 1,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:32"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:31",
+        "java-app/src/main/java/lab/CryptoFixture.java:38"
+      ]
+    },
+    {
+      "signature": "algorithm | AES-128-GCM | ae",
+      "properties": {
+        "mode": "gcm",
+        "parameterSetIdentifier": "128",
+        "primitive": "ae"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:19"
+      ],
+      "afterLocations": [
+        "go-app/main.go:18"
+      ]
+    },
+    {
+      "signature": "algorithm | AES-CBC | block-cipher",
+      "properties": {
+        "cryptoFunctions": [
+          "encrypt"
+        ],
+        "mode": "cbc",
+        "parameterSetIdentifier": "128",
+        "primitive": "block-cipher"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 0,
+      "componentDelta": -1,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 0,
+      "occurrenceDelta": -1,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:19"
+      ],
+      "afterLocations": []
+    },
+    {
+      "signature": "algorithm | AES-GCM | ae",
+      "properties": {
+        "cryptoFunctions": [
+          "encrypt"
+        ],
+        "mode": "gcm",
+        "parameterSetIdentifier": "128",
+        "primitive": "ae"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 1,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:13"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:13",
+        "python-app/crypto_fixture.py:18"
+      ]
+    },
+    {
+      "signature": "algorithm | EC | pke",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen"
+        ],
+        "primitive": "pke"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 2,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:70",
+        "java-app/src/main/java/lab/CryptoFixture.java:80"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:68",
+        "java-app/src/main/java/lab/CryptoFixture.java:78"
+      ]
+    },
+    {
+      "signature": "algorithm | EC-secp256r1 | pke",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen"
+        ],
+        "curve": "secp256r1",
+        "primitive": "pke"
+      },
+      "beforeComponents": 2,
+      "afterComponents": 2,
+      "componentDelta": 0,
+      "beforeOccurrences": 3,
+      "afterOccurrences": 3,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:71",
+        "java-app/src/main/java/lab/CryptoFixture.java:81",
+        "python-app/crypto_fixture.py:60"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:69",
+        "java-app/src/main/java/lab/CryptoFixture.java:79",
+        "python-app/crypto_fixture.py:59"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDH | key-agree",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen"
+        ],
+        "curve": "secp256r1",
+        "primitive": "key-agree"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:61"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:60"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDH | key-agree",
+      "properties": {
+        "curve": "secp256r1",
+        "primitive": "key-agree"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:44"
+      ],
+      "afterLocations": [
+        "go-app/main.go:43"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDH | key-agree",
+      "properties": {
+        "primitive": "key-agree"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:84"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:82"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDSA-SHA-256 | signature",
+      "properties": {
+        "cryptoFunctions": [
+          "sign"
+        ],
+        "primitive": "signature"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:73"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:71"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDSA-secp256r1 | signature",
+      "properties": {
+        "curve": "secp256r1",
+        "primitive": "signature"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:37"
+      ],
+      "afterLocations": [
+        "go-app/main.go:36"
+      ]
+    },
+    {
+      "signature": "algorithm | ECDSA-secp256r1-SHA-256 | signature",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen",
+          "sign"
+        ],
+        "curve": "secp256r1",
+        "primitive": "signature"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:55"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:54"
+      ]
+    },
+    {
+      "signature": "algorithm | HMAC-SHA-256 | mac",
+      "properties": {
+        "cryptoFunctions": [
+          "tag"
+        ],
+        "primitive": "mac"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:64"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:62"
+      ]
+    },
+    {
+      "signature": "algorithm | MD5 | hash",
+      "properties": {
+        "cryptoFunctions": [
+          "digest"
+        ],
+        "parameterSetIdentifier": "128",
+        "primitive": "hash"
+      },
+      "beforeComponents": 3,
+      "afterComponents": 0,
+      "componentDelta": -3,
+      "beforeOccurrences": 3,
+      "afterOccurrences": 0,
+      "occurrenceDelta": -3,
+      "beforeLocations": [
+        "go-app/main.go:32",
+        "java-app/src/main/java/lab/CryptoFixture.java:59",
+        "python-app/crypto_fixture.py:42"
+      ],
+      "afterLocations": []
+    },
+    {
+      "signature": "algorithm | MGF1 | other",
+      "properties": {
+        "primitive": "other"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:48"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:47"
+      ]
+    },
+    {
+      "signature": "algorithm | NATIVEPRNG | drbg",
+      "properties": {
+        "primitive": "drbg"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:37"
+      ],
+      "afterLocations": [
+        "go-app/main.go:36"
+      ]
+    },
+    {
+      "signature": "algorithm | PBKDF2-HMAC-SHA-256 | kdf",
+      "properties": {
+        "cryptoFunctions": [
+          "keyderive"
+        ],
+        "parameterSetIdentifier": "256",
+        "primitive": "kdf"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:64"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:62"
+      ]
+    },
+    {
+      "signature": "algorithm | PBKDF2-SHA-256 | kdf",
+      "properties": {
+        "cryptoFunctions": [
+          "keyderive"
+        ],
+        "parameterSetIdentifier": "256",
+        "primitive": "kdf"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:48"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:47"
+      ]
+    },
+    {
+      "signature": "algorithm | RSA-2048 | pke",
+      "properties": {
+        "cryptoFunctions": [
+          "keygen"
+        ],
+        "parameterSetIdentifier": "2048",
+        "primitive": "pke"
+      },
+      "beforeComponents": 2,
+      "afterComponents": 2,
+      "componentDelta": 0,
+      "beforeOccurrences": 2,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:45",
+        "python-app/crypto_fixture.py:24"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:44",
+        "python-app/crypto_fixture.py:23"
+      ]
+    },
+    {
+      "signature": "algorithm | RSA-2048 | pke",
+      "properties": {
+        "parameterSetIdentifier": "2048",
+        "primitive": "pke"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:25"
+      ],
+      "afterLocations": [
+        "go-app/main.go:24"
+      ]
+    },
+    {
+      "signature": "algorithm | RSA-OAEP | pke",
+      "properties": {
+        "cryptoFunctions": [
+          "encrypt"
+        ],
+        "mode": "ecb",
+        "padding": "oaep",
+        "parameterSetIdentifier": "2048",
+        "primitive": "pke"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:48"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:47"
+      ]
+    },
+    {
+      "signature": "algorithm | RSA-OAEP | pke",
+      "properties": {
+        "padding": "oaep",
+        "parameterSetIdentifier": "2048",
+        "primitive": "pke"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "go-app/main.go:25"
+      ],
+      "afterLocations": [
+        "go-app/main.go:24"
+      ]
+    },
+    {
+      "signature": "algorithm | SHA-256 | hash",
+      "properties": {
+        "cryptoFunctions": [
+          "digest"
+        ],
+        "parameterSetIdentifier": "256",
+        "primitive": "hash"
+      },
+      "beforeComponents": 3,
+      "afterComponents": 3,
+      "componentDelta": 0,
+      "beforeOccurrences": 10,
+      "afterOccurrences": 12,
+      "occurrenceDelta": 2,
+      "beforeLocations": [
+        "go-app/main.go:26",
+        "go-app/main.go:31",
+        "go-app/main.go:38",
+        "java-app/src/main/java/lab/CryptoFixture.java:48",
+        "java-app/src/main/java/lab/CryptoFixture.java:54",
+        "java-app/src/main/java/lab/CryptoFixture.java:64",
+        "java-app/src/main/java/lab/CryptoFixture.java:73",
+        "python-app/crypto_fixture.py:36",
+        "python-app/crypto_fixture.py:48",
+        "python-app/crypto_fixture.py:55"
+      ],
+      "afterLocations": [
+        "go-app/main.go:25",
+        "go-app/main.go:31",
+        "go-app/main.go:37",
+        "java-app/src/main/java/lab/CryptoFixture.java:47",
+        "java-app/src/main/java/lab/CryptoFixture.java:53",
+        "java-app/src/main/java/lab/CryptoFixture.java:57",
+        "java-app/src/main/java/lab/CryptoFixture.java:62",
+        "java-app/src/main/java/lab/CryptoFixture.java:71",
+        "python-app/crypto_fixture.py:35",
+        "python-app/crypto_fixture.py:41",
+        "python-app/crypto_fixture.py:47",
+        "python-app/crypto_fixture.py:54"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | iv",
+      "properties": {
+        "size": 128,
+        "type": "initialization-vector"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 0,
+      "componentDelta": -1,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 0,
+      "occurrenceDelta": -1,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:40"
+      ],
+      "afterLocations": []
+    },
+    {
+      "signature": "related-crypto-material | iv",
+      "properties": {
+        "size": 96,
+        "type": "initialization-vector"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 2,
+      "componentDelta": 1,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 2,
+      "occurrenceDelta": 1,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:31"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:30",
+        "java-app/src/main/java/lab/CryptoFixture.java:39"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | key",
+      "properties": {
+        "size": 2048,
+        "type": "secret-key"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:45"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:44"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | key",
+      "properties": {
+        "type": "secret-key"
+      },
+      "beforeComponents": 4,
+      "afterComponents": 4,
+      "componentDelta": 0,
+      "beforeOccurrences": 4,
+      "afterOccurrences": 4,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:70",
+        "java-app/src/main/java/lab/CryptoFixture.java:80"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:68",
+        "java-app/src/main/java/lab/CryptoFixture.java:78"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | password",
+      "properties": {
+        "size": 72,
+        "type": "password"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:63"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:61"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | private-key",
+      "properties": {
+        "size": 2048,
+        "type": "private-key"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:24"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:23"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | private-key",
+      "properties": {
+        "type": "private-key"
+      },
+      "beforeComponents": 3,
+      "afterComponents": 3,
+      "componentDelta": 0,
+      "beforeOccurrences": 3,
+      "afterOccurrences": 3,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "python-app/crypto_fixture.py:54",
+        "python-app/crypto_fixture.py:59",
+        "python-app/crypto_fixture.py:60"
+      ],
+      "afterLocations": [
+        "python-app/crypto_fixture.py:53",
+        "python-app/crypto_fixture.py:58",
+        "python-app/crypto_fixture.py:59"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | salt",
+      "properties": {
+        "size": 128,
+        "type": "salt"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:63"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:61"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | secret-key",
+      "properties": {
+        "size": 128,
+        "type": "secret-key"
+      },
+      "beforeComponents": 4,
+      "afterComponents": 4,
+      "componentDelta": 0,
+      "beforeOccurrences": 4,
+      "afterOccurrences": 4,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:30",
+        "java-app/src/main/java/lab/CryptoFixture.java:32",
+        "java-app/src/main/java/lab/CryptoFixture.java:38",
+        "java-app/src/main/java/lab/CryptoFixture.java:39"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:29",
+        "java-app/src/main/java/lab/CryptoFixture.java:31",
+        "java-app/src/main/java/lab/CryptoFixture.java:37",
+        "java-app/src/main/java/lab/CryptoFixture.java:38"
+      ]
+    },
+    {
+      "signature": "related-crypto-material | secret-key",
+      "properties": {
+        "size": 256,
+        "type": "secret-key"
+      },
+      "beforeComponents": 1,
+      "afterComponents": 1,
+      "componentDelta": 0,
+      "beforeOccurrences": 1,
+      "afterOccurrences": 1,
+      "occurrenceDelta": 0,
+      "beforeLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:64"
+      ],
+      "afterLocations": [
+        "java-app/src/main/java/lab/CryptoFixture.java:62"
+      ]
+    }
+  ]
+}

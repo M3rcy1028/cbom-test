@@ -1,0 +1,15 @@
+time="2026-08-25T16:52:08+09:00" level=info msg="try to fetch image alpine:3.22 ..."
+time="2026-08-25T16:52:11+09:00" level=info msg="successfully loaded image alpine:3.22 with id b66e0ce64844f5c6435b0c4bfd965558199ab0f53270846861c979cb1ac29365"
+time="2026-08-25T16:52:11+09:00" level=info msg="Since no BOM is provided as input the java security check is automatically disabled."
+time="2026-08-25T16:52:11+09:00" level=warning msg="No BOM provided or provided BOM does not have any components, this scan will only add components"
+time="2026-08-25T16:52:11+09:00" level=info msg="=> Running Certificate File Plugin"
+time="2026-08-25T16:52:12+09:00" level=warning msg="Skipping large file: /usr/lib/libcrypto.so.3 (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:52:12+09:00" level=info msg="Certificate searching done" numberOfDetectedCertificates=476
+time="2026-08-25T16:52:12+09:00" level=info msg="=> Running Secret Detection Plugin"
+time="2026-08-25T16:54:49+09:00" level=warning msg="Skipping large file: /usr/lib/libcrypto.so.3 (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:55:07+09:00" level=info msg="No secrets found."
+time="2026-08-25T16:55:07+09:00" level=info msg="=> Running OpenSSL Config Plugin"
+time="2026-08-25T16:55:07+09:00" level=info msg="OpenSSL config detected" file=/etc/ssl/openssl.cnf
+time="2026-08-25T16:55:07+09:00" level=info msg="OpenSSL config detected" file=/etc/ssl/openssl.cnf.dist
+time="2026-08-25T16:55:07+09:00" level=info msg="=> Running Problematic CA Detection Plugin"
+time="2026-08-25T16:55:07+09:00" level=info msg="Problematic CA detection completed" checked=0 flagged=0

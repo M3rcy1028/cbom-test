@@ -1,0 +1,43 @@
+# cbom-test
+
+IBM/PQCA CBOM 생태계를 동일한 Java·Python·Go·인증서·TLS fixture로 실행하고 비교한 재현 lab이다. IBM schema, Sonar Cryptography Plugin, CBOMkit-action, CBOMkit-theia, CBOMkit full/coeus, PostgreSQL, built-in compliance와 OPA를 다룬다.
+
+## 먼저 볼 문서
+
+- [통합 기능 명세 및 실증 보고서](CBOM_통합_기능_명세서.md): 도구별 20항목 명세, 결과 비교, 결함, 운영 권고
+- [실행 계획·작업 원장](CBOM_LAB_PLAN.md): revision, 실행 순서, 원본 결과와 차단 사유
+- [Ground truth](ground-truth.md): scanner 실행 전에 고정한 기대 자산·line·정책
+- [캡처 manifest](evidence/CAPTURE_MANIFEST.md): 각 그림이 증명하는 것과 증명하지 않는 것
+
+## 대표 결과
+
+| 대상 | 결과 |
+|---|---:|
+| Schema 정상·음성 case | 11/11 기대 일치 |
+| Sonar source scan | 38 components, source family 22/22 |
+| Action local scan | 49 components, Java/Python/Go module CBOM |
+| Theia directory | 25 components, filesystem 6/7 |
+| Theia `alpine:3.22` | 2,858 components |
+| Sonar→Theia enrichment | 38→64 components |
+| Built-in/OPA policy fixture | exact 5/5 vs 3/5 |
+| 보완 후 Action | 49→44, MD5·CBC component 제거 |
+
+![CBOMkit result](evidence/16-cbomkit-sonar-results.png)
+
+## 빠른 재현
+
+```bash
+mvn -f java-app/pom.xml clean package
+mvn -f java-app/pom.xml exec:java
+python3 python-app/crypto_fixture.py
+tools/go/bin/go -C go-app run .
+
+python3 scripts/validate_schemas.py
+python3 scripts/capture_evidence.py
+```
+
+`tools/`와 `sources/`의 다운로드·upstream clone은 크기와 재배포 문제로 Git에서 제외한다. 정확한 upstream URL과 commit은 작업 원장과 보고서에 기록했다.
+
+## 안전 주의
+
+이 repository의 MD5, AES-CBC, 고정 key/IV와 인증서는 scanner 검증용이며 production 예제가 아니다. 테스트 private key와 credential은 Git에서 제외한다. CBOM에는 source 위치·암호 구성·certificate metadata가 포함될 수 있으므로 실제 조직에서는 접근 제어와 log redaction이 필요하다.

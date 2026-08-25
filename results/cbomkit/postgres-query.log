@@ -1,0 +1,38 @@
+             List of relations
+ Schema |      Name       | Type  |  Owner  
+--------+-----------------+-------+---------
+ public | cbomreadmodel   | table | cbomkit
+ public | scan            | table | cbomkit
+ public | scan_scanresult | table | cbomkit
+ public | scanresult      | table | cbomkit
+(4 rows)
+
+Did not find any relation named "cbom".
+ERROR:  relation "cbom" does not exist
+LINE 1: ... createdat, octet_length(cbom) AS cbom_bytes FROM cbom ORDER...
+                                                             ^
+                            Table "public.cbomreadmodel"
+      Column       |              Type              | Collation | Nullable | Default 
+-------------------+--------------------------------+-----------+----------+---------
+ id                | uuid                           |           | not null | 
+ bom               | jsonb                          |           |          | 
+ commit            | character varying(255)         |           |          | 
+ createdat         | timestamp(6) without time zone |           |          | 
+ packagefolder     | character varying(255)         |           |          | 
+ projectidentifier | character varying(255)         |           |          | 
+ repository        | character varying(255)         |           |          | 
+ revision          | character varying(255)         |           |          | 
+Indexes:
+    "cbomreadmodel_pkey" PRIMARY KEY, btree (id)
+
+ERROR:  column "generatedat" does not exist
+LINE 1: SELECT projectidentifier, generatedat, octet_length(cbom) AS...
+                                  ^
+ projectidentifier |         createdat          | cbom_bytes | components 
+-------------------+----------------------------+------------+------------
+ lab-policy        | 2026-08-25 16:47:13.476746 |       1645 |          5
+ lab-enriched      | 2026-08-25 16:47:13.407176 |      35790 |         64
+ lab-theia         | 2026-08-25 16:47:13.318534 |      12296 |         25
+ lab-sonar         | 2026-08-25 16:47:13.14178  |      23373 |         38
+(4 rows)
+

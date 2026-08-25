@@ -1,0 +1,61 @@
+
+> frontend@0.1.0 build
+> vue-cli-service build --dest /home/tako/naryun/cbom/cbom-lab/results/ui/release-full
+
+[dotenv][DEBUG] "VUE_APP_HTTP_API_BASE" is already defined in `process.env` and will not be overwritten
+[dotenv][DEBUG] "VUE_APP_WS_API_BASE" is already defined in `process.env` and will not be overwritten
+[dotenv][DEBUG] "VUE_APP_TITLE" is already defined in `process.env` and will not be overwritten
+[dotenv][DEBUG] "VUE_APP_VIEWER_ONLY" is already defined in `process.env` and will not be overwritten
+All browser targets in the browserslist configuration have supported ES module.
+Therefore we don't build two separate bundles for differential loading.
+
+
+-  Building for production...
+[BABEL] Note: The code generator has deoptimised the styling of /home/tako/naryun/cbom/cbom-lab/sources/cbomkit-2.2.0/frontend/node_modules/@carbon/charts-vue/dist/index.mjs as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /home/tako/naryun/cbom/cbom-lab/sources/cbomkit-2.2.0/frontend/node_modules/@carbon/icons-vue/es/index.js as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /home/tako/naryun/cbom/cbom-lab/sources/cbomkit-2.2.0/frontend/node_modules/@carbon/vue/node_modules/@carbon/icons-vue/es/index.js as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /home/tako/naryun/cbom/cbom-lab/sources/cbomkit-2.2.0/frontend/node_modules/@carbon/ibmdotcom-web-components/es/components/footer/footer.css.js as it exceeds the max of 500KB.
+ WARNING  Compiled with 3 warnings5:01:09 PM
+
+ warning  
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  css/app.217b119b.css (634 KiB)
+  js/chunk-vendors.e3d48d74.js (3.3 MiB)
+
+ warning  
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (4.25 MiB)
+      css/chunk-vendors.ecf2b69a.css
+      js/chunk-vendors.e3d48d74.js
+      css/app.217b119b.css
+      js/app.44644364.js
+
+
+ warning  
+
+webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                      Size             Gzipped
+
+  ../../../results/ui/release-full/js/ch    3381.36 KiB      596.23 KiB
+  unk-vendors.e3d48d74.js
+  ../../../results/ui/release-full/js/ap    145.95 KiB       33.13 KiB
+  p.44644364.js
+  ../../../results/ui/release-full/css/a    634.17 KiB       59.31 KiB
+  pp.217b119b.css
+  ../../../results/ui/release-full/css/c    192.11 KiB       17.41 KiB
+  hunk-vendors.ecf2b69a.css
+
+  Images and other types of assets omitted.
+  Build at: 2026-08-25T08:01:10.140Z - Hash: 5e217736546d4299 - Time: 71696ms
+
+ DONE  Build complete. The ../../../results/ui/release-full directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+       

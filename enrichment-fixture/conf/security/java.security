@@ -1,0 +1,5 @@
+# Minimal test-only java.security fixture for deterministic Theia enrichment.
+# It is intentionally stricter than the JDK default so restricted assets receive
+# ibm:cryptography:restriction:* properties in the enriched CBOM.
+security.overridePropertiesFile=true
+jdk.tls.disabledAlgorithms=MD5, RSA keySize < 3072, EC keySize < 384

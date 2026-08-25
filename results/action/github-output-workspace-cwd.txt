@@ -1,0 +1,1 @@
+pattern=/home/tako/naryun/cbom/cbom-lab/results/action/local-workspace-cwd/cbom*.json

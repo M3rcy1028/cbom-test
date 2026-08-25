@@ -1,0 +1,252 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:f753205f-f005-4e05-9372-7143c0d04cdf",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-25T08:10:15Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "PQCA"
+          },
+          "name" : "CBOMkit"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "gitUrl",
+        "value" : "https://github.com/M3rcy1028/cbom-test"
+      },
+      {
+        "name" : "revision",
+        "value" : "main"
+      },
+      {
+        "name" : "commit",
+        "value" : "0000000000000000000000000000000000000000"
+      },
+      {
+        "name" : "subfolder",
+        "value" : "go-app"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3a06d104-8907-403c-9718-e9ac3302c055",
+      "name" : "RSA-OAEP",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 25,
+            "offset" : 18,
+            "additionalContext" : "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048",
+          "padding" : "oaep"
+        },
+        "oid" : "1.2.840.113549.1.1.7"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2155b5fc-0824-49d2-ae31-457fb66b8956",
+      "name" : "ECDSA-secp256r1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 37,
+            "offset" : 11,
+            "additionalContext" : "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "curve" : "secp256r1"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "55b3a9c0-dd8b-4e2d-8280-4ef369fad7a3",
+      "name" : "ECDH",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 44,
+            "offset" : 10,
+            "additionalContext" : "P256"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "key-agree",
+          "curve" : "secp256r1"
+        },
+        "oid" : "1.3.132.1.12"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "de641bf1-0c31-433a-b390-8558edf731f2",
+      "name" : "MD5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 32,
+            "offset" : 9,
+            "additionalContext" : "Sum"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "128",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1ce5c4aa-3d68-48b9-9830-871eac5574c6",
+      "name" : "RSA-2048",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 25,
+            "offset" : 18,
+            "additionalContext" : "GenerateKey"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048"
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9020f23f-1933-4930-a275-a7a3713f6b38",
+      "name" : "NATIVEPRNG",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 37,
+            "offset" : 46
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "drbg"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c3429415-c566-400b-a1c6-b4f0f23c2da5",
+      "name" : "AES-128-GCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 19,
+            "offset" : 13,
+            "additionalContext" : "NewCipher"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "gcm"
+        },
+        "oid" : "2.16.840.1.101.3.4.1.6"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ed9eaf03-c6a0-4ff3-8829-b63dad7ebfb7",
+      "name" : "SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "go-app/main.go",
+            "line" : 26,
+            "offset" : 30,
+            "additionalContext" : "New"
+          },
+          {
+            "location" : "go-app/main.go",
+            "line" : 31,
+            "offset" : 8,
+            "additionalContext" : "Sum256"
+          },
+          {
+            "location" : "go-app/main.go",
+            "line" : 38,
+            "offset" : 11,
+            "additionalContext" : "Sum256"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.1"
+      }
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "3a06d104-8907-403c-9718-e9ac3302c055",
+      "dependsOn" : [
+        "ed9eaf03-c6a0-4ff3-8829-b63dad7ebfb7"
+      ]
+    },
+    {
+      "ref" : "2155b5fc-0824-49d2-ae31-457fb66b8956",
+      "dependsOn" : [
+        "9020f23f-1933-4930-a275-a7a3713f6b38"
+      ]
+    }
+  ]
+}

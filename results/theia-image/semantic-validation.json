@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "path": "results/theia-image/alpine-3.22-cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 2858,
+      "dependencyCount": 476,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    }
+  ],
+  "allValid": true
+}

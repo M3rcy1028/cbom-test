@@ -1,0 +1,364 @@
+{
+  "before": {
+    "path": "results/sonar/cbom.json",
+    "sha256": "3d97f2d2451f59035f16369e0b4fa474f4cafac821fea515396e3d444717e883",
+    "specVersion": "1.6"
+  },
+  "after": {
+    "path": "results/action/local/cbom.json",
+    "sha256": "630a3ef87895ed770adb984ff8d8c2340db0f74b55babc9b9540f32c912f7256",
+    "specVersion": "1.6"
+  },
+  "summary": {
+    "beforeComponents": 38,
+    "afterComponents": 49,
+    "added": 49,
+    "removed": 38,
+    "modified": 0,
+    "unchanged": 0,
+    "beforeDependencies": 23,
+    "afterDependencies": 24
+  },
+  "addedByAssetType": {
+    "algorithm": 31,
+    "related-crypto-material": 18
+  },
+  "added": [
+    {
+      "identity": "01d89f7d-3d6f-46f8-9e6f-8f3cef61afb4",
+      "bom-ref": "01d89f7d-3d6f-46f8-9e6f-8f3cef61afb4",
+      "name": "AES-128-CBC-PKCS5",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "07468b59-5a42-48ee-906e-602b753ff658",
+      "bom-ref": "07468b59-5a42-48ee-906e-602b753ff658",
+      "name": "ECDSA-SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "07829d31-dc25-4514-a4e4-3a5c558ca35f",
+      "bom-ref": "07829d31-dc25-4514-a4e4-3a5c558ca35f",
+      "name": "key@07829d31-dc25-4514-a4e4-3a5c558ca35f",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "0899316b-88f3-41ed-a412-d24a42f23c9d",
+      "bom-ref": "0899316b-88f3-41ed-a412-d24a42f23c9d",
+      "name": "ECDSA-secp256r1-SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "0eb27928-8bbd-45f2-851f-a57ee75ae6ec",
+      "bom-ref": "0eb27928-8bbd-45f2-851f-a57ee75ae6ec",
+      "name": "AES-128-GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "0fdf1ca9-2e3d-43f4-a8dd-63fd989685d6",
+      "bom-ref": "0fdf1ca9-2e3d-43f4-a8dd-63fd989685d6",
+      "name": "SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "1395db5c-3b47-4756-8e7f-9f5ab87a8c5a",
+      "bom-ref": "1395db5c-3b47-4756-8e7f-9f5ab87a8c5a",
+      "name": "RSA-2048",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "140b970f-abca-45fa-8b0b-4c141366772a",
+      "bom-ref": "140b970f-abca-45fa-8b0b-4c141366772a",
+      "name": "RSA-OAEP",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "1d9385bd-c12d-497c-8582-6575ecf10a7b",
+      "bom-ref": "1d9385bd-c12d-497c-8582-6575ecf10a7b",
+      "name": "PBKDF2-HMAC-SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "1e183548-843f-4a3e-9dc3-eaff72267cf5",
+      "bom-ref": "1e183548-843f-4a3e-9dc3-eaff72267cf5",
+      "name": "key@1e183548-843f-4a3e-9dc3-eaff72267cf5",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "2eeef633-6c4d-4449-b9eb-295a1e99bc42",
+      "bom-ref": "2eeef633-6c4d-4449-b9eb-295a1e99bc42",
+      "name": "ECDH",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "36aedfe1-df9f-4094-9ed5-da921c4d0dd2",
+      "bom-ref": "36aedfe1-df9f-4094-9ed5-da921c4d0dd2",
+      "name": "EC-secp256r1",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "3cb60243-69e5-4036-8d50-97931cdaac57",
+      "bom-ref": "3cb60243-69e5-4036-8d50-97931cdaac57",
+      "name": "MD5",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "4a3069b5-48f4-4ff5-b91e-f101aed75bcd",
+      "bom-ref": "4a3069b5-48f4-4ff5-b91e-f101aed75bcd",
+      "name": "PBKDF2-SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "5650a6db-cb08-42ce-bf8f-f0a51a8e8a89",
+      "bom-ref": "5650a6db-cb08-42ce-bf8f-f0a51a8e8a89",
+      "name": "key@5650a6db-cb08-42ce-bf8f-f0a51a8e8a89",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "5a1dab2d-0920-4c5a-964d-f51605467c73",
+      "bom-ref": "5a1dab2d-0920-4c5a-964d-f51605467c73",
+      "name": "secret-key@5a1dab2d-0920-4c5a-964d-f51605467c73",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "5f6ee766-c3d7-4629-8a8a-80b39f0985bf",
+      "bom-ref": "5f6ee766-c3d7-4629-8a8a-80b39f0985bf",
+      "name": "secret-key@5f6ee766-c3d7-4629-8a8a-80b39f0985bf",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "609b1760-a40e-4096-83d8-5b6bc83a2677",
+      "bom-ref": "609b1760-a40e-4096-83d8-5b6bc83a2677",
+      "name": "NATIVEPRNG",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "61459c02-68cd-430c-88a6-40130a908855",
+      "bom-ref": "61459c02-68cd-430c-88a6-40130a908855",
+      "name": "AES-CBC",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "640c888c-ff79-4b39-804d-4a1b9660d3d1",
+      "bom-ref": "640c888c-ff79-4b39-804d-4a1b9660d3d1",
+      "name": "ECDH",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "64a63f1a-257e-45a7-b1e8-eeeaabdab478",
+      "bom-ref": "64a63f1a-257e-45a7-b1e8-eeeaabdab478",
+      "name": "AES-GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "72906d03-d198-4f6a-b751-0747e70530d6",
+      "bom-ref": "72906d03-d198-4f6a-b751-0747e70530d6",
+      "name": "secret-key@72906d03-d198-4f6a-b751-0747e70530d6",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "80d48604-1a36-46ce-9191-91a7d6593e74",
+      "bom-ref": "80d48604-1a36-46ce-9191-91a7d6593e74",
+      "name": "AES-128-GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "84cf1a35-6a0a-4eee-9bee-00df864153b7",
+      "bom-ref": "84cf1a35-6a0a-4eee-9bee-00df864153b7",
+      "name": "private-key@84cf1a35-6a0a-4eee-9bee-00df864153b7",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "8e0a5482-1fdd-42b5-bf3e-0ed596034371",
+      "bom-ref": "8e0a5482-1fdd-42b5-bf3e-0ed596034371",
+      "name": "RSA-2048",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "988c3e5d-0ba4-46b5-9b87-6e5e0256f2b5",
+      "bom-ref": "988c3e5d-0ba4-46b5-9b87-6e5e0256f2b5",
+      "name": "ECDSA-secp256r1",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "9d770faf-6c17-4c73-89f2-ca16d01f71d0",
+      "bom-ref": "9d770faf-6c17-4c73-89f2-ca16d01f71d0",
+      "name": "ECDH",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "a282bd35-5f0c-4763-8214-a79c01b8775b",
+      "bom-ref": "a282bd35-5f0c-4763-8214-a79c01b8775b",
+      "name": "iv@a282bd35-5f0c-4763-8214-a79c01b8775b",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "a54db7b8-3cc7-4b45-8c81-7dea07649cef",
+      "bom-ref": "a54db7b8-3cc7-4b45-8c81-7dea07649cef",
+      "name": "key@a54db7b8-3cc7-4b45-8c81-7dea07649cef",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "a9a84dc2-162b-4d92-856a-6422d6accb5b",
+      "bom-ref": "a9a84dc2-162b-4d92-856a-6422d6accb5b",
+      "name": "private-key@a9a84dc2-162b-4d92-856a-6422d6accb5b",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "aa86d68d-941b-4d2e-92ee-09146cdca789",
+      "bom-ref": "aa86d68d-941b-4d2e-92ee-09146cdca789",
+      "name": "HMAC-SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "ab1a27bf-f5b7-4a5c-8a54-9c434fc499b9",
+      "bom-ref": "ab1a27bf-f5b7-4a5c-8a54-9c434fc499b9",
+      "name": "SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "affef7d1-ef94-4e84-a54d-be57cf897258",
+      "bom-ref": "affef7d1-ef94-4e84-a54d-be57cf897258",
+      "name": "iv@affef7d1-ef94-4e84-a54d-be57cf897258",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "b2e86e62-4f59-4483-86a2-677bfd945813",
+      "bom-ref": "b2e86e62-4f59-4483-86a2-677bfd945813",
+      "name": "EC-secp256r1",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "b709d741-775c-4306-9488-4a1e3997d984",
+      "bom-ref": "b709d741-775c-4306-9488-4a1e3997d984",
+      "name": "MD5",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "b825ac4a-6b37-4c38-aabe-c5eef2f9b4fd",
+      "bom-ref": "b825ac4a-6b37-4c38-aabe-c5eef2f9b4fd",
+      "name": "salt@b825ac4a-6b37-4c38-aabe-c5eef2f9b4fd",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "c16239b1-b8b3-4ae2-b204-39e8fe902832",
+      "bom-ref": "c16239b1-b8b3-4ae2-b204-39e8fe902832",
+      "name": "MGF1",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "c6165600-9e1d-493b-a3db-d44d649660af",
+      "bom-ref": "c6165600-9e1d-493b-a3db-d44d649660af",
+      "name": "MD5",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "cdedef1b-0453-4826-9d35-425f6c954106",
+      "bom-ref": "cdedef1b-0453-4826-9d35-425f6c954106",
+      "name": "AES-128",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "d1669607-20d4-4df1-a261-ff8f0d8c2f4a",
+      "bom-ref": "d1669607-20d4-4df1-a261-ff8f0d8c2f4a",
+      "name": "RSA-OAEP",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "d3999ae8-781e-4097-a56c-128fdf130e0e",
+      "bom-ref": "d3999ae8-781e-4097-a56c-128fdf130e0e",
+      "name": "RSA-2048",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "d6cbeba1-42e8-400f-82a9-0c7a7eeed3b2",
+      "bom-ref": "d6cbeba1-42e8-400f-82a9-0c7a7eeed3b2",
+      "name": "secret-key@d6cbeba1-42e8-400f-82a9-0c7a7eeed3b2",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "d845b9b1-7274-4877-83d7-83d564fbeefa",
+      "bom-ref": "d845b9b1-7274-4877-83d7-83d564fbeefa",
+      "name": "private-key@d845b9b1-7274-4877-83d7-83d564fbeefa",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "dd5827ee-0fea-433e-9673-2576ae876bc2",
+      "bom-ref": "dd5827ee-0fea-433e-9673-2576ae876bc2",
+      "name": "EC",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "e63d9cae-9d46-45a8-86f6-a8c880d5c8fe",
+      "bom-ref": "e63d9cae-9d46-45a8-86f6-a8c880d5c8fe",
+      "name": "private-key@e63d9cae-9d46-45a8-86f6-a8c880d5c8fe",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "eb5248b9-034f-4d83-ac7d-593060efbb6d",
+      "bom-ref": "eb5248b9-034f-4d83-ac7d-593060efbb6d",
+      "name": "key@eb5248b9-034f-4d83-ac7d-593060efbb6d",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "f67ffa1f-733c-47ec-a0ee-55b3f39a73a1",
+      "bom-ref": "f67ffa1f-733c-47ec-a0ee-55b3f39a73a1",
+      "name": "SHA-256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "f6e295e5-3d27-442b-89e9-63c1ecdfe060",
+      "bom-ref": "f6e295e5-3d27-442b-89e9-63c1ecdfe060",
+      "name": "password@f6e295e5-3d27-442b-89e9-63c1ecdfe060",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "fab544f0-f0ce-4b5a-a9c9-593fe128b777",
+      "bom-ref": "fab544f0-f0ce-4b5a-a9c9-593fe128b777",
+      "name": "secret-key@fab544f0-f0ce-4b5a-a9c9-593fe128b777",
+      "assetType": "related-crypto-material"
+    }
+  ],
+  "removedRefs": [
+    "08d27c4d-f44c-46be-bf85-4576871f87a4",
+    "0c51fd6e-c248-4cc1-90e7-0c0bbcd544dd",
+    "10f9c57a-f0cb-4d2a-a3df-3c216d63434b",
+    "1529752e-0ddd-4387-94da-9ddfad13cad9",
+    "20c4eba3-f014-451a-aa3b-7393e18a8fa1",
+    "26a47ae7-f0cf-4884-8b59-6a92ca185d7b",
+    "2a94f47d-c073-4655-842a-bf6d62a2f31d",
+    "2cc1c94c-3523-4ae3-84df-5c6008eb8557",
+    "34633ded-0f03-483b-9ad0-7589a4cd4539",
+    "3fcc26a5-230c-47ce-bf1a-d2b08b5ff9e4",
+    "4183695d-298c-4814-ad4e-12e491ebb76e",
+    "4a3d9860-d5a8-4d47-8432-059f09a25ce0",
+    "50104b29-ff9e-4a23-9d53-f24fbe1e72f3",
+    "5261794a-2874-428f-b497-9cebd73b8c48",
+    "5acb2756-8d92-4405-a1ef-db466f9bcb3b",
+    "5f5d6f1a-61c6-478e-b348-ca2688b0e066",
+    "69a0f723-87c3-482a-afd1-c2d3d11bd371",
+    "777f04ab-de11-46d8-9765-b29ce670d677",
+    "831954dd-a8eb-4c56-9897-41a8a3e9876b",
+    "86c9f46c-0bee-47c1-80c6-c98288b3cb64",
+    "8addc100-780c-46a2-b6ed-f2abfd2ccfff",
+    "8cd0e081-e79c-41ec-a62f-78a54ad181d3",
+    "8da1ff9b-4903-485b-9cd0-f38c9dce8382",
+    "9f345720-0289-4da0-ae70-db6e61f84114",
+    "a7ad2abd-ffd2-4e1f-b625-eb2bf77a959b",
+    "ab48d082-e3a6-4093-b87d-6a2a5b71be17",
+    "b8421089-6ee4-412e-8774-286907a9edb6",
+    "bc015f05-c9cf-4e9d-b1ce-d5ad78fec866",
+    "c3f0cc4e-d118-4c3d-86f0-da3faf687b31",
+    "d213e097-284b-44eb-9702-bf954c676a77",
+    "d815fb72-95f7-483b-b668-c35ffdf09eb2",
+    "e6ad7b72-4697-4fe0-ac90-4c13dc918050",
+    "f1a7bdf7-09fb-4920-9b69-ed64ccf06be4",
+    "f27e7957-5e9f-4003-8345-ee322f78461f",
+    "f55aff5a-09dd-4726-a6b2-65c75e057fe0",
+    "f64a268c-2c10-4cd9-968d-b21d9c230e93",
+    "fd4329b0-16db-4d15-a4f2-cc390af4efd2",
+    "ff1b30f2-289a-4e5e-b8a2-628a478d122b"
+  ],
+  "modifiedRefs": [],
+  "missingBomRefAfter": []
+}

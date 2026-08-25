@@ -1,0 +1,106 @@
+{
+  "input": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "version": 1,
+    "metadata": {
+      "component": {
+        "type": "application",
+        "bom-ref": "app:policy-fixture",
+        "name": "cbom-lab-policy-fixture",
+        "version": "1.0.0"
+      }
+    },
+    "components": [
+      {
+        "type": "cryptographic-asset",
+        "bom-ref": "policy:rsa-2048",
+        "name": "RSA-2048",
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "pke",
+            "parameterSetIdentifier": "2048",
+            "cryptoFunctions": [
+              "keygen",
+              "encrypt"
+            ]
+          }
+        }
+      },
+      {
+        "type": "cryptographic-asset",
+        "bom-ref": "policy:ecdh-p256",
+        "name": "ECDH-secp256r1",
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "key-agree",
+            "curve": "secp256r1",
+            "cryptoFunctions": [
+              "keyderive"
+            ]
+          }
+        }
+      },
+      {
+        "type": "cryptographic-asset",
+        "bom-ref": "policy:aes-128-gcm",
+        "name": "AES-128-GCM",
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "ae",
+            "parameterSetIdentifier": "128",
+            "mode": "gcm",
+            "cryptoFunctions": [
+              "encrypt",
+              "decrypt"
+            ]
+          }
+        }
+      },
+      {
+        "type": "cryptographic-asset",
+        "bom-ref": "policy:unknown",
+        "name": "Vendor-Algorithm-X",
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "unknown"
+          }
+        }
+      },
+      {
+        "type": "cryptographic-asset",
+        "bom-ref": "policy:ml-kem-768",
+        "name": "ML-KEM-768",
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "kem",
+            "parameterSetIdentifier": "768",
+            "nistQuantumSecurityLevel": 3,
+            "cryptoFunctions": [
+              "keygen",
+              "encapsulate",
+              "decapsulate"
+            ]
+          }
+        }
+      }
+    ],
+    "dependencies": [
+      {
+        "ref": "app:policy-fixture",
+        "dependsOn": [
+          "policy:rsa-2048",
+          "policy:ecdh-p256",
+          "policy:aes-128-gcm",
+          "policy:unknown",
+          "policy:ml-kem-768"
+        ]
+      }
+    ]
+  }
+}

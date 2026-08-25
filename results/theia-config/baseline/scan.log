@@ -1,0 +1,10 @@
+time="2026-08-25T17:13:22+09:00" level=info msg="Since no BOM is provided as input the java security check is automatically disabled."
+time="2026-08-25T17:13:22+09:00" level=warning msg="No BOM provided or provided BOM does not have any components, this scan will only add components"
+time="2026-08-25T17:13:22+09:00" level=info msg="=> Running Certificate File Plugin"
+time="2026-08-25T17:13:22+09:00" level=info msg="Certificate searching done" numberOfDetectedCertificates=0
+time="2026-08-25T17:13:22+09:00" level=info msg="=> Running Secret Detection Plugin"
+time="2026-08-25T17:13:22+09:00" level=info msg="No secrets found."
+time="2026-08-25T17:13:22+09:00" level=info msg="=> Running OpenSSL Config Plugin"
+time="2026-08-25T17:13:22+09:00" level=info msg="OpenSSL config detected" file=openssl.cnf
+time="2026-08-25T17:13:22+09:00" level=info msg="=> Running Problematic CA Detection Plugin"
+time="2026-08-25T17:13:22+09:00" level=info msg="Problematic CA detection completed" checked=0 flagged=0

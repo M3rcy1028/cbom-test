@@ -1,0 +1,38 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:38e8322c-9376-4865-b25f-cff0a19ed01d",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-25T08:09:35Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "PQCA"
+          },
+          "name" : "CBOMkit"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "gitUrl",
+        "value" : "https://github.com/M3rcy1028/cbom-test"
+      },
+      {
+        "name" : "revision",
+        "value" : "main"
+      },
+      {
+        "name" : "commit",
+        "value" : "0000000000000000000000000000000000000000"
+      },
+      {
+        "name" : "subfolder",
+        "value" : "java-app"
+      }
+    ]
+  },
+  "dependencies" : [ ]
+}

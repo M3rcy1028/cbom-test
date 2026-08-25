@@ -1,0 +1,14 @@
+# Deliberately mixed TLS configuration for CBOMkit-theia evaluation.
+openssl_conf = default_conf
+
+[default_conf]
+ssl_conf = ssl_sect
+
+[ssl_sect]
+system_default = tls_defaults
+
+[tls_defaults]
+MinProtocol = TLSv1.2
+MaxProtocol = TLSv1.3
+CipherString = ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256
+Ciphersuites = TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256

@@ -1,0 +1,114 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": [
+            {
+              "bom-ref": "policy:aes-128-gcm",
+              "property": "algorithmProperties.primitive",
+              "result": "NA",
+              "rule": "symmetric_na",
+              "value": "ae"
+            },
+            {
+              "bom-ref": "policy:ecdh-p256",
+              "property": "algorithmProperties.primitive",
+              "result": "NA",
+              "rule": "symmetric_na",
+              "value": "key-agree"
+            },
+            {
+              "bom-ref": "policy:ml-kem-768",
+              "property": "name",
+              "referenceList": [
+                "ml-kem",
+                "ml-dsa",
+                "slh-dsa",
+                "pqxdh",
+                "bike",
+                "mceliece",
+                "frodokem",
+                "hqc",
+                "kyber",
+                "ntru",
+                "crystals",
+                "falcon",
+                "mayo",
+                "sphincs",
+                "xmss",
+                "lms"
+              ],
+              "result": "quantum-vulnerable",
+              "rule": "asymmetric_quantum_safe",
+              "value": "ML-KEM-768"
+            },
+            {
+              "bom-ref": "policy:ml-kem-768",
+              "property": "nistQuantumSecurityLevel",
+              "referenceValue": 1,
+              "result": "quantum-safe",
+              "rule": "nist_qs_level",
+              "value": 3
+            },
+            {
+              "bom-ref": "policy:rsa-2048",
+              "property": "name",
+              "referenceList": [
+                "ml-kem",
+                "ml-dsa",
+                "slh-dsa",
+                "pqxdh",
+                "bike",
+                "mceliece",
+                "frodokem",
+                "hqc",
+                "kyber",
+                "ntru",
+                "crystals",
+                "falcon",
+                "mayo",
+                "sphincs",
+                "xmss",
+                "lms"
+              ],
+              "result": "quantum-vulnerable",
+              "rule": "asymmetric_quantum_safe",
+              "value": "RSA-2048"
+            },
+            {
+              "bom-ref": "policy:unknown",
+              "property": "name",
+              "referenceList": [
+                "ml-kem",
+                "ml-dsa",
+                "slh-dsa",
+                "pqxdh",
+                "bike",
+                "mceliece",
+                "frodokem",
+                "hqc",
+                "kyber",
+                "ntru",
+                "crystals",
+                "falcon",
+                "mayo",
+                "sphincs",
+                "xmss",
+                "lms"
+              ],
+              "result": "unknown",
+              "rule": "asymmetric_quantum_safe",
+              "value": "Vendor-Algorithm-X"
+            }
+          ],
+          "text": "data.policies.quantum_safe.findings",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}

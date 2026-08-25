@@ -1,0 +1,4 @@
+630a3ef87895ed770adb984ff8d8c2340db0f74b55babc9b9540f32c912f7256  results/action/local/cbom.json
+7b1940932696a8e390c4fc0a72f2577ddc38fb7e5b8ac09c716f849787afd79d  results/action/local/cbom_go-app.json
+3dd7812b419e210e3d29717d71d9c461bc4b50c56f56b3ef555132a4c635ae69  results/action/local/cbom_java-app.json
+5c894dfde8b402df2e125def73711d3189ed189b8fdd6bf8ac5bac60ba97bf3e  results/action/local/cbom_python-app.json

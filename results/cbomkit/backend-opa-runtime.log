@@ -1,0 +1,17 @@
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [org.slf4j.impl.JBossSlf4jServiceProvider@339a3670]
+SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@6cd5122d]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [org.slf4j.impl.JBossSlf4jServiceProvider@339a3670]
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-08-25 16:49:52,724 INFO  [io.undertow.websockets] (main) UT026003: Adding annotated server endpoint class com.ibm.presentation.api.v1.scanning.WebsocketScanningResource for path /v1/scan/{clientId}
+2026-08-25 16:49:55,053 INFO  [com.ibm.infrastructure.compliance.service.opa.OPAComplianceService] (main) Using external compliance service: Open Policy Agent http://127.0.0.1:8181
+2026-08-25 16:49:55,104 INFO  [io.quarkus] (main) CBOMkit 2.0.0-SNAPSHOT on JVM (powered by Quarkus 3.38.2) started in 3.629s. Listening on: http://0.0.0.0:8082
+2026-08-25 16:49:55,105 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-08-25 16:49:55,105 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, config-yaml, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, vertx, websockets, websockets-client]
+2026-08-25 16:50:07,267 INFO  [com.ibm.infrastructure.compliance.service.opa.OPAComplianceService] (pool-6-thread-1) Checking CBOM with compliance policy quantum_safe
+2026-08-25 16:50:07,441 INFO  [com.ibm.infrastructure.compliance.service.opa.OPAComplianceService] (pool-7-thread-1) Checking CBOM with compliance policy missing_policy
+2026-08-25 16:50:07,522 INFO  [com.ibm.infrastructure.compliance.service.opa.OPAComplianceService] (pool-8-thread-1) Checking CBOM with compliance policy quantum_safe

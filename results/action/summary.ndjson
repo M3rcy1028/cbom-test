@@ -1,0 +1,4 @@
+{"file":"results/action/local/cbom.json","bomFormat":"CycloneDX","specVersion":"1.6","components":49,"dependencies":24,"types":{"algorithm":31,"related-crypto-material":18}}
+{"file":"results/action/local/cbom_go-app.json","bomFormat":"CycloneDX","specVersion":"1.6","components":0,"dependencies":0,"types":{}}
+{"file":"results/action/local/cbom_java-app.json","bomFormat":"CycloneDX","specVersion":"1.6","components":0,"dependencies":0,"types":{}}
+{"file":"results/action/local/cbom_python-app.json","bomFormat":"CycloneDX","specVersion":"1.6","components":0,"dependencies":0,"types":{}}

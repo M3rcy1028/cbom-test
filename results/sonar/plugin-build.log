@@ -1,0 +1,976 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] sonar-cryptography                                                 [pom]
+[[1;34mINFO[m] common                                                             [jar]
+[[1;34mINFO[m] engine                                                             [jar]
+[[1;34mINFO[m] mapper                                                             [jar]
+[[1;34mINFO[m] output                                                             [jar]
+[[1;34mINFO[m] enricher                                                           [jar]
+[[1;34mINFO[m] rules                                                              [jar]
+[[1;34mINFO[m] java                                                               [jar]
+[[1;34mINFO[m] python                                                             [jar]
+[[1;34mINFO[m] go                                                                 [jar]
+[[1;34mINFO[m] csharp                                                             [jar]
+[[1;34mINFO[m] sonar-cryptography-plugin                                 [sonar-plugin]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.ibm:sonar-cryptography[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding sonar-cryptography 2.0.0-SNAPSHOT                        [1/12][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36msonar-cryptography[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36msonar-cryptography[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:common[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding common 2.0.0-SNAPSHOT                                    [2/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from codehaus: http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+Downloading from maven: http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/common/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/common/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mcommon[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 6 files clean - 0 were changed to be clean, 0 were already clean, 6 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:engine[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding engine 2.0.0-SNAPSHOT                                    [3/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/engine/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/engine/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mengine[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 175 files clean - 0 were changed to be clean, 0 were already clean, 175 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:mapper[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding mapper 2.0.0-SNAPSHOT                                    [4/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/mapper/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/mapper/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mmapper[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 411 files clean - 0 were changed to be clean, 0 were already clean, 411 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:output[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding output 2.0.0-SNAPSHOT                                    [5/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/output/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/output/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36moutput[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 23 files clean - 0 were changed to be clean, 0 were already clean, 23 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------------< [0;36mcom.ibm:enricher[0;1m >--------------------------[m
+[[1;34mINFO[m] [1mBuilding enricher 2.0.0-SNAPSHOT                                  [6/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/enricher/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/enricher/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36menricher[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 28 files clean - 0 were changed to be clean, 0 were already clean, 28 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:rules[0;1m >----------------------------[m
+[[1;34mINFO[m] [1mBuilding rules 2.0.0-SNAPSHOT                                     [7/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/rules/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/rules/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mrules[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 11 files clean - 0 were changed to be clean, 0 were already clean, 11 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------------< [0;36mcom.ibm:java[0;1m >----------------------------[m
+[[1;34mINFO[m] [1mBuilding java 2.0.0-SNAPSHOT                                      [8/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mjava[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 327 files clean - 0 were changed to be clean, 0 were already clean, 327 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:python[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding python 2.0.0-SNAPSHOT                                    [9/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/python/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mpython[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 97 files clean - 0 were changed to be clean, 0 were already clean, 97 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------------< [0;36mcom.ibm:go[0;1m >-----------------------------[m
+[[1;34mINFO[m] [1mBuilding go 2.0.0-SNAPSHOT                                       [10/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/go/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mgo[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 84 files clean - 0 were changed to be clean, 0 were already clean, 84 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mcom.ibm:csharp[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding csharp 2.0.0-SNAPSHOT                                   [11/12][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/csharp/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36mcsharp[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 42 files clean - 0 were changed to be clean, 0 were already clean, 42 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36mcom.ibm:sonar-cryptography-plugin[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding sonar-cryptography-plugin 2.0.0-SNAPSHOT                [12/12][m
+[[1;34mINFO[m] [1m----------------------------[ sonar-plugin ]----------------------------[m
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[[1;33mWARNING[m] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 Not Implemented
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.6.0:check[m [1m(default)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msonar-packaging-maven-plugin:1.25.1.3002:check[m [1m(default-check)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.5.0:resources[m [1m(default-resources)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/sonar-cryptography-plugin/src/main/resources
+[[1;34mINFO[m] Copying 1 resource from src/main/resources-filtered to target/classes
+[[1;34mINFO[m] The encoding used to copy filtered properties files has not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.15.0:compile[m [1m(default-compile)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.5.0:testResources[m [1m(default-testResources)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/sonar-cryptography-plugin/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.15.0:testCompile[m [1m(default-testCompile)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.6:test[m [1m(default-test)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msonar-packaging-maven-plugin:1.25.1.3002:sonar-plugin[m [1m(default-sonar-plugin)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Plugin definition in update center
+[[1;34mINFO[m]     Key: crypto
+[[1;34mINFO[m]     Name: Sonar Crypto Plugin
+[[1;34mINFO[m]     Description: A SonarQube Plugin to detect cryptographic assets in applications
+[[1;34mINFO[m]     Version: 2.0.0-SNAPSHOT
+[[1;34mINFO[m]     Display Version: 2.0.0-SNAPSHOT
+[[1;34mINFO[m]     Entry-point Class: com.ibm.plugin.CryptographyPlugin
+[[1;34mINFO[m]     Required Plugins: 
+[[1;34mINFO[m]     Does the plugin support SonarLint?: true
+[[1;34mINFO[m]     Use Child-first ClassLoader: false
+[[1;34mINFO[m]     Base Plugin: 
+[[1;34mINFO[m]     Homepage URL: 
+[[1;34mINFO[m]     Minimal Sonar Plugin API Version: 9.14.0.375
+[[1;34mINFO[m]     Licensing: Apache-2.0
+[[1;34mINFO[m]     Organization: cbomkit
+[[1;34mINFO[m]     Organization URL: https://github.com/cbomkit
+[[1;34mINFO[m]     Terms and Conditions: 
+[[1;34mINFO[m]     Issue Tracker URL: 
+[[1;34mINFO[m]     Build date: 2026-08-25T07:34:12+0000
+[[1;34mINFO[m]     Sources URL: 
+[[1;34mINFO[m]     Developers: 
+[[1;34mINFO[m]     Minimal JRE Specification Version: 17
+[[1;34mINFO[m]     Minimal Node.js Version: 
+[[1;34mINFO[m]     Languages for which this plugin should be downloaded: java,jsp,py,ipynb,go,cs
+[[1;34mINFO[m] Skip packaging of dependencies
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Building jar: /home/tako/naryun/cbom/cbom-lab/sources/sonar-cryptography/sonar-cryptography-plugin/target/sonar-cryptography-plugin-2.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspotless-maven-plugin:3.9.0:apply[m [1m(default)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Spotless.Java is keeping 12 files clean - 0 were changed to be clean, 0 were already clean, 12 were skipped because caching determined they were already clean
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-shade-plugin:3.6.2:shade[m [1m(default)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Minimizing jar com.ibm:sonar-cryptography-plugin:sonar-plugin:2.0.0-SNAPSHOT
+[[1;33mWARNING[m] Removing module-info from sonar-cryptography-plugin-2.0.0-SNAPSHOT.jar
+[[1;33mWARNING[m] Discovered module-info.class. Shading will break its strong encapsulation.
+[[1;33mWARNING[m] Discovered module-info.class. Shading will break its strong encapsulation.
+[[1;33mWARNING[m] java-checks-8.22.0.41895.jar, java-checks-common-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.checks.helpers.package-info
+[[1;33mWARNING[m] commons-codec-1.19.0.jar, commons-collections4-4.5.0.jar, commons-io-2.20.0.jar, commons-lang3-3.20.0.jar, commons-text-1.15.0.jar, error_prone_annotations-2.41.0.jar, gson-2.13.2.jar, itu-1.14.0.jar, jackson-core-2.22.1.jar, jackson-databind-2.22.1.jar, jackson-dataformat-toml-2.22.1.jar, jackson-dataformat-xml-2.21.1.jar, jackson-dataformat-yaml-2.18.3.jar, jackson-datatype-jdk8-2.22.1.jar, json-schema-validator-2.0.1.jar, slf4j-api-2.0.18.jar, snakeyaml-2.3.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - META-INF.versions.9.module-info
+[[1;33mWARNING[m] java-checks-8.22.0.41895.jar, java-checks-aws-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.checks.security.package-info
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, staxmate-2.4.1.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.staxmate/staxmate/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.staxmate/staxmate/pom.xml
+[[1;33mWARNING[m] jdt-package-1.6.0.160.jar, sonar-java-plugin-8.22.0.41895.jar define 3527 overlapping classes and resources: 
+[[1;33mWARNING[m]   - .api_description
+[[1;33mWARNING[m]   - .options
+[[1;33mWARNING[m]   - CDC-1.0_Foundation-1.0.profile
+[[1;33mWARNING[m]   - CDC-1.1_Foundation-1.1.profile
+[[1;33mWARNING[m]   - J2SE-1.2.profile
+[[1;33mWARNING[m]   - J2SE-1.3.profile
+[[1;33mWARNING[m]   - J2SE-1.4.profile
+[[1;33mWARNING[m]   - J2SE-1.5.profile
+[[1;33mWARNING[m]   - JRE-1.1.profile
+[[1;33mWARNING[m]   - JavaSE-1.6.profile
+[[1;33mWARNING[m]   - 3517 more...
+[[1;33mWARNING[m] jackson-dataformat-toml-2.22.1.jar, sonar-python-plugin-5.29.0.35837.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-toml/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-toml/pom.xml
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, stax-api-1.0.1.jar, xml-apis-1.4.01.jar define 6 overlapping classes: 
+[[1;33mWARNING[m]   - javax.xml.stream.events.Comment
+[[1;33mWARNING[m]   - javax.xml.stream.events.DTD
+[[1;33mWARNING[m]   - javax.xml.stream.events.EndDocument
+[[1;33mWARNING[m]   - javax.xml.stream.events.ProcessingInstruction
+[[1;33mWARNING[m]   - javax.xml.stream.events.StartDocument
+[[1;33mWARNING[m]   - javax.xml.stream.util.StreamReaderDelegate
+[[1;33mWARNING[m] antlr4-runtime-4.13.1.jar, cbomkit-csharp-parser-0.1.2.jar, check-list-8.22.0.41895.jar, checker-qual-3.37.0.jar, common-2.0.0-SNAPSHOT.jar, commons-codec-1.19.0.jar, commons-collections4-4.5.0.jar, commons-io-2.20.0.jar, commons-lang3-3.20.0.jar, commons-text-1.15.0.jar, csharp-2.0.0-SNAPSHOT.jar, cyclonedx-core-java-12.2.0.jar, engine-2.0.0-SNAPSHOT.jar, enricher-2.0.0-SNAPSHOT.jar, error_prone_annotations-2.41.0.jar, external-reports-8.22.0.41895.jar, failureaccess-1.0.1.jar, go-2.0.0-SNAPSHOT.jar, google-java-format-1.28.0.jar, gson-2.13.2.jar, guava-32.1.3-jre.jar, itu-1.14.0.jar, j2objc-annotations-2.8.jar, jackson-annotations-2.22.jar, jackson-core-2.22.1.jar, jackson-databind-2.22.1.jar, jackson-dataformat-toml-2.22.1.jar, jackson-dataformat-xml-2.21.1.jar, jackson-dataformat-yaml-2.18.3.jar, jackson-datatype-jdk8-2.22.1.jar, java-2.0.0-SNAPSHOT.jar, java-checks-8.22.0.41895.jar, java-checks-aws-8.22.0.41895.jar, java-checks-common-8.22.0.41895.jar, java-frontend-8.22.0.41895.jar, java-jsp-8.22.0.41895.jar, java-surefire-8.22.0.41895.jar, json-schema-validator-2.0.1.jar, jsr305-3.0.2.jar, listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, mapper-2.0.0-SNAPSHOT.jar, output-2.0.0-SNAPSHOT.jar, packageurl-java-1.5.0.jar, protobuf-java-4.29.3.jar, python-2.0.0-SNAPSHOT.jar, python-checks-5.29.0.35837.jar, python-commons-5.29.0.35837.jar, python-frontend-5.29.0.35837.jar, rules-2.0.0-SNAPSHOT.jar, slf4j-api-2.0.18.jar, snakeyaml-2.3.jar, sonar-analyzer-commons-2.18.0.3393.jar, sonar-analyzer-recognizers-2.18.0.3393.jar, sonar-cryptography-plugin-2.0.0-SNAPSHOT.jar, sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-performance-measure-2.18.0.3393.jar, sonar-python-plugin-5.29.0.35837.jar, sonar-regex-parsing-2.18.0.3393.jar, sonar-xml-parsing-2.18.0.3393.jar, spring-core-6.2.11.jar, spring-expression-6.2.11.jar, spring-jcl-6.2.11.jar, sslr-core-1.24.0.633.jar, stax-api-1.0.1.jar, stax2-api-3.1.4.jar, staxmate-2.0.1.jar, staxmate-2.4.1.jar, woodstox-core-6.4.0.jar, xercesImpl-2.12.2.jar, xml-apis-1.4.01.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - META-INF/MANIFEST.MF
+[[1;33mWARNING[m] commons-text-1.15.0.jar, sonar-python-plugin-5.29.0.35837.jar define 10 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.apache.commons/commons-text/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.apache.commons/commons-text/pom.xml
+[[1;33mWARNING[m]   - org.apache.commons.text.diff.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.io.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.lookup.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.matcher.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.numbers.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.similarity.package-info
+[[1;33mWARNING[m]   - org.apache.commons.text.translate.package-info
+[[1;33mWARNING[m] sonar-python-plugin-5.29.0.35837.jar, staxmate-2.0.1.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.codehaus.staxmate/staxmate/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.codehaus.staxmate/staxmate/pom.xml
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, spring-core-6.2.11.jar define 42 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF.versions.21.org.springframework.core.task.VirtualThreadDelegate
+[[1;33mWARNING[m]   - META-INF/native-image/org.springframework/spring-core/native-image.properties
+[[1;33mWARNING[m]   - META-INF/services/reactor.blockhound.integration.BlockHoundIntegration
+[[1;33mWARNING[m]   - META-INF/spring-core.kotlin_module
+[[1;33mWARNING[m]   - META-INF/spring/aot.factories
+[[1;33mWARNING[m]   - org.springframework.aot.generate.package-info
+[[1;33mWARNING[m]   - org.springframework.aot.hint.annotation.package-info
+[[1;33mWARNING[m]   - org.springframework.aot.hint.package-info
+[[1;33mWARNING[m]   - org.springframework.aot.hint.predicate.package-info
+[[1;33mWARNING[m]   - org.springframework.aot.hint.support.package-info
+[[1;33mWARNING[m]   - 32 more...
+[[1;33mWARNING[m] protobuf-java-4.29.3.jar, sonar-python-plugin-5.29.0.35837.jar define 540 overlapping classes and resources: 
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessage
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessage$Builder
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessage$BuilderParent
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessageLite
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessageLite$Builder
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessageLite$Builder$LimitedInputStream
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractMessageLite$InternalOneOfEnum
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractParser
+[[1;33mWARNING[m]   - com.google.protobuf.AbstractProtobufList
+[[1;33mWARNING[m]   - com.google.protobuf.Android
+[[1;33mWARNING[m]   - 530 more...
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, stax-api-1.0.1.jar, xml-apis-1.4.01.jar define 3 overlapping classes: 
+[[1;33mWARNING[m]   - javax.xml.stream.XMLEventFactory
+[[1;33mWARNING[m]   - javax.xml.stream.XMLEventWriter
+[[1;33mWARNING[m]   - javax.xml.stream.XMLOutputFactory
+[[1;33mWARNING[m] java-frontend-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 262 overlapping classes: 
+[[1;33mWARNING[m]   - org.eclipse.jdt.core.dom.ASTUtils
+[[1;33mWARNING[m]   - org.eclipse.jdt.core.dom.ASTUtils$EnvironmentCleaner
+[[1;33mWARNING[m]   - org.eclipse.jdt.core.dom.package-info
+[[1;33mWARNING[m]   - org.sonar.java.AnalysisException
+[[1;33mWARNING[m]   - org.sonar.java.AnalysisWarningsWrapper
+[[1;33mWARNING[m]   - org.sonar.java.AnalysisWarningsWrapper$1
+[[1;33mWARNING[m]   - org.sonar.java.Preconditions
+[[1;33mWARNING[m]   - org.sonar.java.SonarComponents
+[[1;33mWARNING[m]   - org.sonar.java.annotations.Beta
+[[1;33mWARNING[m]   - org.sonar.java.annotations.VisibleForTesting
+[[1;33mWARNING[m]   - 252 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, xercesImpl-2.12.2.jar define 29 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.datatype.DatatypeFactory
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.parsers.DocumentBuilderFactory
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.parsers.SAXParserFactory
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.validation.SchemaFactory
+[[1;33mWARNING[m]   - META-INF/services/org.w3c.dom.DOMImplementationSourceList
+[[1;33mWARNING[m]   - META-INF/services/org.xml.sax.driver
+[[1;33mWARNING[m]   - org/apache/xerces/impl/msg/DOMMessages.properties
+[[1;33mWARNING[m]   - org/apache/xerces/impl/msg/DOMMessages_en.properties
+[[1;33mWARNING[m]   - org/apache/xerces/impl/msg/DatatypeMessages.properties
+[[1;33mWARNING[m]   - org/apache/xerces/impl/msg/DatatypeMessages_en.properties
+[[1;33mWARNING[m]   - 19 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, woodstox-core-6.4.0.jar, xercesImpl-2.12.2.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.stream.XMLEventFactory
+[[1;33mWARNING[m] sonar-python-plugin-5.29.0.35837.jar, woodstox-core-6.4.0.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - com.ctc.wstx.exc.WstxOutputException
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-python-plugin-5.29.0.35837.jar define 6 overlapping resources: 
+[[1;33mWARNING[m]   - licenses/LICENSE.txt
+[[1;33mWARNING[m]   - licenses/THIRD_PARTY_LICENSES/com.fasterxml.woodstox.woodstox-core-LICENSE.txt
+[[1;33mWARNING[m]   - licenses/THIRD_PARTY_LICENSES/com.google.code.findbugs.jsr305-LICENSE.txt
+[[1;33mWARNING[m]   - licenses/THIRD_PARTY_LICENSES/org.codehaus.woodstox.stax2-api-LICENSE.txt
+[[1;33mWARNING[m]   - licenses/THIRD_PARTY_LICENSES/org.sonarsource.analyzer-commons.sonar-analyzer-commons-LICENSE.txt
+[[1;33mWARNING[m]   - licenses/THIRD_PARTY_LICENSES/org.sonarsource.analyzer-commons.sonar-xml-parsing-LICENSE.txt
+[[1;33mWARNING[m] jackson-databind-2.22.1.jar, sonar-python-plugin-5.29.0.35837.jar define 748 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.AbstractTypeResolver
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.AnnotationIntrospector
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.AnnotationIntrospector$ReferenceProperty
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.AnnotationIntrospector$ReferenceProperty$Type
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.AnnotationIntrospector$XmlExtensions
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.BeanDescription
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.BeanProperty
+[[1;33mWARNING[m]   - com.fasterxml.jackson.databind.BeanProperty$Bogus
+[[1;33mWARNING[m]   - 738 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, xml-apis-1.4.01.jar define 46 overlapping classes: 
+[[1;33mWARNING[m]   - javax.xml.namespace.QName$1
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryFinder$ConfigurationError
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport$1
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport$2
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport$3
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport$4
+[[1;33mWARNING[m]   - javax.xml.stream.SecuritySupport$5
+[[1;33mWARNING[m]   - javax.xml.transform.Source
+[[1;33mWARNING[m]   - javax.xml.transform.dom.DOMSource
+[[1;33mWARNING[m]   - 36 more...
+[[1;33mWARNING[m] jackson-annotations-2.22.jar, sonar-python-plugin-5.29.0.35837.jar define 77 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JacksonAnnotation
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JacksonAnnotationValue
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JacksonAnnotationsInside
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JacksonInject
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JacksonInject$Value
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JsonAlias
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JsonAnyGetter
+[[1;33mWARNING[m]   - com.fasterxml.jackson.annotation.JsonAnySetter
+[[1;33mWARNING[m]   - 67 more...
+[[1;33mWARNING[m] check-list-8.22.0.41895.jar, java-frontend-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.package-info
+[[1;33mWARNING[m] commons-lang3-3.20.0.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 151 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.apache.commons/commons-lang3/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.apache.commons/commons-lang3/pom.xml
+[[1;33mWARNING[m]   - org.apache.commons.lang3.AppendableJoiner
+[[1;33mWARNING[m]   - org.apache.commons.lang3.AppendableJoiner$1
+[[1;33mWARNING[m]   - org.apache.commons.lang3.AppendableJoiner$Builder
+[[1;33mWARNING[m]   - org.apache.commons.lang3.ArrayFill
+[[1;33mWARNING[m]   - org.apache.commons.lang3.ArraySorter
+[[1;33mWARNING[m]   - org.apache.commons.lang3.ArrayUtils
+[[1;33mWARNING[m]   - org.apache.commons.lang3.BooleanUtils
+[[1;33mWARNING[m]   - org.apache.commons.lang3.CharSequenceUtils
+[[1;33mWARNING[m]   - 141 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, stax-api-1.0.1.jar, xml-apis-1.4.01.jar define 26 overlapping classes: 
+[[1;33mWARNING[m]   - javax.xml.namespace.NamespaceContext
+[[1;33mWARNING[m]   - javax.xml.namespace.QName
+[[1;33mWARNING[m]   - javax.xml.stream.EventFilter
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryConfigurationError
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryFinder
+[[1;33mWARNING[m]   - javax.xml.stream.Location
+[[1;33mWARNING[m]   - javax.xml.stream.StreamFilter
+[[1;33mWARNING[m]   - javax.xml.stream.XMLEventReader
+[[1;33mWARNING[m]   - javax.xml.stream.XMLInputFactory
+[[1;33mWARNING[m]   - javax.xml.stream.XMLReporter
+[[1;33mWARNING[m]   - 16 more...
+[[1;33mWARNING[m] jdt-package-1.6.0.160.jar, sonar-cryptography-plugin-2.0.0-SNAPSHOT.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - plugin.properties
+[[1;33mWARNING[m] java-checks-aws-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 2 overlapping class and resource: 
+[[1;33mWARNING[m]   - org.sonar.java.checks.aws.package-info
+[[1;33mWARNING[m]   - org/sonar/java/checks/security/S6437-methods.json
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, stax2-api-3.1.4.jar define 83 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.codehaus.woodstox/stax2-api/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.codehaus.woodstox/stax2-api/pom.xml
+[[1;33mWARNING[m]   - org.codehaus.stax2.AttributeInfo
+[[1;33mWARNING[m]   - org.codehaus.stax2.DTDInfo
+[[1;33mWARNING[m]   - org.codehaus.stax2.LocationInfo
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLEventReader2
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLInputFactory2
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLReporter2
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLStreamLocation2
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLStreamLocation2$1
+[[1;33mWARNING[m]   - 73 more...
+[[1;33mWARNING[m] commons-io-2.20.0.jar, sonar-python-plugin-5.29.0.35837.jar define 20 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/commons-io/commons-io/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/commons-io/commons-io/pom.xml
+[[1;33mWARNING[m]   - org.apache.commons.io.FileSystem
+[[1;33mWARNING[m]   - org.apache.commons.io.FilenameUtils
+[[1;33mWARNING[m]   - org.apache.commons.io.IOCase
+[[1;33mWARNING[m]   - org.apache.commons.io.build.package-info
+[[1;33mWARNING[m]   - org.apache.commons.io.channels.package-info
+[[1;33mWARNING[m]   - org.apache.commons.io.charset.package-info
+[[1;33mWARNING[m]   - org.apache.commons.io.comparator.package-info
+[[1;33mWARNING[m]   - org.apache.commons.io.file.attribute.package-info
+[[1;33mWARNING[m]   - 10 more...
+[[1;33mWARNING[m] python-commons-5.29.0.35837.jar, sonar-python-plugin-5.29.0.35837.jar define 26 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-commons/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-commons/pom.xml
+[[1;33mWARNING[m]   - org.sonar.plugins.python.architecture.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.bandit.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.caching.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.coverage.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.cpd.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.dependency.model.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.dependency.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.python.editions.package-info
+[[1;33mWARNING[m]   - 16 more...
+[[1;33mWARNING[m] python-frontend-5.29.0.35837.jar, sonar-python-plugin-5.29.0.35837.jar define 5636 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-frontend/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-frontend/pom.xml
+[[1;33mWARNING[m]   - descriptors.proto
+[[1;33mWARNING[m]   - org.sonar.plugins.python.GeneratedIPythonFile
+[[1;33mWARNING[m]   - org.sonar.plugins.python.PythonInputFile
+[[1;33mWARNING[m]   - org.sonar.plugins.python.PythonInputFile$Kind
+[[1;33mWARNING[m]   - org.sonar.plugins.python.SonarQubePythonFile
+[[1;33mWARNING[m]   - org.sonar.plugins.python.SonarQubePythonFile$IpynbFile
+[[1;33mWARNING[m]   - org.sonar.plugins.python.SonarQubePythonFile$Sq62File
+[[1;33mWARNING[m]   - org.sonar.plugins.python.api.DjangoViewInfo
+[[1;33mWARNING[m]   - 5626 more...
+[[1;33mWARNING[m] commons-lang3-3.20.0.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.apache.commons.lang3.reflect.AccessibleObjects
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, woodstox-core-6.4.0.jar define 20 overlapping classes: 
+[[1;33mWARNING[m]   - com.ctc.wstx.dom.DOMOutputElement
+[[1;33mWARNING[m]   - com.ctc.wstx.dom.WstxDOMWrappingWriter
+[[1;33mWARNING[m]   - com.ctc.wstx.io.CompletelyCloseable
+[[1;33mWARNING[m]   - com.ctc.wstx.io.UTF8Writer
+[[1;33mWARNING[m]   - com.ctc.wstx.stax.WstxEventFactory
+[[1;33mWARNING[m]   - com.ctc.wstx.stax.WstxOutputFactory
+[[1;33mWARNING[m]   - com.ctc.wstx.sw.AsciiXmlWriter
+[[1;33mWARNING[m]   - com.ctc.wstx.sw.BaseNsStreamWriter
+[[1;33mWARNING[m]   - com.ctc.wstx.sw.BaseStreamWriter
+[[1;33mWARNING[m]   - com.ctc.wstx.sw.BufferingXmlWriter
+[[1;33mWARNING[m]   - 10 more...
+[[1;33mWARNING[m] sonar-analyzer-commons-2.18.0.3393.jar, sonar-go-plugin-1.32.0.5128.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.TokenLocation
+[[1;33mWARNING[m] python-checks-5.29.0.35837.jar, python-frontend-5.29.0.35837.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.python.package-info
+[[1;33mWARNING[m] java-checks-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 11 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.checks.design.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.naming.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.regex.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.serialization.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.spring.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.sustainability.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.synchronization.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.tests.package-info
+[[1;33mWARNING[m]   - org.sonar.java.checks.unused.package-info
+[[1;33mWARNING[m]   - 1 more...
+[[1;33mWARNING[m] failureaccess-1.0.1.jar, sonar-python-plugin-5.29.0.35837.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/failureaccess/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/failureaccess/pom.xml
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-performance-measure-2.18.0.3393.jar, sonar-python-plugin-5.29.0.35837.jar define 17 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-performance-measure/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-performance-measure/pom.xml
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.DurationMeasure
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.DurationMeasureFiles
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.MeasurementCost
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.MeasurementCost$ChildCounter
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.PerformanceMeasure
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.PerformanceMeasure$Builder
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.PerformanceMeasure$Duration
+[[1;33mWARNING[m]   - org.sonarsource.performance.measure.PerformanceMeasure$IgnoredDuration
+[[1;33mWARNING[m]   - 7 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, woodstox-core-6.4.0.jar define 2 overlapping classes: 
+[[1;33mWARNING[m]   - com.ctc.wstx.compat.QNameCreator
+[[1;33mWARNING[m]   - com.ctc.wstx.compat.QNameCreator$Helper
+[[1;33mWARNING[m] listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, sonar-python-plugin-5.29.0.35837.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/listenablefuture/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/listenablefuture/pom.xml
+[[1;33mWARNING[m] java-2.0.0-SNAPSHOT.jar, python-2.0.0-SNAPSHOT.jar, sonar-cryptography-plugin-2.0.0-SNAPSHOT.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - com.ibm.plugin.package-info
+[[1;33mWARNING[m] jackson-core-2.22.1.jar, jackson-dataformat-xml-2.21.1.jar, jackson-dataformat-yaml-2.18.3.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - META-INF/services/com.fasterxml.jackson.core.JsonFactory
+[[1;33mWARNING[m] java-jsp-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.jsp.package-info
+[[1;33mWARNING[m] go-2.0.0-SNAPSHOT.jar, java-2.0.0-SNAPSHOT.jar, python-2.0.0-SNAPSHOT.jar define 2 overlapping classes: 
+[[1;33mWARNING[m]   - com.ibm.plugin.rules.detection.Memoize
+[[1;33mWARNING[m]   - com.ibm.plugin.rules.detection.Memoize$1
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, spring-core-6.2.11.jar, spring-expression-6.2.11.jar, spring-jcl-6.2.11.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/license.txt
+[[1;33mWARNING[m]   - META-INF/notice.txt
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, sslr-core-1.24.0.633.jar define 21 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.sslr/sslr-core/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.sslr/sslr-core/pom.xml
+[[1;33mWARNING[m]   - com.sonar.sslr.api.AstNodeType
+[[1;33mWARNING[m]   - com.sonar.sslr.api.RecognitionException
+[[1;33mWARNING[m]   - com.sonar.sslr.api.package-info
+[[1;33mWARNING[m]   - com.sonar.sslr.api.typed.package-info
+[[1;33mWARNING[m]   - com.sonar.sslr.impl.LexerException
+[[1;33mWARNING[m]   - com.sonar.sslr.impl.ast.package-info
+[[1;33mWARNING[m]   - com.sonar.sslr.impl.channel.package-info
+[[1;33mWARNING[m]   - com.sonar.sslr.impl.matcher.package-info
+[[1;33mWARNING[m]   - 11 more...
+[[1;33mWARNING[m] sonar-analyzer-commons-2.18.0.3393.jar, sonar-java-plugin-8.22.0.41895.jar define 3 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.collections.ListUtils
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.collections.MapBuilder
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.collections.SetUtils
+[[1;33mWARNING[m] sonar-analyzer-commons-2.18.0.3393.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 4 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.googlecode.json-simple/json-simple/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.googlecode.json-simple/json-simple/pom.xml
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-analyzer-commons/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-analyzer-commons/pom.xml
+[[1;33mWARNING[m] sonar-analyzer-recognizers-2.18.0.3393.jar, sonar-java-plugin-8.22.0.41895.jar define 3 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-analyzer-recognizers/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-analyzer-recognizers/pom.xml
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.recognizers.package-info
+[[1;33mWARNING[m] external-reports-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 6 overlapping classes and resources: 
+[[1;33mWARNING[m]   - org.sonar.java.externalreport.package-info
+[[1;33mWARNING[m]   - org/sonar/l10n/java/rules/checkstyle/rules.json
+[[1;33mWARNING[m]   - org/sonar/l10n/java/rules/pmd/rules.json
+[[1;33mWARNING[m]   - org/sonar/l10n/java/rules/spotbugs/fbcontrib-rules.json
+[[1;33mWARNING[m]   - org/sonar/l10n/java/rules/spotbugs/findsecbugs-rules.json
+[[1;33mWARNING[m]   - org/sonar/l10n/java/rules/spotbugs/spotbugs-rules.json
+[[1;33mWARNING[m] error_prone_annotations-2.41.0.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 4 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.errorprone/error_prone_annotations/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.errorprone/error_prone_annotations/pom.xml
+[[1;33mWARNING[m]   - com.google.errorprone.annotations.CanIgnoreReturnValue
+[[1;33mWARNING[m]   - com.google.errorprone.annotations.InlineMe
+[[1;33mWARNING[m] python-commons-5.29.0.35837.jar, python-frontend-5.29.0.35837.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.plugins.python.package-info
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, spring-jcl-6.2.11.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - META-INF/services/org.apache.commons.logging.LogFactory
+[[1;33mWARNING[m] sonar-python-plugin-5.29.0.35837.jar, stax-api-1.0.1.jar define 3 overlapping classes: 
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryFinder$1
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryFinder$ClassLoaderFinder
+[[1;33mWARNING[m]   - javax.xml.stream.FactoryFinder$ClassLoaderFinderConcrete
+[[1;33mWARNING[m] jackson-datatype-jdk8-2.22.1.jar, sonar-python-plugin-5.29.0.35837.jar define 25 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml
+[[1;33mWARNING[m]   - META-INF/services/com.fasterxml.jackson.databind.Module
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.BaseScalarOptionalDeserializer
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.DoubleStreamSerializer
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.IntStreamSerializer
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.Jdk8BeanSerializerModifier
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.Jdk8Deserializers
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.Jdk8Module
+[[1;33mWARNING[m]   - com.fasterxml.jackson.datatype.jdk8.Jdk8OptionalBeanPropertyWriter
+[[1;33mWARNING[m]   - 15 more...
+[[1;33mWARNING[m] gson-2.13.2.jar, sonar-java-plugin-8.22.0.41895.jar define 6 overlapping classes: 
+[[1;33mWARNING[m]   - com.google.gson.Gson$1
+[[1;33mWARNING[m]   - com.google.gson.Gson$2
+[[1;33mWARNING[m]   - com.google.gson.Gson$3
+[[1;33mWARNING[m]   - com.google.gson.Gson$4
+[[1;33mWARNING[m]   - com.google.gson.Gson$5
+[[1;33mWARNING[m]   - com.google.gson.internal.bind.TypeAdapters$32$1
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, spring-expression-6.2.11.jar define 6 overlapping classes: 
+[[1;33mWARNING[m]   - org.springframework.expression.common.package-info
+[[1;33mWARNING[m]   - org.springframework.expression.package-info
+[[1;33mWARNING[m]   - org.springframework.expression.spel.ast.package-info
+[[1;33mWARNING[m]   - org.springframework.expression.spel.package-info
+[[1;33mWARNING[m]   - org.springframework.expression.spel.standard.package-info
+[[1;33mWARNING[m]   - org.springframework.expression.spel.support.package-info
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, stax2-api-3.1.4.jar define 26 overlapping classes: 
+[[1;33mWARNING[m]   - org.codehaus.stax2.XMLOutputFactory2
+[[1;33mWARNING[m]   - org.codehaus.stax2.evt.XMLEventFactory2
+[[1;33mWARNING[m]   - org.codehaus.stax2.io.Stax2Result
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.Stax2EventFactoryImpl
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.Stax2EventWriterImpl
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.Stax2WriterAdapter
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.Stax2WriterImpl
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.dom.DOMWrappingWriter
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.typed.NumberUtil
+[[1;33mWARNING[m]   - org.codehaus.stax2.ri.typed.SimpleValueEncoder
+[[1;33mWARNING[m]   - 16 more...
+[[1;33mWARNING[m] python-checks-5.29.0.35837.jar, sonar-python-plugin-5.29.0.35837.jar define 908 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-checks/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.python/python-checks/pom.xml
+[[1;33mWARNING[m]   - org.sonar.python.checks.cdk.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.django.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.hotspots.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.regex.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.tests.package-info
+[[1;33mWARNING[m]   - org.sonar.python.checks.utils.package-info
+[[1;33mWARNING[m]   - org/sonar/l10n/py/rules/python/BackticksUsage.html
+[[1;33mWARNING[m]   - 898 more...
+[[1;33mWARNING[m] jackson-databind-2.22.1.jar, jackson-dataformat-xml-2.21.1.jar, jackson-dataformat-yaml-2.18.3.jar, sonar-python-plugin-5.29.0.35837.jar define 1 overlapping resource: 
+[[1;33mWARNING[m]   - META-INF/services/com.fasterxml.jackson.core.ObjectCodec
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, woodstox-core-6.4.0.jar define 193 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/services/com.ctc.wstx.shaded.msv.relaxng_datatype.DatatypeLibraryFactory
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.stream.XMLInputFactory
+[[1;33mWARNING[m]   - META-INF/services/javax.xml.stream.XMLOutputFactory
+[[1;33mWARNING[m]   - META-INF/services/org.codehaus.stax2.validation.XMLValidationSchemaFactory
+[[1;33mWARNING[m]   - META-INF/services/org.codehaus.stax2.validation.XMLValidationSchemaFactory.dtd
+[[1;33mWARNING[m]   - META-INF/services/org.codehaus.stax2.validation.XMLValidationSchemaFactory.relaxng
+[[1;33mWARNING[m]   - META-INF/services/org.codehaus.stax2.validation.XMLValidationSchemaFactory.w3c
+[[1;33mWARNING[m]   - com.ctc.wstx.api.CommonConfig
+[[1;33mWARNING[m]   - com.ctc.wstx.api.EmptyElementHandler
+[[1;33mWARNING[m]   - com.ctc.wstx.api.EmptyElementHandler$HtmlEmptyElementHandler
+[[1;33mWARNING[m]   - 183 more...
+[[1;33mWARNING[m] java-checks-common-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.checks.methods.package-info
+[[1;33mWARNING[m] guava-32.1.3-jre.jar, sonar-python-plugin-5.29.0.35837.jar define 26 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/guava/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.guava/guava/pom.xml
+[[1;33mWARNING[m]   - META-INF/proguard/base.pro
+[[1;33mWARNING[m]   - META-INF/proguard/cache.pro
+[[1;33mWARNING[m]   - META-INF/proguard/collect.pro
+[[1;33mWARNING[m]   - META-INF/proguard/concurrent.pro
+[[1;33mWARNING[m]   - META-INF/proguard/hash.pro
+[[1;33mWARNING[m]   - META-INF/proguard/primitives.pro
+[[1;33mWARNING[m]   - com.google.common.annotations.Beta
+[[1;33mWARNING[m]   - com.google.common.annotations.GwtCompatible
+[[1;33mWARNING[m]   - 16 more...
+[[1;33mWARNING[m] gson-2.13.2.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 196 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.code.gson/gson/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.code.gson/gson/pom.xml
+[[1;33mWARNING[m]   - META-INF/proguard/gson.pro
+[[1;33mWARNING[m]   - com.google.gson.ExclusionStrategy
+[[1;33mWARNING[m]   - com.google.gson.FieldAttributes
+[[1;33mWARNING[m]   - com.google.gson.FieldNamingPolicy
+[[1;33mWARNING[m]   - com.google.gson.FieldNamingPolicy$1
+[[1;33mWARNING[m]   - com.google.gson.FieldNamingPolicy$2
+[[1;33mWARNING[m]   - com.google.gson.FieldNamingPolicy$3
+[[1;33mWARNING[m]   - com.google.gson.FieldNamingPolicy$4
+[[1;33mWARNING[m]   - 186 more...
+[[1;33mWARNING[m] jsr305-3.0.2.jar, sonar-analyzer-commons-2.18.0.3393.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.code.findbugs/jsr305/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.code.findbugs/jsr305/pom.xml
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, xml-apis-1.4.01.jar define 137 overlapping classes and resources: 
+[[1;33mWARNING[m]   - javax.xml.datatype.DatatypeConfigurationException
+[[1;33mWARNING[m]   - javax.xml.datatype.DatatypeConstants
+[[1;33mWARNING[m]   - javax.xml.datatype.DatatypeConstants$1
+[[1;33mWARNING[m]   - javax.xml.datatype.DatatypeConstants$Field
+[[1;33mWARNING[m]   - javax.xml.datatype.DatatypeFactory
+[[1;33mWARNING[m]   - javax.xml.datatype.Duration
+[[1;33mWARNING[m]   - javax.xml.datatype.FactoryFinder
+[[1;33mWARNING[m]   - javax.xml.datatype.FactoryFinder$ConfigurationError
+[[1;33mWARNING[m]   - javax.xml.datatype.SecuritySupport
+[[1;33mWARNING[m]   - javax.xml.datatype.SecuritySupport$1
+[[1;33mWARNING[m]   - 127 more...
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, sonar-xml-parsing-2.18.0.3393.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-xml-parsing/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-xml-parsing/pom.xml
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, sonar-regex-parsing-2.18.0.3393.jar define 9 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-regex-parsing/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/org.sonarsource.analyzer-commons/sonar-regex-parsing/pom.xml
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.ast.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.finders.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.helpers.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.java.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.php.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.regex.python.package-info
+[[1;33mWARNING[m] sonar-python-plugin-5.29.0.35837.jar, sslr-core-1.24.0.633.jar define 88 overlapping classes: 
+[[1;33mWARNING[m]   - com.sonar.sslr.api.AstNode
+[[1;33mWARNING[m]   - com.sonar.sslr.api.AstNodeSkippingPolicy
+[[1;33mWARNING[m]   - com.sonar.sslr.api.GenericTokenType
+[[1;33mWARNING[m]   - com.sonar.sslr.api.Grammar
+[[1;33mWARNING[m]   - com.sonar.sslr.api.PreprocessingDirective
+[[1;33mWARNING[m]   - com.sonar.sslr.api.PreprocessingDirective$1
+[[1;33mWARNING[m]   - com.sonar.sslr.api.PreprocessingDirective$DefaultPreprocessingDirective
+[[1;33mWARNING[m]   - com.sonar.sslr.api.Rule
+[[1;33mWARNING[m]   - com.sonar.sslr.api.Token
+[[1;33mWARNING[m]   - com.sonar.sslr.api.Token$1
+[[1;33mWARNING[m]   - 78 more...
+[[1;33mWARNING[m] sonar-analyzer-commons-2.18.0.3393.jar, sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 26 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.BuiltInQualityProfileJsonLoader
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.EducationRuleLoader
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.JsonParser
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.Resources
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.RuleMetadataLoader
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKeys
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.annotations.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.collections.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.domain.RuleManifest
+[[1;33mWARNING[m]   - 16 more...
+[[1;33mWARNING[m] java-checks-8.22.0.41895.jar, java-frontend-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 1 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.java.filters.package-info
+[[1;33mWARNING[m] jsr305-3.0.2.jar, sonar-analyzer-commons-2.18.0.3393.jar, sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar define 8 overlapping classes: 
+[[1;33mWARNING[m]   - javax.annotation.CheckForNull
+[[1;33mWARNING[m]   - javax.annotation.Nonnull
+[[1;33mWARNING[m]   - javax.annotation.Nonnull$Checker
+[[1;33mWARNING[m]   - javax.annotation.Nullable
+[[1;33mWARNING[m]   - javax.annotation.meta.TypeQualifier
+[[1;33mWARNING[m]   - javax.annotation.meta.TypeQualifierNickname
+[[1;33mWARNING[m]   - javax.annotation.meta.TypeQualifierValidator
+[[1;33mWARNING[m]   - javax.annotation.meta.When
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, woodstox-core-6.4.0.jar define 6 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.woodstox/woodstox-core/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.fasterxml.woodstox/woodstox-core/pom.xml
+[[1;33mWARNING[m]   - META-INF/maven/com.sun.xml.bind.jaxb/isorelax/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.sun.xml.bind.jaxb/isorelax/pom.xml
+[[1;33mWARNING[m]   - META-INF/maven/net.java.dev.msv/xsdlib/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/net.java.dev.msv/xsdlib/pom.xml
+[[1;33mWARNING[m] java-surefire-8.22.0.41895.jar, sonar-java-plugin-8.22.0.41895.jar define 3 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonar.plugins.surefire.api.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.surefire.data.package-info
+[[1;33mWARNING[m]   - org.sonar.plugins.surefire.package-info
+[[1;33mWARNING[m] commons-codec-1.19.0.jar, sonar-go-plugin-1.32.0.5128.jar define 143 overlapping classes and resources: 
+[[1;33mWARNING[m]   - org.apache.commons.codec.BinaryDecoder
+[[1;33mWARNING[m]   - org.apache.commons.codec.BinaryEncoder
+[[1;33mWARNING[m]   - org.apache.commons.codec.CharEncoding
+[[1;33mWARNING[m]   - org.apache.commons.codec.Decoder
+[[1;33mWARNING[m]   - org.apache.commons.codec.DecoderException
+[[1;33mWARNING[m]   - org.apache.commons.codec.Encoder
+[[1;33mWARNING[m]   - org.apache.commons.codec.EncoderException
+[[1;33mWARNING[m]   - org.apache.commons.codec.binary.Hex
+[[1;33mWARNING[m]   - org.apache.commons.codec.binary.package-info
+[[1;33mWARNING[m]   - org.apache.commons.codec.cli.package-info
+[[1;33mWARNING[m]   - 133 more...
+[[1;33mWARNING[m] sonar-java-plugin-8.22.0.41895.jar, xercesImpl-2.12.2.jar define 693 overlapping classes: 
+[[1;33mWARNING[m]   - org.apache.xerces.dom.AttrImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.AttrNSImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.AttributeMap
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CDATASectionImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CharacterDataImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CharacterDataImpl$1
+[[1;33mWARNING[m]   - org.apache.xerces.dom.ChildNode
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CommentImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CoreDOMImplementationImpl
+[[1;33mWARNING[m]   - org.apache.xerces.dom.CoreDOMImplementationImpl$RevalidationHandlerHolder
+[[1;33mWARNING[m]   - 683 more...
+[[1;33mWARNING[m] jackson-core-2.22.1.jar, sonar-python-plugin-5.29.0.35837.jar define 215 overlapping classes and resources: 
+[[1;33mWARNING[m]   - META-INF.versions.11.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.BigSignificand
+[[1;33mWARNING[m]   - META-INF.versions.11.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastDoubleSwar
+[[1;33mWARNING[m]   - META-INF.versions.11.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastIntegerMath
+[[1;33mWARNING[m]   - META-INF.versions.17.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastDoubleSwar
+[[1;33mWARNING[m]   - META-INF.versions.17.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastIntegerMath
+[[1;33mWARNING[m]   - META-INF.versions.21.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastDoubleSwar
+[[1;33mWARNING[m]   - META-INF.versions.21.com.fasterxml.jackson.core.internal.shaded.fdp.v2_22_1.FastIntegerMath
+[[1;33mWARNING[m]   - META-INF/FastDoubleParser-LICENSE
+[[1;33mWARNING[m]   - META-INF/FastDoubleParser-ThirdParty-LICENSE
+[[1;33mWARNING[m]   - META-INF/Schubfach-LICENSE
+[[1;33mWARNING[m]   - 205 more...
+[[1;33mWARNING[m] sonar-go-plugin-1.32.0.5128.jar, sonar-java-plugin-8.22.0.41895.jar, sonar-python-plugin-5.29.0.35837.jar, sonar-xml-parsing-2.18.0.3393.jar define 2 overlapping classes: 
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.xml.checks.package-info
+[[1;33mWARNING[m]   - org.sonarsource.analyzer.commons.xml.package-info
+[[1;33mWARNING[m] j2objc-annotations-2.8.jar, sonar-python-plugin-5.29.0.35837.jar define 2 overlapping resources: 
+[[1;33mWARNING[m]   - META-INF/maven/com.google.j2objc/j2objc-annotations/pom.properties
+[[1;33mWARNING[m]   - META-INF/maven/com.google.j2objc/j2objc-annotations/pom.xml
+[[1;33mWARNING[m] maven-shade-plugin has detected that some files are
+[[1;33mWARNING[m] present in two or more JARs. When this happens, only one
+[[1;33mWARNING[m] single version of the file is copied to the uber jar.
+[[1;33mWARNING[m] Usually this is not harmful and you can skip these warnings,
+[[1;33mWARNING[m] otherwise try to manually exclude artifacts based on
+[[1;33mWARNING[m] mvn dependency:tree -Ddetail=true and the above output.
+[[1;33mWARNING[m] See https://maven.apache.org/plugins/maven-shade-plugin/
+[[1;34mINFO[m] Minimized 49109 -> 34932 (71%)
+[[1;34mINFO[m] Replacing original artifact with shaded artifact.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.5.0:copy-resources[m [1m(copy-files-on-build)[m @ [36msonar-cryptography-plugin[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from target to ../.SonarQube/plugins
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for sonar-cryptography 2.0.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] sonar-cryptography ................................. [1;32mSUCCESS[m [  1.152 s]
+[[1;34mINFO[m] common ............................................. [1;32mSUCCESS[m [  1.728 s]
+[[1;34mINFO[m] engine ............................................. [1;32mSUCCESS[m [  0.209 s]
+[[1;34mINFO[m] mapper ............................................. [1;32mSUCCESS[m [  0.298 s]
+[[1;34mINFO[m] output ............................................. [1;32mSUCCESS[m [  0.124 s]
+[[1;34mINFO[m] enricher ........................................... [1;32mSUCCESS[m [  0.076 s]
+[[1;34mINFO[m] rules .............................................. [1;32mSUCCESS[m [  0.065 s]
+[[1;34mINFO[m] java ............................................... [1;32mSUCCESS[m [  0.191 s]
+[[1;34mINFO[m] python ............................................. [1;32mSUCCESS[m [  0.097 s]
+[[1;34mINFO[m] go ................................................. [1;32mSUCCESS[m [  0.086 s]
+[[1;34mINFO[m] csharp ............................................. [1;32mSUCCESS[m [  0.073 s]
+[[1;34mINFO[m] sonar-cryptography-plugin .......................... [1;32mSUCCESS[m [ 27.783 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  32.556 s
+[[1;34mINFO[m] Finished at: 2026-08-25T16:34:39+09:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

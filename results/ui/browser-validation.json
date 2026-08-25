@@ -1,0 +1,53 @@
+{
+  "releaseFullHome": {
+    "bodyLength": 1650,
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\""
+    ]
+  },
+  "releaseFullSonar": {
+    "url": "http://127.0.0.1:8001/",
+    "bodyLength": 1871,
+    "bodyExcerpt": "IBM \nResearch\n|\nCBOMkit 2.2.0 Lab\nSystem theme\nStart over\ncbom.json (uploaded)\n59 cryptographic assets found.\n\nNot compliant –\n\nThis CBOM does not comply with the policy \"quantum_safe\".\nSource: Basic Backend Compliance Service\n\nNot Applicable\n\nUnknown\n\nNot Quantum Safe\n\nQuantum Safe\n\n40.7%\n32.2%\n27.1%\n59\nCrypto Assets\n\n26 types of crypto assets\n\nHash\n\nPke\n\nBlock-cipher\n\nKey-agree\n\nSignature\n\nAe\n\nKdf\n\nOther\n\nMac\n\nDrbg\n\n31.7%\n24.4%\n9.8%\n7.3%\n7.3%\n7.3%\n4.9%\n2.4%\n2.4%\n2.4%\n10\nCrypto Primitives\n\nDigest\n\nKeygen\n\nEncrypt\n\nKeyderive\n\nSign\n\nTag\n\n36.1%\n30.6%\n19.4%\n5.6%\n5.6%\n2.8%\n6\nCrypto Functions\nList ",
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\""
+    ]
+  },
+  "releaseFullDetail": {
+    "url": "http://127.0.0.1:8001/",
+    "bodyLength": 2693,
+    "bodyExcerpt": "IBM \nResearch\n|\nCBOMkit 2.2.0 Lab\nSystem theme\nStart over\ncbom.json (uploaded)\n59 cryptographic assets found.\n\nNot compliant –\n\nThis CBOM does not comply with the policy \"quantum_safe\".\nSource: Basic Backend Compliance Service\n\nNot Applicable\n\nUnknown\n\nNot Quantum Safe\n\nQuantum Safe\n\n40.7%\n32.2%\n27.1%\n59\nCrypto Assets\n\n26 types of crypto assets\n\nHash\n\nPke\n\nBlock-cipher\n\nKey-agree\n\nSignature\n\nAe\n\nKdf\n\nOther\n\nMac\n\nDrbg\n\n31.7%\n24.4%\n9.8%\n7.3%\n7.3%\n7.3%\n4.9%\n2.4%\n2.4%\n2.4%\n10\nCrypto Primitives\n\nDigest\n\nKeygen\n\nEncrypt\n\nKeyderive\n\nSign\n\nTag\n\n36.1%\n30.6%\n19.4%\n5.6%\n5.6%\n2.8%\n6\nCrypto Functions\n\nAlgo",
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\""
+    ]
+  },
+  "releaseCoeusHome": {
+    "bodyLength": 1598,
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\""
+    ]
+  },
+  "releaseCoeusSonar": {
+    "url": "http://127.0.0.1:8004/",
+    "bodyLength": 1962,
+    "bodyExcerpt": "IBM \nResearch\n|\nCBOMkit-coeus 2.2.0 Lab\nSystem theme\nStart over\ncbom.json (uploaded)\n59 cryptographic assets found.\n\nNot compliant –\n\nThis CBOM does not comply with the policy \"NIST Post-Quantum Cryptography\".\nSource: Basic Local Compliance Service\n\nNot Applicable\n\nUnknown\n\nNot Quantum Safe\n\nQuantum Safe\n\n40.7%\n32.2%\n27.1%\n59\nCrypto Assets*\n\n*\n\nThis compliance data is approximate and given for illustrative purposes only.\n\n26 types of crypto assets\n\nHash\n\nPke\n\nBlock-cipher\n\nKey-agree\n\nSignature\n\nAe\n\nKdf\n\nOther\n\nMac\n\nDrbg\n\n31.7%\n24.4%\n9.8%\n7.3%\n7.3%\n7.3%\n4.9%\n2.4%\n2.4%\n2.4%\n10\nCrypto Primitives\n",
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\""
+    ]
+  },
+  "releaseCoeusPolicy": {
+    "url": "http://127.0.0.1:8004/",
+    "bodyLength": 1471,
+    "bodyExcerpt": "IBM \nResearch\n|\nCBOMkit-coeus 2.2.0 Lab\nSystem theme\nInvalid CBOM\n\nThe provided CBOM does not respect the expected format.\n\nStart over\npolicy-fixture-cbom.json (uploaded)\n5 cryptographic assets found.\n\nNot compliant –\n\nThis CBOM does not comply with the policy \"NIST Post-Quantum Cryptography\".\nSource: Basic Local Compliance Service\n\nNot Quantum Safe\n\nUnknown\n\nQuantum Safe\n\nNot Applicable\n\n40%\n20%\n20%\n20%\n5\nCrypto Assets*\n\n*\n\nThis compliance data is approximate and given for illustrative purposes only.\n\n5 types of crypto assets\n\nPke\n\nKey-agree\n\nAe\n\nUnknown\n\nKem\n\n20%\n20%\n20%\n20%\n20%\n5\nCrypto Pri",
+    "errors": [
+      "console:error:Refused to set unsafe header \"origin\"",
+      "console:error:Invalid CBOM detected. 1 errors:\n   - Missing mandatory field: serialNumber."
+    ]
+  },
+  "currentMain": {
+    "bodyLength": 0,
+    "errors": [
+      "pageerror:Cannot read properties of undefined (reading 'use')"
+    ]
+  }
+}

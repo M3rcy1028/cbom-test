@@ -1,0 +1,192 @@
+{
+  "before": {
+    "path": "results/sonar/cbom.json",
+    "sha256": "3d97f2d2451f59035f16369e0b4fa474f4cafac821fea515396e3d444717e883",
+    "specVersion": "1.6"
+  },
+  "after": {
+    "path": "results/enriched/cbom.json",
+    "sha256": "3cda51bf6d5551fd8fe9724bd577394e033842e954b6f9de0d502a66b55cddc8",
+    "specVersion": "1.6"
+  },
+  "summary": {
+    "beforeComponents": 38,
+    "afterComponents": 64,
+    "added": 26,
+    "removed": 0,
+    "modified": 0,
+    "unchanged": 38,
+    "beforeDependencies": 23,
+    "afterDependencies": 27
+  },
+  "addedByAssetType": {
+    "algorithm": 16,
+    "certificate": 2,
+    "file": 1,
+    "protocol": 2,
+    "related-crypto-material": 5
+  },
+  "added": [
+    {
+      "identity": "0bc05897-50a2-43a7-a79d-b9293837cc73",
+      "bom-ref": "0bc05897-50a2-43a7-a79d-b9293837cc73",
+      "name": "SHA256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "208f9582-dc1a-45bd-b8e3-9f990afaae62",
+      "bom-ref": "208f9582-dc1a-45bd-b8e3-9f990afaae62",
+      "name": "RSA",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "2215b565-fd33-4274-9946-3ccb06547d4f",
+      "bom-ref": "2215b565-fd33-4274-9946-3ccb06547d4f",
+      "name": "TLSv1.3",
+      "assetType": "protocol"
+    },
+    {
+      "identity": "24decdca-950b-47a1-880b-bed904179359",
+      "bom-ref": "24decdca-950b-47a1-880b-bed904179359",
+      "name": "RSA-2048",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "253df6da-48b3-438c-88c8-f8726d288b32",
+      "bom-ref": "253df6da-48b3-438c-88c8-f8726d288b32",
+      "name": "SHA256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "42dfca1b-e547-4d00-b116-cf7de0857abe",
+      "bom-ref": "42dfca1b-e547-4d00-b116-cf7de0857abe",
+      "name": "cbom-lab-valid",
+      "assetType": "certificate"
+    },
+    {
+      "identity": "4fbc8724-efe0-4511-995f-4c1eb752cd58",
+      "bom-ref": "4fbc8724-efe0-4511-995f-4c1eb752cd58",
+      "name": "SHA256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "60e36f75-568a-411d-b24e-8f5920c74dd8",
+      "bom-ref": "60e36f75-568a-411d-b24e-8f5920c74dd8",
+      "name": "RSA-2048",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "62bf4ef4-3805-490f-901e-adc40b79664a",
+      "bom-ref": "62bf4ef4-3805-490f-901e-adc40b79664a",
+      "name": "openssl.cnf",
+      "assetType": "file"
+    },
+    {
+      "identity": "6a1444a7-9221-4523-83ab-cc8a4b28a076",
+      "bom-ref": "6a1444a7-9221-4523-83ab-cc8a4b28a076",
+      "name": "AES256 GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "6d73dead-3c2f-4e8b-a840-55aceb6ddd76",
+      "bom-ref": "6d73dead-3c2f-4e8b-a840-55aceb6ddd76",
+      "name": "AES128 GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "84333189-49b3-4ab9-bef2-fb576acd4423",
+      "bom-ref": "84333189-49b3-4ab9-bef2-fb576acd4423",
+      "name": "RSA",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "9833e161-dcf0-40ff-96bd-487e3fbc8763",
+      "bom-ref": "9833e161-dcf0-40ff-96bd-487e3fbc8763",
+      "name": "RSA-2048",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "9c3dec54-2ab6-4e4a-8a28-3b374ba9377c",
+      "bom-ref": "9c3dec54-2ab6-4e4a-8a28-3b374ba9377c",
+      "name": "cbom-lab-expired",
+      "assetType": "certificate"
+    },
+    {
+      "identity": "__missing_bom_ref__:52:111d03a548b7956f",
+      "bom-ref": null,
+      "name": "generic-api-key",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "a126b64b-ae42-4573-872b-d54e428474f9",
+      "bom-ref": "a126b64b-ae42-4573-872b-d54e428474f9",
+      "name": "SHA384",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "b67ba1fc-7bf1-4ebb-9cdf-2b2742f595bc",
+      "bom-ref": "b67ba1fc-7bf1-4ebb-9cdf-2b2742f595bc",
+      "name": "AES256 GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "c29dc5dc-22a0-4ad2-8cb2-aa9f3d47fb98",
+      "bom-ref": "c29dc5dc-22a0-4ad2-8cb2-aa9f3d47fb98",
+      "name": "TLSv1.2",
+      "assetType": "protocol"
+    },
+    {
+      "identity": "c49655c1-2372-4b88-8f2d-5c70f2a5c14d",
+      "bom-ref": "c49655c1-2372-4b88-8f2d-5c70f2a5c14d",
+      "name": "AES128 GCM",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "ca384f47-af6d-4c40-97c6-b1333952f025",
+      "bom-ref": "ca384f47-af6d-4c40-97c6-b1333952f025",
+      "name": "RSA",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "cfcd4d0f-59e2-487b-b5ad-8d2e9d76c3ad",
+      "bom-ref": "cfcd4d0f-59e2-487b-b5ad-8d2e9d76c3ad",
+      "name": "SHA256",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "d1bfeb2c-ae45-4597-8b12-b5a7b89e2d6e",
+      "bom-ref": "d1bfeb2c-ae45-4597-8b12-b5a7b89e2d6e",
+      "name": "SHA384",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "d5cf05ba-1d81-461f-b725-820613d2a60c",
+      "bom-ref": "d5cf05ba-1d81-461f-b725-820613d2a60c",
+      "name": "SHA256-RSA",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "db683e61-b5da-4a4f-a2ac-0be350ee6f13",
+      "bom-ref": "db683e61-b5da-4a4f-a2ac-0be350ee6f13",
+      "name": "SHA256-RSA",
+      "assetType": "algorithm"
+    },
+    {
+      "identity": "ead5dde2-b8b7-4a07-a0b4-4014f502d2ad",
+      "bom-ref": "ead5dde2-b8b7-4a07-a0b4-4014f502d2ad",
+      "name": "RSA-2048",
+      "assetType": "related-crypto-material"
+    },
+    {
+      "identity": "f6ab7dc5-43c5-4303-85a8-e965c36e7a06",
+      "bom-ref": "f6ab7dc5-43c5-4303-85a8-e965c36e7a06",
+      "name": "RSA",
+      "assetType": "algorithm"
+    }
+  ],
+  "removedRefs": [],
+  "modifiedRefs": [],
+  "missingBomRefAfter": [
+    "__missing_bom_ref__:52:111d03a548b7956f"
+  ]
+}

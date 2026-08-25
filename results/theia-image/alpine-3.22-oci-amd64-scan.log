@@ -1,0 +1,6 @@
+time="2026-08-25T17:05:00+09:00" level=info msg="try to fetch image oci-dir:/home/tako/naryun/cbom/cbom-lab/tools/alpine-3.22-oci-amd64 ..."
+time="2026-08-25T17:05:00+09:00" level=info msg="successfully loaded image oci-dir:/home/tako/naryun/cbom/cbom-lab/tools/alpine-3.22-oci-amd64 with id b66e0ce64844f5c6435b0c4bfd965558199ab0f53270846861c979cb1ac29365"
+time="2026-08-25T17:05:00+09:00" level=warning msg="No BOM provided or provided BOM does not have any components, this scan will only add components"
+time="2026-08-25T17:05:00+09:00" level=info msg="=> Running Certificate File Plugin"
+time="2026-08-25T17:05:00+09:00" level=warning msg="Skipping large file: /usr/lib/libcrypto.so.3 (exceeds limit of 1048576 bytes)"
+time="2026-08-25T17:05:00+09:00" level=info msg="Certificate searching done" numberOfDetectedCertificates=476

@@ -1,0 +1,83 @@
+{
+  "builtinService": "Basic Backend Compliance Service",
+  "opaService": "Open Policy Agent Compliance Service",
+  "rows": [
+    {
+      "bomRef": "policy:rsa-2048",
+      "asset": "RSA-2048",
+      "groundTruth": "quantum-vulnerable",
+      "builtin": [
+        "quantum-vulnerable"
+      ],
+      "opa": [
+        "quantum-vulnerable"
+      ],
+      "builtinMatches": true,
+      "opaMatches": true,
+      "opaConflict": false
+    },
+    {
+      "bomRef": "policy:ecdh-p256",
+      "asset": "ECDH-P256",
+      "groundTruth": "quantum-vulnerable",
+      "builtin": [
+        "quantum-vulnerable"
+      ],
+      "opa": [
+        "not-applicable"
+      ],
+      "builtinMatches": true,
+      "opaMatches": false,
+      "opaConflict": false
+    },
+    {
+      "bomRef": "policy:aes-128-gcm",
+      "asset": "AES-128-GCM",
+      "groundTruth": "not-applicable",
+      "builtin": [
+        "not-applicable"
+      ],
+      "opa": [
+        "not-applicable"
+      ],
+      "builtinMatches": true,
+      "opaMatches": true,
+      "opaConflict": false
+    },
+    {
+      "bomRef": "policy:unknown",
+      "asset": "Vendor-Algorithm-X",
+      "groundTruth": "unknown",
+      "builtin": [
+        "unknown"
+      ],
+      "opa": [
+        "unknown"
+      ],
+      "builtinMatches": true,
+      "opaMatches": true,
+      "opaConflict": false
+    },
+    {
+      "bomRef": "policy:ml-kem-768",
+      "asset": "ML-KEM-768",
+      "groundTruth": "quantum-safe",
+      "builtin": [
+        "quantum-safe"
+      ],
+      "opa": [
+        "quantum-safe",
+        "quantum-vulnerable"
+      ],
+      "builtinMatches": true,
+      "opaMatches": false,
+      "opaConflict": true
+    }
+  ],
+  "summary": {
+    "assetCount": 5,
+    "builtinExactMatches": 5,
+    "opaExactMatches": 3,
+    "opaConflictAssets": 1
+  }
+}

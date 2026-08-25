@@ -1,0 +1,4 @@
+POST /api/v1/cbom/lab-sonar -> 200
+POST /api/v1/cbom/lab-theia -> 200
+POST /api/v1/cbom/lab-enriched -> 200
+POST /api/v1/cbom/lab-policy -> 200

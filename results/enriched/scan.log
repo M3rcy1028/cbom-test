@@ -1,0 +1,53 @@
+time="2026-08-25T16:40:06+09:00" level=info msg="=> Running Certificate File Plugin"
+time="2026-08-25T16:40:06+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:40:06+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:40:06+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:40:06+09:00" level=warning msg="Skipping large file: go-app/go-crypto-fixture (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:40:06+09:00" level=info msg="Certificate searching done" numberOfDetectedCertificates=2
+time="2026-08-25T16:40:06+09:00" level=info msg="=> Running Secret Detection Plugin"
+time="2026-08-25T16:40:06+09:00" level=info msg="Secret detected" file=certs/expired-private-key.pem type=private-key
+time="2026-08-25T16:40:06+09:00" level=info msg="Found 1 private key(s) in certs/expired-private-key.pem"
+time="2026-08-25T16:40:06+09:00" level=info msg="Secret detected" file=certs/test-private-key.pem type=private-key
+time="2026-08-25T16:40:06+09:00" level=info msg="Found 1 private key(s) in certs/test-private-key.pem"
+time="2026-08-25T16:40:06+09:00" level=warning msg="Skipping large file: go-app/go-crypto-fixture (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:40:06+09:00" level=info msg="Secret detected" file=runtime/conf/security/java.security type=generic-api-key
+time="2026-08-25T16:40:06+09:00" level=info msg="=> Running OpenSSL Config Plugin"
+time="2026-08-25T16:40:06+09:00" level=info msg="OpenSSL config detected" file=config/openssl.cnf
+time="2026-08-25T16:40:06+09:00" level=info msg="=> Running java.security Plugin"
+time="2026-08-25T16:40:06+09:00" level=warning msg="Current version does not take dynamic changes of java javaSecurity properties (e.g. via System.setProperty) into account."
+time="2026-08-25T16:40:06+09:00" level=info msg="java.security files found" number=1
+time="2026-08-25T16:40:06+09:00" level=info msg="Select java.security file" path=runtime/conf/security/java.security
+time="2026-08-25T16:40:06+09:00" level=warning msg="Found constraint in java.security file that is not supported in this version" algorithm="rsa_pkcs1_sha1 usage HandshakeSignature"
+time="2026-08-25T16:40:06+09:00" level=warning msg="Found constraint in java.security file that is not supported in this version" algorithm="ecdsa_sha1 usage HandshakeSignature"
+time="2026-08-25T16:40:06+09:00" level=warning msg="Found constraint in java.security file that is not supported in this version" algorithm="dsa_sha1 usage HandshakeSignature"
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=8cd0e081-e79c-41ec-a62f-78a54ad181d3 component=secret-key@8cd0e081-e79c-41ec-a62f-78a54ad181d3
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=69a0f723-87c3-482a-afd1-c2d3d11bd371 component=ECDH
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=e6ad7b72-4697-4fe0-ac90-4c13dc918050 component=AES-128
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=86c9f46c-0bee-47c1-80c6-c98288b3cb64 component=RSA-OAEP
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=50104b29-ff9e-4a23-9d53-f24fbe1e72f3 component=key@50104b29-ff9e-4a23-9d53-f24fbe1e72f3
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=5261794a-2874-428f-b497-9cebd73b8c48 component=PBKDF2-HMAC-SHA-256
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=8da1ff9b-4903-485b-9cd0-f38c9dce8382 component=ECDSA-SHA-256
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=5acb2756-8d92-4405-a1ef-db466f9bcb3b component=iv@5acb2756-8d92-4405-a1ef-db466f9bcb3b
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=2cc1c94c-3523-4ae3-84df-5c6008eb8557 component=key@2cc1c94c-3523-4ae3-84df-5c6008eb8557
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=08d27c4d-f44c-46be-bf85-4576871f87a4 component=AES-128-GCM
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=fd4329b0-16db-4d15-a4f2-cc390af4efd2 component=RSA-2048
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=8addc100-780c-46a2-b6ed-f2abfd2ccfff component=key@8addc100-780c-46a2-b6ed-f2abfd2ccfff
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=f1a7bdf7-09fb-4920-9b69-ed64ccf06be4 component=salt@f1a7bdf7-09fb-4920-9b69-ed64ccf06be4
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=831954dd-a8eb-4c56-9897-41a8a3e9876b component=secret-key@831954dd-a8eb-4c56-9897-41a8a3e9876b
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=bc015f05-c9cf-4e9d-b1ce-d5ad78fec866 component=secret-key@bc015f05-c9cf-4e9d-b1ce-d5ad78fec866
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=c3f0cc4e-d118-4c3d-86f0-da3faf687b31 component=EC
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=1529752e-0ddd-4387-94da-9ddfad13cad9 component=MGF1
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=ff1b30f2-289a-4e5e-b8a2-628a478d122b component=HMAC-SHA-256
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=ab48d082-e3a6-4093-b87d-6a2a5b71be17 component=key@ab48d082-e3a6-4093-b87d-6a2a5b71be17
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=d213e097-284b-44eb-9702-bf954c676a77 component=password@d213e097-284b-44eb-9702-bf954c676a77
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=3fcc26a5-230c-47ce-bf1a-d2b08b5ff9e4 component=secret-key@3fcc26a5-230c-47ce-bf1a-d2b08b5ff9e4
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=f27e7957-5e9f-4003-8345-ee322f78461f component=iv@f27e7957-5e9f-4003-8345-ee322f78461f
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=f64a268c-2c10-4cd9-968d-b21d9c230e93 component=secret-key@f64a268c-2c10-4cd9-968d-b21d9c230e93
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=b8421089-6ee4-412e-8774-286907a9edb6 component=key@b8421089-6ee4-412e-8774-286907a9edb6
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=34633ded-0f03-483b-9ad0-7589a4cd4539 component=AES-128-CBC-PKCS5
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=4a3d9860-d5a8-4d47-8432-059f09a25ce0 component=SHA-256
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=f55aff5a-09dd-4726-a6b2-65c75e057fe0 component=MD5
+time="2026-08-25T16:40:06+09:00" level=info msg="component is affected by java.security file" bom-ref=26a47ae7-f0cf-4884-8b59-6a92ca185d7b component=EC-secp256r1
+time="2026-08-25T16:40:06+09:00" level=info msg="java.security analysis done!"
+time="2026-08-25T16:40:06+09:00" level=info msg="=> Running Problematic CA Detection Plugin"
+time="2026-08-25T16:40:06+09:00" level=info msg="Problematic CA detection completed" checked=0 flagged=0

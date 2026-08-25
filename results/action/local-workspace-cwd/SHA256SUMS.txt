@@ -1,0 +1,5 @@
+57d90543c6153f7efc4fa5e29530e9a9e9edb01c804681c6648c183a5838b2c0  results/action/local-workspace-cwd/CBOM.zip
+9827b277809782de94c444ab6854ccc585798912e9f2415fa5299e71a8a4b805  results/action/local-workspace-cwd/cbom.json
+1d09c8a738c513123305efab04825d4b3773e8d3e0222ac9de1dd74b98f802d5  results/action/local-workspace-cwd/cbom_go-app.json
+3d7fe9ff6b259216adcb1365bf6db12cb8fe3cbcbcc0122de2fd52be47928ab9  results/action/local-workspace-cwd/cbom_java-app.json
+3f915d4f089c0059f09d81860d338133323047851fb941faff54f8550f66993a  results/action/local-workspace-cwd/cbom_python-app.json

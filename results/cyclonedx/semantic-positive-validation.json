@@ -1,0 +1,155 @@
+{
+  "checks": [
+    {
+      "path": "results/sonar/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 38,
+      "dependencyCount": 23,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-dir/cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 25,
+      "dependencyCount": 4,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/local-workspace-cwd/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 49,
+      "dependencyCount": 24,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/remediated/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 44,
+      "dependencyCount": 23,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-image/alpine-3.22-cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 2858,
+      "dependencyCount": 476,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-image/alpine-3.22-oci-amd64-cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 2856,
+      "dependencyCount": 476,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/remediated-theia/cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 6,
+      "dependencyCount": 1,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-config/baseline/cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 11,
+      "dependencyCount": 2,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-config/remediated/cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 6,
+      "dependencyCount": 1,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/compliance/policy-fixture-cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 5,
+      "dependencyCount": 1,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    }
+  ],
+  "allValid": true
+}

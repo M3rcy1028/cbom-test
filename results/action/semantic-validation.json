@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "path": "results/action/local/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 49,
+      "dependencyCount": 24,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/local/cbom_java-app.json",
+      "specVersion": "1.6",
+      "componentCount": 0,
+      "dependencyCount": 0,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/local/cbom_python-app.json",
+      "specVersion": "1.6",
+      "componentCount": 0,
+      "dependencyCount": 0,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/action/local/cbom_go-app.json",
+      "specVersion": "1.6",
+      "componentCount": 0,
+      "dependencyCount": 0,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    }
+  ],
+  "allValid": true
+}

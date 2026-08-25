@@ -1,0 +1,43 @@
+name: CBOM generation experiment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cbom-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout fixture
+        uses: actions/checkout@v5
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Build Java fixture before scanning
+        run: mvn -B -f java-app/pom.xml clean package -DskipTests
+
+      - name: Install Python dependencies
+        run: python -m pip install -r python-app/requirements.txt
+
+      - name: Generate module and consolidated CBOMs
+        id: cbom
+        uses: cbomkit/cbomkit-action@v2.1.1
+        env:
+          CBOMKIT_LANGUAGES: java, python
+          CBOMKIT_GENERATE_MODULE_CBOMS: "true"
+          CBOMKIT_WRITE_EMPTY_CBOMS: "true"
+          CBOMKIT_JAVA_REQUIRE_BUILD: "true"
+
+      - name: Upload CBOM evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: CBOM
+          path: ${{ steps.cbom.outputs.pattern }}
+          if-no-files-found: error

@@ -1,0 +1,2 @@
+time="2026-08-25T17:04:45+09:00" level=info msg="try to fetch image oci-dir:/home/tako/naryun/cbom/cbom-lab/tools/alpine-3.22-oci.tar ..."
+time="2026-08-25T17:04:45+09:00" level=error msg="could not fetch image: unable to detect input for '/home/tako/naryun/cbom/cbom-lab/tools/alpine-3.22-oci.tar', errs: unable to parse OCI directory as an image: unexpected media type for sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dce: application/vnd.oci.image.index.v1+json"

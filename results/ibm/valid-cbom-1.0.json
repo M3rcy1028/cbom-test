@@ -1,0 +1,44 @@
+{
+  "bomFormat": "CBOM",
+  "specVersion": "1.4-cbom-1.0",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "bom-ref": "app:cbom-lab",
+      "name": "cbom-lab",
+      "version": "1.0.0"
+    }
+  },
+  "components": [
+    {
+      "type": "crypto-asset",
+      "bom-ref": "crypto:aes-128-gcm",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ae",
+          "variant": "AES-128-GCM",
+          "mode": "gcm",
+          "cryptoFunctions": [
+            "encrypt",
+            "decrypt",
+            "tag"
+          ]
+        },
+        "classicalSecurityLevel": 128,
+        "nistQuantumSecurityLevel": 1
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "app:cbom-lab",
+      "dependsOn": [
+        "crypto:aes-128-gcm"
+      ],
+      "dependencyType": "uses"
+    }
+  ]
+}

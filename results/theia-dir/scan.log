@@ -1,0 +1,18 @@
+time="2026-08-25T16:29:59+09:00" level=info msg="Since no BOM is provided as input the java security check is automatically disabled."
+time="2026-08-25T16:29:59+09:00" level=warning msg="No BOM provided or provided BOM does not have any components, this scan will only add components"
+time="2026-08-25T16:29:59+09:00" level=info msg="=> Running Certificate File Plugin"
+time="2026-08-25T16:29:59+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:29:59+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:29:59+09:00" level=warning msg="failed to parse file that was assumed to be a valid configuration: (Certificate File Plugin) x509: malformed certificate"
+time="2026-08-25T16:29:59+09:00" level=warning msg="Skipping large file: go-app/go-crypto-fixture (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:30:00+09:00" level=info msg="Certificate searching done" numberOfDetectedCertificates=2
+time="2026-08-25T16:30:00+09:00" level=info msg="=> Running Secret Detection Plugin"
+time="2026-08-25T16:30:00+09:00" level=info msg="Secret detected" file=certs/expired-private-key.pem type=private-key
+time="2026-08-25T16:30:00+09:00" level=info msg="Found 1 private key(s) in certs/expired-private-key.pem"
+time="2026-08-25T16:30:00+09:00" level=info msg="Secret detected" file=certs/test-private-key.pem type=private-key
+time="2026-08-25T16:30:00+09:00" level=info msg="Found 1 private key(s) in certs/test-private-key.pem"
+time="2026-08-25T16:30:00+09:00" level=warning msg="Skipping large file: go-app/go-crypto-fixture (exceeds limit of 1048576 bytes)"
+time="2026-08-25T16:30:00+09:00" level=info msg="=> Running OpenSSL Config Plugin"
+time="2026-08-25T16:30:00+09:00" level=info msg="OpenSSL config detected" file=config/openssl.cnf
+time="2026-08-25T16:30:00+09:00" level=info msg="=> Running Problematic CA Detection Plugin"
+time="2026-08-25T16:30:00+09:00" level=info msg="Problematic CA detection completed" checked=0 flagged=0

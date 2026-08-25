@@ -1,0 +1,310 @@
+{
+  "sonar": [
+    {
+      "key": "algorithm|AES-128-CBC-PKCS5|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-128-GCM|ae",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-128|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-CBC|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-GCM|ae",
+      "count": 1
+    },
+    {
+      "key": "algorithm|EC-secp256r1|pke",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDH|key-agree",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDSA-SHA-256|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDSA-secp256r1-SHA-256|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDSA-secp256r1|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|EC|pke",
+      "count": 1
+    },
+    {
+      "key": "algorithm|HMAC-SHA-256|mac",
+      "count": 1
+    },
+    {
+      "key": "algorithm|MD5|hash",
+      "count": 1
+    },
+    {
+      "key": "algorithm|MGF1|other",
+      "count": 1
+    },
+    {
+      "key": "algorithm|NATIVEPRNG|drbg",
+      "count": 1
+    },
+    {
+      "key": "algorithm|PBKDF2-HMAC-SHA-256|kdf",
+      "count": 1
+    },
+    {
+      "key": "algorithm|PBKDF2-SHA-256|kdf",
+      "count": 1
+    },
+    {
+      "key": "algorithm|RSA-2048|pke",
+      "count": 1
+    },
+    {
+      "key": "algorithm|RSA-OAEP|pke",
+      "count": 1
+    },
+    {
+      "key": "algorithm|SHA-256|hash",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|iv@5acb2756-8d92-4405-a1ef-db466f9bcb3b|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|iv@f27e7957-5e9f-4003-8345-ee322f78461f|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@2cc1c94c-3523-4ae3-84df-5c6008eb8557|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@50104b29-ff9e-4a23-9d53-f24fbe1e72f3|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@8addc100-780c-46a2-b6ed-f2abfd2ccfff|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@ab48d082-e3a6-4093-b87d-6a2a5b71be17|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@b8421089-6ee4-412e-8774-286907a9edb6|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|password@d213e097-284b-44eb-9702-bf954c676a77|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@0c51fd6e-c248-4cc1-90e7-0c0bbcd544dd|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@10f9c57a-f0cb-4d2a-a3df-3c216d63434b|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@4183695d-298c-4814-ad4e-12e491ebb76e|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@9f345720-0289-4da0-ae70-db6e61f84114|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|salt@f1a7bdf7-09fb-4920-9b69-ed64ccf06be4|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@3fcc26a5-230c-47ce-bf1a-d2b08b5ff9e4|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@831954dd-a8eb-4c56-9897-41a8a3e9876b|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@8cd0e081-e79c-41ec-a62f-78a54ad181d3|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@bc015f05-c9cf-4e9d-b1ce-d5ad78fec866|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@f64a268c-2c10-4cd9-968d-b21d9c230e93|",
+      "count": 1
+    }
+  ],
+  "action": [
+    {
+      "key": "algorithm|AES-128-CBC-PKCS5|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-128-GCM|ae",
+      "count": 2
+    },
+    {
+      "key": "algorithm|AES-128|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-CBC|block-cipher",
+      "count": 1
+    },
+    {
+      "key": "algorithm|AES-GCM|ae",
+      "count": 1
+    },
+    {
+      "key": "algorithm|EC-secp256r1|pke",
+      "count": 2
+    },
+    {
+      "key": "algorithm|ECDH|key-agree",
+      "count": 3
+    },
+    {
+      "key": "algorithm|ECDSA-SHA-256|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDSA-secp256r1-SHA-256|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|ECDSA-secp256r1|signature",
+      "count": 1
+    },
+    {
+      "key": "algorithm|EC|pke",
+      "count": 1
+    },
+    {
+      "key": "algorithm|HMAC-SHA-256|mac",
+      "count": 1
+    },
+    {
+      "key": "algorithm|MD5|hash",
+      "count": 3
+    },
+    {
+      "key": "algorithm|MGF1|other",
+      "count": 1
+    },
+    {
+      "key": "algorithm|NATIVEPRNG|drbg",
+      "count": 1
+    },
+    {
+      "key": "algorithm|PBKDF2-HMAC-SHA-256|kdf",
+      "count": 1
+    },
+    {
+      "key": "algorithm|PBKDF2-SHA-256|kdf",
+      "count": 1
+    },
+    {
+      "key": "algorithm|RSA-2048|pke",
+      "count": 3
+    },
+    {
+      "key": "algorithm|RSA-OAEP|pke",
+      "count": 2
+    },
+    {
+      "key": "algorithm|SHA-256|hash",
+      "count": 3
+    },
+    {
+      "key": "related-crypto-material|iv@a282bd35-5f0c-4763-8214-a79c01b8775b|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|iv@affef7d1-ef94-4e84-a54d-be57cf897258|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@07829d31-dc25-4514-a4e4-3a5c558ca35f|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@1e183548-843f-4a3e-9dc3-eaff72267cf5|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@5650a6db-cb08-42ce-bf8f-f0a51a8e8a89|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@a54db7b8-3cc7-4b45-8c81-7dea07649cef|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|key@eb5248b9-034f-4d83-ac7d-593060efbb6d|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|password@f6e295e5-3d27-442b-89e9-63c1ecdfe060|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@84cf1a35-6a0a-4eee-9bee-00df864153b7|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@a9a84dc2-162b-4d92-856a-6422d6accb5b|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@d845b9b1-7274-4877-83d7-83d564fbeefa|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|private-key@e63d9cae-9d46-45a8-86f6-a8c880d5c8fe|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|salt@b825ac4a-6b37-4c38-aabe-c5eef2f9b4fd|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@5a1dab2d-0920-4c5a-964d-f51605467c73|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@5f6ee766-c3d7-4629-8a8a-80b39f0985bf|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@72906d03-d198-4f6a-b751-0747e70530d6|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@d6cbeba1-42e8-400f-82a9-0c7a7eeed3b2|",
+      "count": 1
+    },
+    {
+      "key": "related-crypto-material|secret-key@fab544f0-f0ce-4b5a-a9c9-593fe128b777|",
+      "count": 1
+    }
+  ]
+}

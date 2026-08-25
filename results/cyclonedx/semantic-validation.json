@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "path": "results/sonar/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 38,
+      "dependencyCount": 23,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/theia-dir/cbom.json",
+      "specVersion": "1.7",
+      "componentCount": 25,
+      "dependencyCount": 4,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/enriched/cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 64,
+      "dependencyCount": 27,
+      "semanticValid": false,
+      "issueCount": 1,
+      "issues": {
+        "missingComponentBomRefs": [
+          {
+            "index": 52,
+            "name": "generic-api-key",
+            "type": "cryptographic-asset"
+          }
+        ],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/compliance/policy-fixture-cbom.json",
+      "specVersion": "1.6",
+      "componentCount": 5,
+      "dependencyCount": 1,
+      "semanticValid": true,
+      "issueCount": 0,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [],
+        "duplicateDependencyRoots": []
+      }
+    },
+    {
+      "path": "results/cyclonedx/semantic-invalid-dangling-ref.json",
+      "specVersion": "1.6",
+      "componentCount": 1,
+      "dependencyCount": 1,
+      "semanticValid": false,
+      "issueCount": 1,
+      "issues": {
+        "missingComponentBomRefs": [],
+        "duplicateComponentBomRefs": [],
+        "danglingDependencyRoots": [],
+        "danglingDependencyTargets": [
+          {
+            "ref": "semantic:known",
+            "dependsOn": "semantic:missing"
+          }
+        ],
+        "duplicateDependencyRoots": []
+      }
+    }
+  ],
+  "allValid": false
+}

@@ -1,0 +1,150 @@
+{
+  "allPassed": true,
+  "cases": [
+    {
+      "label": "IBM CBOM 1.0 positive",
+      "schema": "sources/ibm-cbom/bom-1.4-cbom-1.0.schema.json",
+      "document": "results/ibm/valid-cbom-1.0.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "IBM CBOM 1.0 negative: CycloneDX-style primitive spelling",
+      "schema": "sources/ibm-cbom/bom-1.4-cbom-1.0.schema.json",
+      "document": "results/ibm/invalid-cbom-1.0.json",
+      "expectedValid": false,
+      "actualValid": false,
+      "passed": true,
+      "errors": [
+        {
+          "path": "/components/0/cryptoProperties/algorithmProperties/primitive",
+          "message": "'block-cipher' is not one of ['drbg', 'mac', 'blockcipher', 'streamcipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'keyagree', 'kem', 'ae', 'other', 'unknown']"
+        }
+      ]
+    },
+    {
+      "label": "CycloneDX 1.6 positive: Sonar-generated CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/sonar/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 negative: unknown primitive",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/cyclonedx/invalid-primitive-1.6.json",
+      "expectedValid": false,
+      "actualValid": false,
+      "passed": true,
+      "errors": [
+        {
+          "path": "/components/1/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/2/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/3/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/5/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/6/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/7/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/10/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/11/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/15/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        },
+        {
+          "path": "/components/19/cryptoProperties/algorithmProperties/primitive",
+          "message": "'not-a-real-primitive' is not one of ['drbg', 'mac', 'block-cipher', 'stream-cipher', 'signature', 'hash', 'pke', 'xof', 'kdf', 'key-agree', 'kem', 'ae', 'combiner', 'other', 'unknown']"
+        }
+      ]
+    },
+    {
+      "label": "CycloneDX 1.6 schema-positive but semantically dangling dependency",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/cyclonedx/semantic-invalid-dangling-ref.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.7 positive: Theia-generated CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.7.schema.json",
+      "document": "results/theia-dir/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: local Action consolidated CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/action/local-workspace-cwd/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: remediated Action CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/action/remediated/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.7 positive: Theia registry image CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.7.schema.json",
+      "document": "results/theia-image/alpine-3.22-cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.7 positive: Theia OCI amd64 CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.7.schema.json",
+      "document": "results/theia-image/alpine-3.22-oci-amd64-cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "label": "CycloneDX 1.7 positive: remediated Theia directory CBOM",
+      "schema": "sources/cyclonedx-schema/bom-1.7.schema.json",
+      "document": "results/remediated-theia/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}
