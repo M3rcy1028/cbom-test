@@ -4,7 +4,7 @@
 
 - `실행 증거 요약 카드`: 원본 JSON·로그를 스크립트가 읽어 핵심 수치를 PNG로 렌더링한 그림이다. 실제 terminal 창처럼 가장하지 않으며 그림 상단에 원본 경로를 표시한다.
 - `실제 UI 캡처`: 로컬에서 실행 중인 공식 CBOMkit release 2.2.0 full/coeus build 또는 current main build를 Playwright로 직접 캡처한 그림이다.
-- 캡처 재현 스크립트는 `scripts/capture_evidence.py`, 브라우저 console·page error 원본은 `results/ui/browser-validation.json`이다.
+- 일반 캡처 재현은 `scripts/capture_evidence.py`, IBM Zurich quantum-safe 캡처는 `scripts/capture_quantum_safe_viewer.py`를 사용한다. 브라우저 검증 JSON은 `results/ui/browser-validation.json`과 `results/quantum-safe/viewer-validation.json`에 있다.
 - 기존 시험 중 만들어진 `full-*`, `ui-*` 이미지는 최종 증거가 아니므로 `.gitignore`로 제외한다.
 
 ## 그림별 해석
@@ -18,7 +18,7 @@
 
 ### 02. Schema validation — `02-schema-validation.png`
 
-1. 무엇을 실행했는가: IBM CBOM 1.0, CycloneDX 1.6/1.7 공식 JSON Schema에 정상·음성 문서 11개를 검증했다.
+1. 무엇을 실행했는가: IBM CBOM 1.0, CycloneDX 1.6/1.7 공식 JSON Schema에 정상·음성 문서 14개를 검증했다.
 2. 어디를 볼 것인가: 각 case의 expected/actual 값과 PASS badge다.
 3. 결론: Sonar, Action, Theia directory/image 산출물이 대응 schema를 통과했고 음성 fixture는 의도대로 실패했다.
 4. 결론낼 수 없는 것: Schema 통과만으로 bom-ref나 dependency 참조가 존재한다고 보장하지 않는다.
@@ -26,7 +26,7 @@
 ### 03. Semantic validation — `03-semantic-validation.png`
 
 1. 무엇을 실행했는가: component bom-ref와 dependency root/target의 중복·누락·dangling 참조를 검사했다.
-2. 어디를 볼 것인가: 정상 12/12, Theia enriched 누락, schema-positive 음성 fixture 행이다.
+2. 어디를 볼 것인가: 정상 13/13, Theia enriched 누락, schema-positive 음성 fixture 행이다.
 3. 결론: 핵심 원본 산출물은 참조 무결성이 있고, enrichment 결과에는 bom-ref 없는 component가 1개 있다.
 4. 결론낼 수 없는 것: 알고리즘 속성의 암호학적 정확성까지 검증하는 도구는 아니다.
 
@@ -112,7 +112,7 @@
 1. 무엇을 실행했는가: MD5→SHA-256, AES-CBC→GCM, TLS 1.2→1.3 변경 뒤 Action·Theia를 재실행했다.
 2. 어디를 볼 것인가: Action 49→44, 제거 component, 대체 occurrence, TLSv1.2 1→0 행이다.
 3. 결론: 설정·코드 변경이 CBOM topology/evidence에 예상 방향으로 반영됐다.
-4. 결론낼 수 없는 것: RSA를 PQC 구현으로 교체하지 않았으므로 전체 양자 안전 전환 완료를 주장할 수 없다.
+4. 결론낼 수 없는 것: 별도 ML-KEM fixture는 있지만 baseline RSA를 PQC로 교체한 것은 아니므로 전체 양자 안전 전환 완료를 주장할 수 없다.
 
 ### 21. coeus policy fixture — `21-coeus-policy-results.png`
 
@@ -127,3 +127,10 @@
 2. 어디를 볼 것인가: Status Success, 48초 duration, artifact 1개, CBOM digest다.
 3. 결론: GitHub-hosted runner에서 build·Java/Python scan·artifact upload가 모두 성공했고 공식 `CBOM.zip`을 회수했다.
 4. 결론낼 수 없는 것: workflow success가 모든 module의 non-empty CBOM을 뜻하지 않는다. 실제 artifact에는 build하지 않은 보완 Java module의 0-component CBOM이 포함됐다.
+
+### 23. IBM Zurich Viewer quantum-safe — `23-ibm-zurich-quantum-safe.png`
+
+1. 무엇을 실행했는가: Go 표준 `crypto/mlkem`으로 ML-KEM-768 round-trip을 실행하고 CBOMkit-action으로 만든 1-component CBOM을 IBM Zurich Viewer에 업로드했다.
+2. 어디를 볼 것인가: `Compliant`, 녹색 `Quantum Safe` 100%, `ML-KEM-768`, `KEM`, `main.go:13`이다.
+3. 결론: 실제 source 호출→scanner evidence→CycloneDX CBOM→공개 Viewer local policy의 end-to-end 경로가 동작한다.
+4. 결론낼 수 없는 것: standalone KEM 성공이 기존 애플리케이션의 RSA 교체, hybrid protocol, 인증·상호운용성·성능 검증 완료를 뜻하지 않는다.

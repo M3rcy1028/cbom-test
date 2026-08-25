@@ -126,6 +126,7 @@ Recall    = TP / (TP + FN)
 - [x] OpenSSL 설정 작성
 - [ ] container image build
 - [x] ground truth 파일·라인 고정
+- [x] 후속 standalone ML-KEM-768 source round-trip·unit test fixture
 
 ### P2. IBM 및 CycloneDX 스키마
 
@@ -270,6 +271,7 @@ evidence/<tool>/<figure-number>-<short-description>.png
 | CBOMkit | 완료 | API·DB·release UI/coeus + public Git scan 48 components; current main blank-screen 회귀 확인 |
 | Compliance | 완료 | 내장·frontend local·OPA CLI/HTTP/backend 연동과 golden matrix 완료 |
 | 변경 전후 | 범위 완료 | Action 49→44, MD5 3·CBC 2 제거; Theia TLS 1.2 제거와 정규화 diff 완료 |
+| Quantum-safe 후속 | 완료 | 실제 ML-KEM-768 round-trip·scan·policy·IBM Zurich Viewer `Quantum Safe` 표시 |
 | 최종 명세 | 완료 | 도구별 20항목, 실제 캡처, 비교·결함·운영 권고·재현 명령 작성 |
 | GitHub 공개 | 완료 | 최초 `066b89e`, 원격 증거 `fe54298` push; 원격 Action success와 remote hash 일치 확인 |
 
@@ -467,3 +469,14 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - README와 `plan.md`에서 결과 요약으로 바로 이동할 수 있도록 링크함.
 - `4ea726de3346a2d7292db2b1ef02c64d0fcc9b8d` (`docs: add CBOM results overview`)로 local commit한 뒤, 다음 사용자 승인에 따라 `origin/main`에 push함.
 - push 직후 local `HEAD`와 remote `main`이 모두 `4ea726de3346a2d7292db2b1ef02c64d0fcc9b8d`로 일치함을 확인함.
+
+### 2026-08-25 — 실제 ML-KEM-768 quantum-safe 후속 검증
+
+- 기존 baseline 집계를 훼손하지 않도록 `quantum-safe-go/` 독립 Go module을 추가함.
+- Go 표준 `crypto/mlkem`의 FIPS 203 ML-KEM-768으로 key generation, encapsulation, decapsulation을 실행하고 32-byte shared key 일치를 runtime·unit test에서 확인함.
+- source-built CBOMkit-action `e7a99fb` Go integration으로 해당 module만 스캔해 `ML-KEM-768` 1 component, `primitive=kem`, parameter set `768`, NIST OID, `main.go:13` evidence를 생성함.
+- `results/quantum-safe/action/cbom.json`은 CycloneDX 1.6 schema와 semantic validation을 모두 통과함. 전체 검증군은 schema 14/14, semantic positive 13/13으로 확장됨.
+- CBOMkit built-in `quantum_safe` 정책은 level 3, global true를 반환함. IBM Zurich Viewer에 같은 CBOM을 업로드해 `Compliant`, `Quantum Safe` 100%, ML-KEM-768, `main.go:13`을 실제 확인함.
+- 실제 화면은 `evidence/23-ibm-zurich-quantum-safe.png`, browser 판정은 `results/quantum-safe/viewer-validation.json`에 보존함.
+- workflow는 Go 1.25, Action Go integration commit, `java, python, go`, ML-KEM-768 non-empty assertion을 사용하도록 보완함.
+- 이는 standalone KEM end-to-end 검증이며 기존 RSA application/protocol의 hybrid/PQC migration 완료를 의미하지 않음.

@@ -20,20 +20,46 @@ jobs:
           java-version: "21"
           cache: maven
 
+      - name: Set up Go 1.25
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.x"
+
       - name: Build Java fixture before scanning
         run: mvn -B -f java-app/pom.xml clean package -DskipTests
 
       - name: Install Python dependencies
         run: python -m pip install -r python-app/requirements.txt
 
+      - name: Test ML-KEM-768 fixture
+        working-directory: quantum-safe-go
+        run: go test -v ./...
+
       - name: Generate module and consolidated CBOMs
         id: cbom
-        uses: cbomkit/cbomkit-action@v2.1.1
+        uses: cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae
         env:
-          CBOMKIT_LANGUAGES: java, python
+          CBOMKIT_LANGUAGES: java, python, go
           CBOMKIT_GENERATE_MODULE_CBOMS: "true"
           CBOMKIT_WRITE_EMPTY_CBOMS: "true"
           CBOMKIT_JAVA_REQUIRE_BUILD: "true"
+
+      - name: Verify ML-KEM-768 was detected
+        shell: python {0}
+        run: |
+          import glob
+          import json
+
+          files = glob.glob("cbom*.json") + glob.glob("cbom/**/*.json", recursive=True)
+          documents = [json.load(open(path, encoding="utf-8")) for path in files]
+          names = {
+              component.get("name")
+              for document in documents
+              for component in document.get("components", [])
+          }
+          if "ML-KEM-768" not in names:
+              raise SystemExit("ML-KEM-768 was not detected in generated CBOMs")
+          print("quantum-safe-cbom-check-ok: ML-KEM-768")
 
       - name: Upload CBOM evidence
         uses: actions/upload-artifact@v4

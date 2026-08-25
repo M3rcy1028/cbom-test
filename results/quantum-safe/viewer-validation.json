@@ -1,0 +1,16 @@
+{
+  "viewerUrl": "https://www.zurich.ibm.com/cbom/",
+  "input": "results/quantum-safe/action/cbom.json",
+  "mlKem768Visible": true,
+  "quantumSafeVisible": true,
+  "bodyExcerpt": "IBM \nResearch\n|\nCBOMkit\nSystem theme\nStart over\ncbom.json (uploaded)\n1 cryptographic asset found.\n\nCompliant –\n\nThis CBOM complies with the policy \"NIST Post-Quantum Cryptography\".\nSource: Basic Local Compliance Service\n\nQuantum Safe\n\nNot Quantum Safe\n\nUnknown\n\nNot Applicable\n\n100%\n1\nCrypto Assets*\n\n*\n\nThis compliance data is approximate and given for illustrative purposes only.\n\nML-KEM-...\n\n(1 types of crypto assets)\n\nKem\n\n100%\n1\nCrypto Primitives\nList of all assets\nCryptographic asset\n\t\nPrimitive\n\t\nLocation\n\t\n\nQuantum Safe\nML-KEM-768\n\t\nKEM\nKey Encapsulation Mechanism\n\tmain.go:13\t\nSee details\nItems per page:\n10\n25\n50\n100\n1-1 of 1 items\nPage number::\n1\nof 1 pages\nContact IBM\nPrivacy\nTerms of use\nAccessibility\nAbout cookies on this site\nOur websites require some cookies to function properly (required). In addition, other cookies may be used with your consent to analyze site usage, improve the user experience and for advertising. For these purposes, IBM may share the personal information collected through cookies with IBM subsidiaries and third parties globally.\nFor more information, please review yourcookie preferences options. By visiting our website, you agree to our processing of",
+  "errors": [
+    "pageerror:Invalid or unexpected token",
+    "console:error:Refused to set unsafe header \"origin\"",
+    "console:error:Failed to load resource: the server responded with a status of 404 ()",
+    "console:error:Failed to load resource: the server responded with a status of 404 ()",
+    "console:error:Refused to set unsafe header \"origin\"",
+    "console:error:TypeError: Cannot read properties of undefined (reading 'className')\n    at e.init (https://1.www.s81c.com/common/v18/js/www.js:9:349721)\n    at o (https://1.www.s81c.com/common/v18/js/www.js:9:206238)\n    at Object.t (https://1.www.s81c.com/common/v18/js/www.js:9:203594)\n    at t.publish (https://1.www.s81c.com/common/v18/js/www.js:9:164591)\n    at s.publish (https://1.www.s81c.com/common/v18/js/www.js:9:163041)\n    at HTMLDocument.<anonymous> (https://1.www.s81c.com/common/v18/js/www.js:9:201173)\n    at e (https://1.www.s81c.com/common/v18/js/www.js:9:43513)\n    at t (https://1.www.s81c.com/common/v18/js/www.js:9:43815)",
+    "pageerror:Cannot read properties of undefined (reading 'attributes')"
+  ]
+}

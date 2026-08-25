@@ -39,8 +39,9 @@ CBOMkit 생태계는 하나의 만능 프로그램이 아니라, **공통 Cyclon
 
 | 실험 | 핵심 결과 | 판정 |
 |---|---:|---|
-| JSON Schema | 정상·음성 13/13 기대 일치 | 통과 |
-| Semantic positive set | 12/12 참조 무결성 통과 | 통과 |
+| JSON Schema | 정상·음성 14/14 기대 일치 | 통과 |
+| Semantic positive set | 13/13 참조 무결성 통과 | 통과 |
+| 실제 ML-KEM-768 source | round-trip·scanner·policy·Viewer 성공 | quantum-safe |
 | Sonar source scan | 38 components, 23 dependencies, 32 issues | 성공 |
 | Sonar 고수준 family recall | 22/22 | 100% |
 | Action local | 49 components, 24 dependencies, module 3개 | 성공 |
@@ -90,21 +91,21 @@ IBM의 초기 CBOM 1.0은 CycloneDX 1.4를 확장했다. IBM 저장소는 2024-0
 | Protocol | `type`, `version`, `cipherSuites`, `cryptoRefArray` | TLS 등 protocol과 suite·algorithm 연결 | TLS 1.2/1.3 확인 |
 | Evidence | `occurrences[].location/line/offset/additionalContext` | 탐지 위치·근거 | source 22/22 위치 대조 |
 | Dependency | `ref`, `dependsOn`, 선택적 relationship 의미 | component와 crypto asset 관계 | Sonar 23, Theia image 476 |
-| Security level | classical·NIST quantum level | 정책 reasoning 입력 | ML-KEM fixture level 3 |
+| Security level | classical·NIST quantum level | 정책 reasoning 입력 | policy fixture level 3, 실제 ML-KEM은 name/OID 판정 |
 | Extensibility | `properties`, evidence, external references | 도구별 보강 metadata | Theia OpenSSL·restriction property 사용 |
 
 ### 4.2 Schema 유효성과 의미 유효성
 
 ![IBM/CycloneDX schema validation](evidence/02-schema-validation.png)
 
-1. IBM 1.0과 CycloneDX 1.6/1.7의 정상·음성 case 13개를 실행했다.
+1. IBM 1.0과 CycloneDX 1.6/1.7의 정상·음성 case 14개를 실행했다.
 2. IBM의 `blockcipher/keyagree`와 현대 CycloneDX의 `block-cipher/key-agree` enum 차이가 실제 검증 결과에 나타났다.
 3. Sonar, Action, Theia directory·image 결과는 해당 공식 schema를 통과했다.
 4. 그러나 schema-positive dangling dependency fixture도 만들 수 있었으므로 별도 semantic validator가 필요하다.
 
 ![Semantic validation](evidence/03-semantic-validation.png)
 
-Schema는 필드 모양을 보지만 참조 대상의 존재까지 전부 보장하지 않는다. `scripts/validate_semantics.py`는 missing/duplicate component bom-ref, dangling dependency root/target, duplicate dependency root를 검사한다. 핵심 positive set 10개는 통과했지만 Theia enrichment 결과의 `generic-api-key` component에는 `bom-ref`가 없었다.
+Schema는 필드 모양을 보지만 참조 대상의 존재까지 전부 보장하지 않는다. `scripts/validate_semantics.py`는 missing/duplicate component bom-ref, dangling dependency root/target, duplicate dependency root를 검사한다. 핵심 positive set 13개는 통과했지만 Theia enrichment 결과의 `generic-api-key` component에는 `bom-ref`가 없었다.
 
 ## 5. 생태계 구성과 설치 방식
 
@@ -148,7 +149,7 @@ uploaded CBOM ── coeus viewer ─ local compliance
 - AES-128-GCM, AES-CBC, RSA-2048/OAEP, SHA-256, MD5, PBKDF2, ECDSA, ECDH
 - 유효·만료 X.509 certificate, public/private key
 - TLS 1.2/1.3 OpenSSL config
-- ML-KEM-768은 실제 구현을 가장하지 않고 policy-only fixture로 분리
+- 초기 ML-KEM-768 policy-only fixture와, 후속 `quantum-safe-go/` 실제 FIPS 203 ML-KEM-768 round-trip을 분리
 
 자세한 사전 정답은 [ground-truth.md](ground-truth.md)에 scanner 실행 전 line 단위로 고정했다.
 
@@ -449,6 +450,16 @@ Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `jav
 
 통합 CBOM은 schema와 semantic validation을 통과했다. local Action current와 semantic signature 집합은 같았고 MD5 component/occurrence만 3→2였다. 그러나 evidence를 보면 보완 Go만 포함되고 보완 Java/Python은 결과에 없었다. CBOMkit service가 repository를 build하지 않는 공식 동작과 module indexing/aggregation 특성 때문에, 중앙 Git scan은 편리하지만 build-aware Sonar/Action의 대체재로 간주하면 안 된다.
 
+### 8.4 실제 ML-KEM-768 source→Viewer 검증
+
+![IBM Zurich Viewer quantum-safe](evidence/23-ibm-zurich-quantum-safe.png)
+
+`quantum-safe-go/main.go`는 Go 표준 라이브러리 `crypto/mlkem`으로 ML-KEM-768 decapsulation key를 생성하고, public encapsulation key로 shared key를 캡슐화한 뒤 ciphertext를 역캡슐화해 양쪽 32-byte shared key 일치를 검증했다.
+
+CBOMkit-action `e7a99fb` Go integration으로 이 디렉터리만 스캔한 결과 `ML-KEM-768` 1개를 탐지했다. 산출물은 CycloneDX 1.6, `primitive=kem`, parameter set `768`, NIST OID `2.16.840.1.101.3.4.4.2`, `main.go:13` occurrence를 포함하며 schema·semantic validation을 모두 통과했다.
+
+내장 정책 API는 level 3 `Quantum Safe`, global true를 반환했다. 같은 `results/quantum-safe/action/cbom.json`을 IBM Zurich Viewer에 업로드했을 때도 `Compliant`, `Quantum Safe` 100%, `ML-KEM-768`, `KEM`, `main.go:13`이 실제로 표시됐다. 단, 이는 독립 KEM 실행 검증이며 기존 RSA 기반 protocol의 hybrid/PQC migration 완료를 의미하지 않는다.
+
 ## 9. Compliance 비교
 
 | Asset | Ground truth | Built-in | coeus local | External OPA |
@@ -478,7 +489,7 @@ Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `jav
 - Go: MD5→SHA-256
 - OpenSSL: MinProtocol TLS 1.2→TLS 1.3
 - RSA는 그대로 유지
-- PQC는 ML-KEM-768 policy-only fixture로만 평가
+- 독립 ML-KEM-768 코드는 실제 실행·스캔했지만 baseline RSA를 교체한 것은 아님
 
 ![Remediation diff](evidence/20-remediation-diff.png)
 
@@ -493,7 +504,7 @@ Enrichment 자체는 source와 filesystem inventory를 합쳤다. 하지만 `jav
 | TLSv1.2 protocol | 1 | 0 | O |
 | TLSv1.3 protocol | 1 | 1 | O |
 
-이 실험은 “코드를 바꾸면 CBOM도 바뀌는가”를 증명한다. “양자 안전 전환을 완료했다”는 증거는 아니다. RSA, ECDSA, ECDH가 남아 있고 실제 ML-KEM library migration, hybrid protocol, interoperability/performance test를 하지 않았다.
+이 실험은 “코드를 바꾸면 CBOM도 바뀌는가”와 “실제 ML-KEM source가 quantum-safe 자산으로 이어지는가”를 증명한다. 그러나 “양자 안전 전환을 완료했다”는 증거는 아니다. baseline에 RSA, ECDSA, ECDH가 남아 있고 hybrid protocol, interoperability/performance test를 하지 않았다.
 
 ## 11. 발견한 결함과 운영 위험
 
@@ -612,6 +623,14 @@ curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:8081/api/v1/sc
   --data '{"scanUrl":"https://github.com/M3rcy1028/cbom-test.git","branch":"main"}'
 ```
 
+### 13.7 Quantum-safe fixture·Viewer
+
+```bash
+tools/go/bin/go -C quantum-safe-go run .
+python3 scripts/validate_semantics.py results/quantum-safe/action/cbom.json
+python3 scripts/capture_quantum_safe_viewer.py
+```
+
 전체 source build command, service endpoint, workaround, 결과 경로와 차단 사유는 [CBOM_LAB_PLAN.md](CBOM_LAB_PLAN.md)에 시간순으로 보존했다.
 
 ## 14. 검증 범위와 제한
@@ -622,7 +641,7 @@ curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:8081/api/v1/sc
 - C#, JavaScript 등 공통 fixture에 없는 언어는 평가하지 않았다.
 - performance benchmark와 대규모 repository scan은 범위 밖이다.
 - 인증서·private key는 lab 전용이며 private key 파일은 Git 추적에서 제외한다.
-- 실제 RSA→PQC code migration은 하지 않았다.
+- 실제 ML-KEM-768 standalone KEM은 실행했지만 RSA→PQC application/protocol migration은 하지 않았다.
 - GitHub-hosted Action과 CBOMkit public Git scan은 완료했지만, private repository credential 경로와 PURL scan은 실행하지 않았다.
 
 ## 15. 공식 자료

@@ -1,0 +1,4 @@
+=== RUN   TestMLKEM768RoundTrip
+--- PASS: TestMLKEM768RoundTrip (0.00s)
+PASS
+ok  	example.com/cbom-lab/quantum-safe-go	0.004s

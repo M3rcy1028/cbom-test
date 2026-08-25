@@ -1,0 +1,11 @@
+[main] INFO org.pqca.Main - Writing CBOMs to /home/tako/naryun/cbom/cbom-lab/results/quantum-safe/action
+[main] INFO org.pqca.indexing.IndexingService - Indexing projects ...
+[main] INFO org.pqca.indexing.IndexingService - Found project module '' [2 .go files]
+[main] INFO org.pqca.scanning.ScannerService - Start scanning 1 go projects
+[main] INFO org.pqca.scanning.ScannerService - Scanning go project  (1/1)
+[main] INFO org.sonar.go.report.GoProgressReport - 1 folder (1 file) to be analyzed
+[main] INFO com.ibm.output.IAggregator - Detected (KeyEncapsulationMechanism) ML-KEM-768
+[main] INFO org.sonar.go.report.GoProgressReport - 1/1 folder (1 file) has been analyzed
+[main] INFO org.pqca.scanning.ScannerService - Scanned 1 go projects
+[main] INFO org.pqca.Main - Scanned 2 files with 42 lines in 0.496 seconds.
+[main] INFO org.pqca.BomGenerator - Wrote cbom /home/tako/naryun/cbom/cbom-lab/results/quantum-safe/action/cbom.json with 1 findings

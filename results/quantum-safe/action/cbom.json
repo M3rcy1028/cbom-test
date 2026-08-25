@@ -1,0 +1,51 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:544a5f98-185a-46fa-9878-77a9427e3bf0",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-25T10:31:41Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "PQCA"
+          },
+          "name" : "CBOMkit"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "gitUrl",
+        "value" : "https://github.com/M3rcy1028/cbom-test"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0e54ec19-49bf-49a4-9d13-f2c7ee3234d3",
+      "name" : "ML-KEM-768",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "main.go",
+            "line" : 13,
+            "offset" : 26,
+            "additionalContext" : "GenerateKey768"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kem",
+          "parameterSetIdentifier" : "768"
+        },
+        "oid" : "2.16.840.1.101.3.4.4.2"
+      }
+    }
+  ],
+  "dependencies" : [ ]
+}

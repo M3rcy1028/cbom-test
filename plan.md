@@ -39,9 +39,10 @@ git push -u origin main
 - [x] 최초 `first commit` 생성 및 `origin/main` push
 - [x] GitHub-hosted CBOMkit Action 실행 및 artifact 회수
 - [x] CBOMkit public Git scan, API, DB, compliance 검증
-- [x] schema 13/13, semantic 12/12, 링크·크기·민감정보·독립 staged tree 검증
+- [x] schema 14/14, semantic 13/13, 링크·크기·민감정보·독립 staged tree 검증
 - [x] 원격 증거 후속 커밋 push 및 remote hash 최종 대조
 - [x] `RESULTS_OVERVIEW.md` 작성·커밋·push
+- [x] 실제 ML-KEM-768 코드·CBOM·Quantum Safe Viewer 결과 생성
 
 ## 산출물 위치
 
@@ -52,10 +53,11 @@ git push -u origin main
 - [캡처 설명서](evidence/CAPTURE_MANIFEST.md)
 - [GitHub Action 원본 증거](results/action/github/)
 - [CBOMkit Git scan 결과](results/cbomkit/git-scan-cbom.json)
+- [Quantum-safe Viewer 입력 CBOM](results/quantum-safe/action/cbom.json)
 
 ## 다음 재개 지점
 
 1. `CBOM_LAB_PLAN.md`를 처음부터 끝까지 다시 읽는다.
 2. `git status`, 민감정보, 파일 크기, Markdown 링크를 검사한다.
-3. schema 13건과 semantic positive 12건을 재검증한다.
+3. schema 14건과 semantic positive 13건을 재검증한다.
 4. 후속 커밋을 push하고 `git ls-remote origin refs/heads/main`과 로컬 `HEAD`를 대조한다.

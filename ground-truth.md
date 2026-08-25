@@ -74,16 +74,33 @@
 |---|---|---|---|---|
 | Q-A09 | ML-KEM-768 | `kem` | `nistQuantumSecurityLevel=3` | quantum-safe |
 
-## 7. 예상 도구 범위
+## 7. 실제 quantum-safe source revision
+
+초기 baseline 평가가 끝난 뒤 별도 디렉터리에 실제 실행 fixture를 추가했다. 기존 Java·Python·Go 22개 family recall 수치는 변경하지 않고 독립 실험으로 평가한다.
+
+파일: `quantum-safe-go/main.go`
+
+| ID | line | 기대 자산 | primitive | 핵심 속성 | function | 정책 기대 |
+|---|---:|---|---|---|---|---|
+| Q-A10 | 13, 18-20 | ML-KEM-768 | `kem` | parameter set 768, NIST OID `2.16.840.1.101.3.4.4.2` | keygen, encapsulate, decapsulate | quantum-safe |
+
+완료 조건:
+
+- Go `crypto/mlkem`으로 양쪽 32-byte shared key가 실제로 일치한다.
+- scanner CBOM에 `ML-KEM-768`, `primitive=kem`, source occurrence가 존재한다.
+- CBOM은 CycloneDX 1.6 schema와 semantic validation을 통과한다.
+- IBM Zurich Viewer와 built-in policy가 자산을 `Quantum Safe`로 표시한다.
+
+## 8. 예상 도구 범위
 
 | 도구 | Java | Python | Go | 인증서/키 | OpenSSL config | container |
 |---|---:|---:|---:|---:|---:|---:|
 | Sonar Plugin | O | O | O | 소스 참조만 | 제한적 | X |
-| CBOMkit-action | O | O | 공식 README상 현재 미지원 | X | X | X |
+| CBOMkit-action | O | O | `e7a99fb` Go integration에서 O; v2.1.1 README는 미지원 표기 | X | X | X |
 | CBOMkit service scanner | O | O | O | X | X | X |
 | CBOMkit-theia | source scan X | source scan X | source scan X | O | O | O |
 
-## 8. 실행 결과 기입 표
+## 9. 실행 결과 기입 표
 
 | 도구 | 지원 대상 수 | TP | FP | FN | Precision | Recall | property completeness | evidence coverage |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|

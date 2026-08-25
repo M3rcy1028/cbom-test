@@ -20,8 +20,9 @@ container / OCI image ─ CBOMkit-theia ──────────┘      �
 
 | 실험 | 결과 | 판단 |
 |---|---:|---|
-| IBM/CycloneDX schema | 13/13 기대 일치 | 정상·음성 fixture 모두 성공 |
-| Semantic positive validation | 12/12 | 참조 무결성 정상 |
+| IBM/CycloneDX schema | 14/14 기대 일치 | 정상·음성 fixture 모두 성공 |
+| Semantic positive validation | 13/13 | 참조 무결성 정상 |
+| 실제 ML-KEM-768 source | 1 component, 1 occurrence | round-trip·scanner·policy·Viewer 모두 성공 |
 | Sonar source scan | 38 components, 23 dependencies, 32 issues | Java·Python·Go family 22/22 탐지 |
 | CBOMkit-action local | 49 components, 24 dependencies | 3개 언어 module과 통합 CBOM 생성 |
 | GitHub-hosted Action | 41 components, 22 dependencies | workflow 성공, artifact 확보 |
@@ -49,8 +50,9 @@ container / OCI image ─ CBOMkit-theia ──────────┘      �
 | `results/remediated-theia/` | 보완된 디렉터리 재분석 | 보완본 Theia `cbom.json` |
 | `results/cbomkit/` | REST API, DB, Git scan, CBOM 재조회·비교 | Git scan CBOM, API response, DB query log |
 | `results/compliance/` | Built-in·coeus local·OPA 정책 평가 | 원시 policy response와 golden matrix |
+| `results/quantum-safe/` | 실제 ML-KEM-768 실행·스캔·정책·공개 Viewer 검증 | Viewer용 CBOM, log, compliance와 browser 결과 |
 | `results/ibm/` | IBM CBOM 1.0 schema 정상·음성 입력 | valid/invalid JSON fixture |
-| `results/cyclonedx/` | JSON Schema와 semantic validation | 13-case schema, 12-case semantic 결과 |
+| `results/cyclonedx/` | JSON Schema와 semantic validation | 14-case schema, 13-case semantic 결과 |
 | `results/ui/` | CBOMkit current/release full·coeus 화면 | browser validation과 build/audit 결과 |
 | `results/diff/` | 비교 결과용 초기 위치 | 현재 비어 있으며 실제 비교는 관련 도구 폴더에 저장 |
 | `results/environment/` | 환경 결과용 초기 위치 | 현재 비어 있으며 환경 근거는 원장과 `evidence/`에 저장 |
@@ -61,13 +63,16 @@ container / OCI image ─ CBOMkit-theia ──────────┘      �
 
 | 권장 순서 | 파일 | 확인할 내용 |
 |---:|---|---|
-| 1 | `results/sonar/cbom.json` | Java·Python·Go 암호 자산과 소스 occurrence |
-| 2 | `results/action/github/artifact/cbom.json` | 실제 GitHub Actions에서 생성된 module 통합 결과 |
-| 3 | `results/theia-dir/cbom.json` | 인증서·개인키·TLS protocol·cipher 설정 |
-| 4 | `results/enriched/cbom.json` | source CBOM과 filesystem 자산을 결합한 결과 |
-| 5 | `results/theia-image/alpine-3.22-cbom.json` | 컨테이너 내부 암호 자산; 2,858개라 렌더링이 느릴 수 있음 |
+| 1 | [`results/quantum-safe/action/cbom.json`](results/quantum-safe/action/cbom.json) | ML-KEM-768 한 개와 녹색 `Quantum Safe` 100% 판정 |
+| 2 | `results/sonar/cbom.json` | Java·Python·Go 암호 자산과 소스 occurrence |
+| 3 | `results/action/github/artifact/cbom.json` | 실제 GitHub Actions에서 생성된 module 통합 결과 |
+| 4 | `results/theia-dir/cbom.json` | 인증서·개인키·TLS protocol·cipher 설정 |
+| 5 | `results/enriched/cbom.json` | source CBOM과 filesystem 자산을 결합한 결과 |
+| 6 | `results/theia-image/alpine-3.22-cbom.json` | 컨테이너 내부 암호 자산; 2,858개라 렌더링이 느릴 수 있음 |
 
-처음 확인할 때는 `results/sonar/cbom.json` 하나만 업로드하면 된다. `schema-validation.json`, compliance response, workflow metadata와 log는 CBOM 문서가 아니므로 Viewer 입력으로 사용하지 않는다.
+Quantum-safe 표시를 확인할 때는 `results/quantum-safe/action/cbom.json` 하나만 업로드하면 된다. 전체 source inventory부터 살펴볼 때는 `results/sonar/cbom.json`을 사용한다. `schema-validation.json`, compliance response, workflow metadata와 log는 CBOM 문서가 아니므로 Viewer 입력으로 사용하지 않는다.
+
+![IBM Zurich Viewer quantum-safe result](evidence/23-ibm-zurich-quantum-safe.png)
 
 ## 5. 주요 발견 사항
 
@@ -77,6 +82,7 @@ container / OCI image ─ CBOMkit-theia ──────────┘      �
 - Theia multi-arch OCI 실패는 exit code 0을 반환해 CI에서 거짓 성공이 될 수 있다.
 - GitHub Action 성공만으로 모든 module이 정상 분석됐다고 볼 수 없다. 실제 artifact에 비어 있는 보완 Java module이 있었다.
 - Built-in policy는 실험 fixture와 일치했지만 OPA sample policy는 `key-agree` 표기와 ML-KEM 이름 처리에서 충돌했다.
+- 별도 Go fixture는 ML-KEM-768 캡슐화·역캡슐화를 실제 수행했고, scanner가 `main.go:13`에서 이를 탐지해 공개 Viewer에서 `Quantum Safe`로 표시했다.
 - Schema 통과는 필드 형식이 맞다는 뜻이며 dependency 참조와 정책 결과까지 정확하다는 뜻은 아니다.
 
 ## 6. 검증 범위와 제한
@@ -85,6 +91,7 @@ container / OCI image ─ CBOMkit-theia ──────────┘      �
 - 보완 전·후 Sonar 재스캔은 관리자 credential 유실로 제외하고 Action·Theia 결과로 비교했다.
 - 공개 Git scan은 실행했지만 private repository credential 경로와 PURL scan은 실행하지 않았다.
 - MD5, AES-CBC, 고정 key/IV와 인증서는 scanner 검증용이며 production 사용 예제가 아니다.
+- 실제 ML-KEM 단독 실행은 검증했지만 기존 RSA 기반 protocol을 hybrid/PQC protocol로 마이그레이션한 것은 아니다.
 - 실제 조직의 CBOM에는 소스 위치와 암호 구성 정보가 포함될 수 있으므로 공개 Viewer 업로드 전 민감정보를 검토해야 한다.
 
 ## 7. 관련 문서와 증거

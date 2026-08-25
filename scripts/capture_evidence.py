@@ -189,7 +189,7 @@ def main() -> int:
             ("pass", "Removed", "MD5 components 3 · AES-CBC components 2 · IV-128 material 1"),
             ("pass", "Replaced evidence", "SHA-256 digest occurrences +2 · AES-GCM encrypt occurrences +2"),
             ("pass", "TLS config", "TLSv1.2 protocol 1→0 · TLSv1.3 유지"),
-        ], "RSA 구현은 그대로이며 PQC 전환은 ML-KEM 정책 fixture로만 평가했다. 구현 완료로 해석하면 안 된다.")
+        ], "Baseline RSA 구현은 그대로이다. 별도 ML-KEM-768 fixture는 실제 실행했지만 application migration 완료로 해석하면 안 된다.")
         card.close()
 
         browser_results: dict[str, Any] = {}

@@ -163,6 +163,15 @@
       "actualValid": true,
       "passed": true,
       "errors": []
+    },
+    {
+      "label": "CycloneDX 1.6 positive: actual ML-KEM-768 source scan",
+      "schema": "sources/cyclonedx-schema/bom-1.6.schema.json",
+      "document": "results/quantum-safe/action/cbom.json",
+      "expectedValid": true,
+      "actualValid": true,
+      "passed": true,
+      "errors": []
     }
   ]
 }
