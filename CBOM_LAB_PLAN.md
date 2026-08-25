@@ -480,3 +480,11 @@ evidence/<tool>/<figure-number>-<short-description>.png
 - 실제 화면은 `evidence/23-ibm-zurich-quantum-safe.png`, browser 판정은 `results/quantum-safe/viewer-validation.json`에 보존함.
 - workflow는 Go 1.25, Action Go integration commit, `java, python, go`, ML-KEM-768 non-empty assertion을 사용하도록 보완함.
 - 이는 standalone KEM end-to-end 검증이며 기존 RSA application/protocol의 hybrid/PQC migration 완료를 의미하지 않음.
+
+### 2026-08-25 — Quantum-safe 원격 Action 1차 실패와 격리 재검증
+
+- quantum-safe 코드 commit `b018a5c3c82d51edc049047238554c78698bee5b`를 `origin/main`에 push하고 GitHub-hosted workflow run `32837919108`을 실행함.
+- 1차 run에서 Go unit test와 Action CBOM 생성은 성공했지만 `ML-KEM-768` assertion이 실패함. Action log상 `quantum-safe-go` 스캔이 첫 번째 `go-app`의 AES/RSA/SHA/ECDSA/ECDH 탐지 결과를 재사용했고 `cbom_quantum-safe-go.json`은 0 findings로 기록됨.
+- 이는 로컬에서 해당 module만 격리해 source-built Action을 실행했을 때 ML-KEM이 정상 탐지된 결과와 대비되는 다중 Go module index 오염 경계임. 검증 gate를 제거하지 않고 workflow를 전체 인벤토리 잡과 quantum-safe 전용 잡으로 분리함.
+- 전용 잡은 sparse checkout으로 `quantum-safe-go`만 받아 unit test 후 Action을 실행하고, 생성 JSON에 `ML-KEM-768`과 `quantum-safe-go/main.go` evidence가 모두 있어야 성공하도록 구성함.
+- 1차 실패 run URL: `https://github.com/M3rcy1028/cbom-test/actions/runs/32837919108`. 격리 잡의 원격 성공·artifact 회수 결과는 후속 항목에 기록 예정.

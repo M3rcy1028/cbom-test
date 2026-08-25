@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: "1.25.x"
+          cache-dependency-path: quantum-safe-go/go.mod
 
       - name: Build Java fixture before scanning
         run: mvn -B -f java-app/pom.xml clean package -DskipTests
@@ -44,26 +45,80 @@ jobs:
           CBOMKIT_WRITE_EMPTY_CBOMS: "true"
           CBOMKIT_JAVA_REQUIRE_BUILD: "true"
 
+      - name: Upload CBOM evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: CBOM
+          path: ${{ steps.cbom.outputs.pattern }}
+          if-no-files-found: error
+
+  quantum-safe-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout only the ML-KEM fixture
+        uses: actions/checkout@v5
+        with:
+          sparse-checkout: quantum-safe-go
+
+      - name: Set up Go 1.25
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.x"
+          cache-dependency-path: quantum-safe-go/go.mod
+
+      - name: Test ML-KEM-768 fixture
+        working-directory: quantum-safe-go
+        run: go test -v ./...
+
+      # Isolate the Go module because the current upstream Action image can
+      # reuse the first Go module's index when several modules share a workspace.
+      - name: Generate isolated quantum-safe CBOM
+        id: quantum_cbom
+        uses: cbomkit/cbomkit-action@e7a99fb41b2041c400ebd8f942b7f2c88cf2c8ae
+        env:
+          CBOMKIT_LANGUAGES: go
+          CBOMKIT_GENERATE_MODULE_CBOMS: "true"
+          CBOMKIT_WRITE_EMPTY_CBOMS: "false"
+
       - name: Verify ML-KEM-768 was detected
         shell: python {0}
         run: |
           import glob
           import json
 
-          files = glob.glob("cbom*.json") + glob.glob("cbom/**/*.json", recursive=True)
-          documents = [json.load(open(path, encoding="utf-8")) for path in files]
-          names = {
-              component.get("name")
-              for document in documents
-              for component in document.get("components", [])
-          }
-          if "ML-KEM-768" not in names:
-              raise SystemExit("ML-KEM-768 was not detected in generated CBOMs")
-          print("quantum-safe-cbom-check-ok: ML-KEM-768")
+          files = sorted(set(
+              glob.glob("cbom*.json") + glob.glob("cbom/**/*.json", recursive=True)
+          ))
+          if not files:
+              raise SystemExit("No CBOM JSON was generated")
 
-      - name: Upload CBOM evidence
+          matches = []
+          for path in files:
+              with open(path, encoding="utf-8") as handle:
+                  document = json.load(handle)
+              for component in document.get("components", []):
+                  if component.get("name") == "ML-KEM-768":
+                      matches.append((path, component))
+
+          if not matches:
+              raise SystemExit("ML-KEM-768 was not detected in generated CBOMs")
+
+          for path, component in matches:
+              evidence = component.get("evidence", {}).get("occurrences", [])
+              if not any(
+                  occurrence.get("location", "").endswith("quantum-safe-go/main.go")
+                  for occurrence in evidence
+              ):
+                  raise SystemExit(f"ML-KEM-768 in {path} has no main.go evidence")
+
+          print(f"quantum-safe-cbom-check-ok: {len(matches)} ML-KEM-768 component(s)")
+
+      - name: Upload quantum-safe CBOM evidence
         uses: actions/upload-artifact@v4
         with:
-          name: CBOM
-          path: ${{ steps.cbom.outputs.pattern }}
+          name: CBOM-quantum-safe
+          path: ${{ steps.quantum_cbom.outputs.pattern }}
           if-no-files-found: error

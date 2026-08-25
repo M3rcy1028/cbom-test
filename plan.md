@@ -13,6 +13,8 @@
 - 원격 증거 결과 커밋: `fe54298394571ca90da14a674059e0e753fe309f`
 - 최종 산출물 후속 push: 완료, 당시 local `HEAD`와 `origin/main` 일치 확인
 - 결과 요약 커밋: `4ea726de3346a2d7292db2b1ef02c64d0fcc9b8d`, 사용자 승인 후 push 완료
+- Quantum-safe 코드 커밋: `b018a5c3c82d51edc049047238554c78698bee5b`, push 완료
+- Quantum-safe 원격 1차 run: [32837919108](https://github.com/M3rcy1028/cbom-test/actions/runs/32837919108), 다중 Go module index 오염으로 ML-KEM assertion 실패
 
 ## 사용자 요청 명령과 적용 방식
 
@@ -43,6 +45,7 @@ git push -u origin main
 - [x] 원격 증거 후속 커밋 push 및 remote hash 최종 대조
 - [x] `RESULTS_OVERVIEW.md` 작성·커밋·push
 - [x] 실제 ML-KEM-768 코드·CBOM·Quantum Safe Viewer 결과 생성
+- [ ] 격리된 quantum-safe GitHub Action 재실행 성공 및 원격 artifact 회수
 
 ## 산출물 위치
 
@@ -60,4 +63,5 @@ git push -u origin main
 1. `CBOM_LAB_PLAN.md`를 처음부터 끝까지 다시 읽는다.
 2. `git status`, 민감정보, 파일 크기, Markdown 링크를 검사한다.
 3. schema 14건과 semantic positive 13건을 재검증한다.
-4. 후속 커밋을 push하고 `git ls-remote origin refs/heads/main`과 로컬 `HEAD`를 대조한다.
+4. 격리된 quantum-safe workflow를 재실행하고 원격 artifact에서 `ML-KEM-768`과 source evidence를 검증한다.
+5. 후속 커밋을 push하고 `git ls-remote origin refs/heads/main`과 로컬 `HEAD`를 대조한다.
